@@ -1,0 +1,488 @@
+{
+    "case_info": {
+        "main_requirement_path_id": [
+            "282454ec-b288-4092-9718-aeeced3a1c0a",
+            "1a25d165-f88c-11ee-8f78-5de70c77b56e",
+            "1a1cf7c0-f88c-11ee-8f78-5de70c77b56e",
+            "1a25d163-f88c-11ee-8f78-5de70c77b56e",
+            "1a1ef390-f88c-11ee-8f78-5de70c77b56e",
+            "1a25d164-f88c-11ee-8f78-5de70c77b56e",
+            "1a238770-f88c-11ee-8f78-5de70c77b56e",
+            "5ceafbb3-a3ba-4acf-a6ec-5846c8f44707",
+            "4ad2bbba-e494-4f43-b17c-65de75549000"
+        ],
+        "main_requirement_graph_id": "eb89e710-f88b-11ee-8f78-5de70c77b56e",
+        "graph_type": "request",
+        "group_name": "default_group"
+    },
+    "observe_signals": [],
+    "test_case": [
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "eb89e710-f88b-11ee-8f78-5de70c77b56e",
+                "id": "282454ec-b288-4092-9718-aeeced3a1c0a",
+                "next_receiver_id": "1a1cf7c0-f88c-11ee-8f78-5de70c77b56e",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "eb89e710-f88b-11ee-8f78-5de70c77b56e",
+                "transition_id": [
+                    "1a25d165-f88c-11ee-8f78-5de70c77b56e"
+                ],
+                "points_combination": {},
+                "action_send": [
+                    {
+                        "name": "慢充",
+                        "value": "1",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "慢充 == 1",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "eb89e710-f88b-11ee-8f78-5de70c77b56e",
+                "id": "1a1cf7c0-f88c-11ee-8f78-5de70c77b56e",
+                "next_receiver_id": "1a1ef390-f88c-11ee-8f78-5de70c77b56e",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "110",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "4",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "10",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "eb89e710-f88b-11ee-8f78-5de70c77b56e",
+                "transition_id": [
+                    "1a25d165-f88c-11ee-8f78-5de70c77b56e"
+                ],
+                "points_combination": {},
+                "action_send": [],
+                "conditional_bool_combination": null,
+                "is_origin_node": true,
+                "condition": "",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "eb89e710-f88b-11ee-8f78-5de70c77b56e",
+                "id": "1a1cf7c0-f88c-11ee-8f78-5de70c77b56e",
+                "next_receiver_id": "1a1ef390-f88c-11ee-8f78-5de70c77b56e",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "110",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "4",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": "sustain"
+            },
+            "timeout": "2",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "eb89e710-f88b-11ee-8f78-5de70c77b56e",
+                "transition_id": [
+                    "1a25d163-f88c-11ee-8f78-5de70c77b56e"
+                ],
+                "points_combination": {},
+                "action_send": [
+                    {
+                        "name": "高压下电请求充放电专用",
+                        "value": "2",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "高压下电请求充放电专用 == 2",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "eb89e710-f88b-11ee-8f78-5de70c77b56e",
+                "id": "1a1ef390-f88c-11ee-8f78-5de70c77b56e",
+                "next_receiver_id": "1a238770-f88c-11ee-8f78-5de70c77b56e",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "115",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "4",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "eb89e710-f88b-11ee-8f78-5de70c77b56e",
+                "transition_id": [
+                    "1a25d164-f88c-11ee-8f78-5de70c77b56e"
+                ],
+                "points_combination": {},
+                "action_send": [
+                    {
+                        "name": "高压下电请求充放电专用",
+                        "value": "0",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "CP占空比",
+                        "value": "85",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "CP幅值",
+                        "value": "3000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "CP频率",
+                        "value": "1500",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true,
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "高压下电请求充放电专用 == 0 and CP占空比 == 85 and CP幅值 == 3000 and CP频率 == 1500",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "eb89e710-f88b-11ee-8f78-5de70c77b56e",
+                "id": "1a238770-f88c-11ee-8f78-5de70c77b56e",
+                "next_receiver_id": "4ad2bbba-e494-4f43-b17c-65de75549000",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "126",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "4",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "供电设备状态",
+                        "value": "3",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "远程充放电需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "eb89e710-f88b-11ee-8f78-5de70c77b56e",
+                "transition_id": [
+                    "5ceafbb3-a3ba-4acf-a6ec-5846c8f44707"
+                ],
+                "points_combination": {
+                    "BMS自检计数器": "0",
+                    "整车故障立即下高压开关": "1",
+                    "车辆充放电模式": "1",
+                    "中控无线充电请求": "0",
+                    "电池预加热保温需求": "0",
+                    "供电设备状态": "3",
+                    "远程充放电需求": "0"
+                },
+                "action_send": [
+                    {
+                        "name": "BMS自检计数器",
+                        "value": "0",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "整车故障立即下高压开关",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "车辆充放电模式",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "中控无线充电请求",
+                        "value": "0",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "电池预加热保温需求",
+                        "value": "0",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "供电设备状态",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "远程充放电需求",
+                        "value": "0",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    false,
+                    false,
+                    true,
+                    false,
+                    true,
+                    false,
+                    true,
+                    false,
+                    false
+                ],
+                "is_origin_node": true,
+                "condition": "(BMS自检计数器==1 or after(2.2, sec)) and (整车故障立即下高压开关 == 1 or (车辆充放电模式 != 1 and 中控无线充电请求 != 1) or 电池预加热保温需求 == 3 or (车辆充放电模式 == 1 and 供电设备状态 != 3) or 远程充放电需求 == 1 )",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "eb89e710-f88b-11ee-8f78-5de70c77b56e",
+                "id": "1a238770-f88c-11ee-8f78-5de70c77b56e",
+                "next_receiver_id": "4ad2bbba-e494-4f43-b17c-65de75549000",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "126",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "4",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "供电设备状态",
+                        "value": "3",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "远程充放电需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "2.1",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "eb89e710-f88b-11ee-8f78-5de70c77b56e",
+                "transition_id": [
+                    "5ceafbb3-a3ba-4acf-a6ec-5846c8f44707"
+                ],
+                "points_combination": {
+                    "BMS自检计数器": "2",
+                    "整车故障立即下高压开关": "1",
+                    "车辆充放电模式": "0",
+                    "中控无线充电请求": "1",
+                    "电池预加热保温需求": "2",
+                    "供电设备状态": "6",
+                    "远程充放电需求": "0"
+                },
+                "action_send": [
+                    {
+                        "name": "BMS自检计数器",
+                        "value": "2",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "整车故障立即下高压开关",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "车辆充放电模式",
+                        "value": "0",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "中控无线充电请求",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "电池预加热保温需求",
+                        "value": "2",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "供电设备状态",
+                        "value": "6",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "远程充放电需求",
+                        "value": "0",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    false,
+                    true,
+                    true,
+                    true,
+                    false,
+                    false,
+                    false,
+                    true,
+                    false
+                ],
+                "is_origin_node": true,
+                "condition": "(BMS自检计数器==1 or after(2.2, sec)) and (整车故障立即下高压开关 == 1 or (车辆充放电模式 != 1 and 中控无线充电请求 != 1) or 电池预加热保温需求 == 3 or (车辆充放电模式 == 1 and 供电设备状态 != 3) or 远程充放电需求 == 1 )",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "eb89e710-f88b-11ee-8f78-5de70c77b56e",
+                "id": "4ad2bbba-e494-4f43-b17c-65de75549000",
+                "next_receiver_id": null,
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "127",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "2.3",
+            "timeout_type": "wait"
+        }
+    ]
+}

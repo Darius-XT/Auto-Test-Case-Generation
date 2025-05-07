@@ -1,0 +1,88 @@
+{
+    "case_info": {
+        "main_requirement_path_id": [
+            "2e4c4857-2a31-11ef-b441-9543add878bf",
+            "406fba6c-0316-47ad-b0e2-c8e75f32a93f",
+            "7593b2a0-2c59-11ef-bad1-f318d45b1445",
+            "bb424f74-b719-4b7d-9399-718d6c07d9cb",
+            "7eb61b70-2c59-11ef-bad1-f318d45b1445"
+        ],
+        "main_requirement_graph_id": "cc497b4e-2c69-11ef-848b-c8cb9e4ad5d4",
+        "graph_type": "request",
+        "group_name": "default_group"
+    },
+    "observe_signals": [],
+    "test_case": [
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "cc497b4e-2c69-11ef-848b-c8cb9e4ad5d4",
+                "id": "2e4c4857-2a31-11ef-b441-9543add878bf",
+                "next_receiver_id": "7eb61b70-2c59-11ef-bad1-f318d45b1445",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cc497b4e-2c69-11ef-848b-c8cb9e4ad5d4",
+                "transition_id": [
+                    "406fba6c-0316-47ad-b0e2-c8e75f32a93f",
+                    "7593b2a0-2c59-11ef-bad1-f318d45b1445",
+                    "bb424f74-b719-4b7d-9399-718d6c07d9cb"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "2"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "2",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号 == 2",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cc497b4e-2c69-11ef-848b-c8cb9e4ad5d4",
+                "id": "7eb61b70-2c59-11ef-bad1-f318d45b1445",
+                "next_receiver_id": null,
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "总扭矩需求下限",
+                        "value": "1",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        }
+    ]
+}

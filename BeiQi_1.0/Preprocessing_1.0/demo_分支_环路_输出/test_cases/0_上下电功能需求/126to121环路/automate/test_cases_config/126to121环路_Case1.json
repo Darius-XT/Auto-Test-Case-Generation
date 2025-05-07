@@ -1,0 +1,1075 @@
+{
+    "case_info": {
+        "main_requirement_path_id": [
+            "d7047770-cdfa-4236-ab90-6eb5acbf66c7",
+            "d7a83db0-f830-11ee-93f4-db3fea7624c7",
+            "d79a5b00-f830-11ee-93f4-db3fea7624c7",
+            "d7a83db1-f830-11ee-93f4-db3fea7624c7",
+            "d79c08b0-f830-11ee-93f4-db3fea7624c7",
+            "d7a816a1-f830-11ee-93f4-db3fea7624c7",
+            "d79e79b0-f830-11ee-93f4-db3fea7624c7",
+            "fafbfb94-a8fa-4ab6-8dce-5a402fa7abd6",
+            "d79c08b0-f830-11ee-93f4-db3fea7624c7",
+            "d7a816a1-f830-11ee-93f4-db3fea7624c7",
+            "d79e79b0-f830-11ee-93f4-db3fea7624c7",
+            "d7a83db2-f830-11ee-93f4-db3fea7624c7",
+            "d7a0c3a0-f830-11ee-93f4-db3fea7624c7"
+        ],
+        "main_requirement_graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+        "graph_type": "request",
+        "group_name": "default_group"
+    },
+    "observe_signals": [],
+    "test_case": [
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "id": "d7047770-cdfa-4236-ab90-6eb5acbf66c7",
+                "next_receiver_id": "d79a5b00-f830-11ee-93f4-db3fea7624c7",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "transition_id": [
+                    "d7a83db0-f830-11ee-93f4-db3fea7624c7"
+                ],
+                "points_combination": {
+                    "慢充": "0"
+                },
+                "action_send": [
+                    {
+                        "name": "慢充",
+                        "value": "0",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    false
+                ],
+                "is_origin_node": true,
+                "condition": "慢充 == 1",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "id": "d7047770-cdfa-4236-ab90-6eb5acbf66c7",
+                "next_receiver_id": "d79a5b00-f830-11ee-93f4-db3fea7624c7",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "transition_id": [
+                    "d7a83db0-f830-11ee-93f4-db3fea7624c7"
+                ],
+                "points_combination": {},
+                "action_send": [
+                    {
+                        "name": "慢充",
+                        "value": "1",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "慢充 == 1",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "id": "d79a5b00-f830-11ee-93f4-db3fea7624c7",
+                "next_receiver_id": "d79c08b0-f830-11ee-93f4-db3fea7624c7",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "110",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "4",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "10",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "transition_id": [
+                    "d7a83db0-f830-11ee-93f4-db3fea7624c7"
+                ],
+                "points_combination": {},
+                "action_send": [],
+                "conditional_bool_combination": null,
+                "is_origin_node": true,
+                "condition": "",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "id": "d79a5b00-f830-11ee-93f4-db3fea7624c7",
+                "next_receiver_id": "d79c08b0-f830-11ee-93f4-db3fea7624c7",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "110",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "4",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": "sustain"
+            },
+            "timeout": "2",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "transition_id": [
+                    "d7a83db1-f830-11ee-93f4-db3fea7624c7"
+                ],
+                "points_combination": {
+                    "高压下电请求充放电专用": "1"
+                },
+                "action_send": [
+                    {
+                        "name": "高压下电请求充放电专用",
+                        "value": "1",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    false
+                ],
+                "is_origin_node": true,
+                "condition": "高压下电请求充放电专用 == 2",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "id": "d79a5b00-f830-11ee-93f4-db3fea7624c7",
+                "next_receiver_id": "d79c08b0-f830-11ee-93f4-db3fea7624c7",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "110",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "4",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": "sustain"
+            },
+            "timeout": "5",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "transition_id": [
+                    "d7a83db1-f830-11ee-93f4-db3fea7624c7"
+                ],
+                "points_combination": {
+                    "高压下电请求充放电专用": "3"
+                },
+                "action_send": [
+                    {
+                        "name": "高压下电请求充放电专用",
+                        "value": "3",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    false
+                ],
+                "is_origin_node": true,
+                "condition": "高压下电请求充放电专用 == 2",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "id": "d79a5b00-f830-11ee-93f4-db3fea7624c7",
+                "next_receiver_id": "d79c08b0-f830-11ee-93f4-db3fea7624c7",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "110",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "4",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": "sustain"
+            },
+            "timeout": "5",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "transition_id": [
+                    "d7a83db1-f830-11ee-93f4-db3fea7624c7"
+                ],
+                "points_combination": {},
+                "action_send": [
+                    {
+                        "name": "高压下电请求充放电专用",
+                        "value": "2",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "高压下电请求充放电专用 == 2",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "id": "d79c08b0-f830-11ee-93f4-db3fea7624c7",
+                "next_receiver_id": "d79e79b0-f830-11ee-93f4-db3fea7624c7",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "121",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "4",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "id": "d79e79b0-f830-11ee-93f4-db3fea7624c7",
+                "next_receiver_id": "d79e79b0-f830-11ee-93f4-db3fea7624c7",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "126",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "4",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "2.7",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "transition_id": [
+                    "d7a816a1-f830-11ee-93f4-db3fea7624c7"
+                ],
+                "points_combination": {
+                    "后MCU直流母线电压": "60",
+                    "前MCU直流母线电压": "59"
+                },
+                "action_send": [
+                    {
+                        "name": "后MCU直流母线电压",
+                        "value": "60",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "前MCU直流母线电压",
+                        "value": "59",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    false,
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "后MCU直流母线电压 < 60 and 前MCU直流母线电压 < 60 or after(3, sec)",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "id": "d79e79b0-f830-11ee-93f4-db3fea7624c7",
+                "next_receiver_id": "d79e79b0-f830-11ee-93f4-db3fea7624c7",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "126",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "4",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "0.3",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "transition_id": [
+                    "d7a816a1-f830-11ee-93f4-db3fea7624c7"
+                ],
+                "points_combination": {},
+                "action_send": [],
+                "conditional_bool_combination": null,
+                "is_origin_node": false,
+                "condition": "",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "id": "d79e79b0-f830-11ee-93f4-db3fea7624c7",
+                "next_receiver_id": "d79c08b0-f830-11ee-93f4-db3fea7624c7",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "126",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "4",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": false,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "transition_id": [
+                    "fafbfb94-a8fa-4ab6-8dce-5a402fa7abd6"
+                ],
+                "points_combination": {
+                    "动力电池正端继电器粘连": "1",
+                    "前MCU直流母线电压": "61",
+                    "后MCU直流母线电压": "59"
+                },
+                "action_send": [
+                    {
+                        "name": "动力电池正端继电器粘连",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "前MCU直流母线电压",
+                        "value": "61",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后MCU直流母线电压",
+                        "value": "59",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    false
+                ],
+                "is_origin_node": true,
+                "condition": "动力电池正端继电器粘连 == 1 and duration(前MCU直流母线电压>60 and 后MCU直流母线电压>60, 3, sec)",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "id": "d79e79b0-f830-11ee-93f4-db3fea7624c7",
+                "next_receiver_id": "d79c08b0-f830-11ee-93f4-db3fea7624c7",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "126",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "4",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": false,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "3.2",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "transition_id": [
+                    "fafbfb94-a8fa-4ab6-8dce-5a402fa7abd6"
+                ],
+                "points_combination": {
+                    "动力电池正端继电器粘连": "1",
+                    "前MCU直流母线电压": "61",
+                    "后MCU直流母线电压": "60"
+                },
+                "action_send": [
+                    {
+                        "name": "动力电池正端继电器粘连",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "前MCU直流母线电压",
+                        "value": "61",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后MCU直流母线电压",
+                        "value": "60",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    false
+                ],
+                "is_origin_node": true,
+                "condition": "动力电池正端继电器粘连 == 1 and duration(前MCU直流母线电压>60 and 后MCU直流母线电压>60, 3, sec)",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "id": "d79e79b0-f830-11ee-93f4-db3fea7624c7",
+                "next_receiver_id": "d79c08b0-f830-11ee-93f4-db3fea7624c7",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "126",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "4",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": false,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "3.2",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "transition_id": [
+                    "fafbfb94-a8fa-4ab6-8dce-5a402fa7abd6"
+                ],
+                "points_combination": {
+                    "动力电池正端继电器粘连": "1",
+                    "前MCU直流母线电压": "59",
+                    "后MCU直流母线电压": "61"
+                },
+                "action_send": [
+                    {
+                        "name": "动力电池正端继电器粘连",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "前MCU直流母线电压",
+                        "value": "59",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后MCU直流母线电压",
+                        "value": "61",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    false
+                ],
+                "is_origin_node": true,
+                "condition": "动力电池正端继电器粘连 == 1 and duration(前MCU直流母线电压>60 and 后MCU直流母线电压>60, 3, sec)",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "id": "d79e79b0-f830-11ee-93f4-db3fea7624c7",
+                "next_receiver_id": "d79c08b0-f830-11ee-93f4-db3fea7624c7",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "126",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "4",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": false,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "3.2",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "transition_id": [
+                    "fafbfb94-a8fa-4ab6-8dce-5a402fa7abd6"
+                ],
+                "points_combination": {
+                    "动力电池正端继电器粘连": "1",
+                    "前MCU直流母线电压": "60",
+                    "后MCU直流母线电压": "61"
+                },
+                "action_send": [
+                    {
+                        "name": "动力电池正端继电器粘连",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "前MCU直流母线电压",
+                        "value": "60",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后MCU直流母线电压",
+                        "value": "61",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    false
+                ],
+                "is_origin_node": true,
+                "condition": "动力电池正端继电器粘连 == 1 and duration(前MCU直流母线电压>60 and 后MCU直流母线电压>60, 3, sec)",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "id": "d79e79b0-f830-11ee-93f4-db3fea7624c7",
+                "next_receiver_id": "d79c08b0-f830-11ee-93f4-db3fea7624c7",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "126",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "4",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": false,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "3.2",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "transition_id": [
+                    "fafbfb94-a8fa-4ab6-8dce-5a402fa7abd6"
+                ],
+                "points_combination": {
+                    "动力电池正端继电器粘连": "0",
+                    "前MCU直流母线电压": "61",
+                    "后MCU直流母线电压": "61"
+                },
+                "action_send": [
+                    {
+                        "name": "动力电池正端继电器粘连",
+                        "value": "0",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "前MCU直流母线电压",
+                        "value": "61",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后MCU直流母线电压",
+                        "value": "61",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    false,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "动力电池正端继电器粘连 == 1 and duration(前MCU直流母线电压>60 and 后MCU直流母线电压>60, 3, sec)",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "id": "d79e79b0-f830-11ee-93f4-db3fea7624c7",
+                "next_receiver_id": "d79c08b0-f830-11ee-93f4-db3fea7624c7",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "126",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "4",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": false,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "3.2",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "transition_id": [
+                    "fafbfb94-a8fa-4ab6-8dce-5a402fa7abd6"
+                ],
+                "points_combination": {
+                    "动力电池正端继电器粘连": "1",
+                    "前MCU直流母线电压": "61",
+                    "后MCU直流母线电压": "61"
+                },
+                "action_send": [
+                    {
+                        "name": "动力电池正端继电器粘连",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "前MCU直流母线电压",
+                        "value": "61",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后MCU直流母线电压",
+                        "value": "61",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    false
+                ],
+                "is_origin_node": true,
+                "condition": "动力电池正端继电器粘连 == 1 and duration(前MCU直流母线电压>60 and 后MCU直流母线电压>60, 3, sec)",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "id": "d79e79b0-f830-11ee-93f4-db3fea7624c7",
+                "next_receiver_id": "d79c08b0-f830-11ee-93f4-db3fea7624c7",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "126",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "4",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": false,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "2.8",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "transition_id": [
+                    "fafbfb94-a8fa-4ab6-8dce-5a402fa7abd6"
+                ],
+                "points_combination": {},
+                "action_send": [],
+                "conditional_bool_combination": [
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "动力电池正端继电器粘连 == 1 and duration(前MCU直流母线电压>60 and 后MCU直流母线电压>60, 3, sec)",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "id": "d79c08b0-f830-11ee-93f4-db3fea7624c7",
+                "next_receiver_id": "d79c08b0-f830-11ee-93f4-db3fea7624c7",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "121",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "4",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "0.4",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "transition_id": [
+                    "fafbfb94-a8fa-4ab6-8dce-5a402fa7abd6"
+                ],
+                "points_combination": {},
+                "action_send": [],
+                "conditional_bool_combination": null,
+                "is_origin_node": false,
+                "condition": "",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "id": "d79c08b0-f830-11ee-93f4-db3fea7624c7",
+                "next_receiver_id": null,
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "121",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "4",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": false,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "id": "d79c08b0-f830-11ee-93f4-db3fea7624c7",
+                "next_receiver_id": null,
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": false,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "3.00",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "transition_id": [
+                    "d7a816a1-f830-11ee-93f4-db3fea7624c7"
+                ],
+                "points_combination": {
+                    "后MCU直流母线电压": "61",
+                    "前MCU直流母线电压": "59"
+                },
+                "action_send": [
+                    {
+                        "name": "后MCU直流母线电压",
+                        "value": "61",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "前MCU直流母线电压",
+                        "value": "59",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    false,
+                    true,
+                    false
+                ],
+                "is_origin_node": true,
+                "condition": "后MCU直流母线电压 < 60 and 前MCU直流母线电压 < 60 or after(3, sec)",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "d5bcc160-f830-11ee-93f4-db3fea7624c7",
+                "id": "d79c08b0-f830-11ee-93f4-db3fea7624c7",
+                "next_receiver_id": null,
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": false,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "0.30",
+            "timeout_type": "sustain"
+        }
+    ]
+}

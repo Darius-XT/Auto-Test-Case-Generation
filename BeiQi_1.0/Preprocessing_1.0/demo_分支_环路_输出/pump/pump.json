@@ -1,0 +1,1 @@
+{"search":[{"type":"range","ipFrom":"127.0.0.1","ipTo":"127.0.0.1","portConfig":[{"type":"range","portFrom":7200,"portTo":7201}]}],"knownPumps":[],"pumpStorageInfo":[]}

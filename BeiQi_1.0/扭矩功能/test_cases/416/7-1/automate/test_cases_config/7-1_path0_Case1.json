@@ -1,0 +1,1043 @@
+{
+    "case_info": {
+        "main_requirement_path_id": [
+            "525638c9-cda8-436f-902a-51fe41245bb7",
+            "04817930-4014-4794-b3f5-449730ec9c9e",
+            "98e807b2-2a3f-4edd-a1b2-39250fd08327"
+        ],
+        "main_requirement_graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+        "graph_type": "request",
+        "group_name": "default_group"
+    },
+    "observe_signals": [],
+    "test_case": [
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+                "id": "525638c9-cda8-436f-902a-51fe41245bb7",
+                "next_receiver_id": "98e807b2-2a3f-4edd-a1b2-39250fd08327",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+                "transition_id": [
+                    "04817930-4014-4794-b3f5-449730ec9c9e"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "驾驶模式信号": "8"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驾驶模式信号",
+                        "value": "8",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    false
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号==4 and 驾驶模式信号==7",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+                "id": "525638c9-cda8-436f-902a-51fe41245bb7",
+                "next_receiver_id": "98e807b2-2a3f-4edd-a1b2-39250fd08327",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+                "transition_id": [
+                    "04817930-4014-4794-b3f5-449730ec9c9e"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "驾驶模式信号": "6"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驾驶模式信号",
+                        "value": "6",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    false
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号==4 and 驾驶模式信号==7",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+                "id": "525638c9-cda8-436f-902a-51fe41245bb7",
+                "next_receiver_id": "98e807b2-2a3f-4edd-a1b2-39250fd08327",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+                "transition_id": [
+                    "04817930-4014-4794-b3f5-449730ec9c9e"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "驾驶模式信号": "7"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驾驶模式信号",
+                        "value": "7",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    false,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号==4 and 驾驶模式信号==7",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+                "id": "525638c9-cda8-436f-902a-51fe41245bb7",
+                "next_receiver_id": "98e807b2-2a3f-4edd-a1b2-39250fd08327",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+                "transition_id": [
+                    "04817930-4014-4794-b3f5-449730ec9c9e"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "5",
+                    "驾驶模式信号": "7"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "5",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驾驶模式信号",
+                        "value": "7",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    false,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号==4 and 驾驶模式信号==7",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+                "id": "525638c9-cda8-436f-902a-51fe41245bb7",
+                "next_receiver_id": "98e807b2-2a3f-4edd-a1b2-39250fd08327",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+                "transition_id": [
+                    "04817930-4014-4794-b3f5-449730ec9c9e"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "驾驶模式信号": "7",
+                    "总扭矩需求": "-22",
+                    "车速信号": "5"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驾驶模式信号",
+                        "value": "7",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "总扭矩需求",
+                        "value": "-22",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "车速信号",
+                        "value": "5",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号==4 and 驾驶模式信号==7",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+                "id": "98e807b2-2a3f-4edd-a1b2-39250fd08327",
+                "next_receiver_id": "98e807b2-2a3f-4edd-a1b2-39250fd08327",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "原始分配比",
+                        "value": "0.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+                "transition_id": [
+                    "04817930-4014-4794-b3f5-449730ec9c9e"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "驾驶模式信号": "7",
+                    "总扭矩需求": "0",
+                    "车速信号": "5"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驾驶模式信号",
+                        "value": "7",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "总扭矩需求",
+                        "value": "0",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "车速信号",
+                        "value": "5",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号==4 and 驾驶模式信号==7",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+                "id": "98e807b2-2a3f-4edd-a1b2-39250fd08327",
+                "next_receiver_id": "98e807b2-2a3f-4edd-a1b2-39250fd08327",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "原始分配比",
+                        "value": "0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+                "transition_id": [
+                    "04817930-4014-4794-b3f5-449730ec9c9e"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "驾驶模式信号": "7",
+                    "总扭矩需求": "-22",
+                    "车速信号": "8"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驾驶模式信号",
+                        "value": "7",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "总扭矩需求",
+                        "value": "-22",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "车速信号",
+                        "value": "8",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号==4 and 驾驶模式信号==7",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+                "id": "98e807b2-2a3f-4edd-a1b2-39250fd08327",
+                "next_receiver_id": "98e807b2-2a3f-4edd-a1b2-39250fd08327",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "原始分配比",
+                        "value": "0.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+                "transition_id": [
+                    "04817930-4014-4794-b3f5-449730ec9c9e"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "驾驶模式信号": "7",
+                    "总扭矩需求": "0",
+                    "车速信号": "8"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驾驶模式信号",
+                        "value": "7",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "总扭矩需求",
+                        "value": "0",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "车速信号",
+                        "value": "8",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号==4 and 驾驶模式信号==7",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+                "id": "98e807b2-2a3f-4edd-a1b2-39250fd08327",
+                "next_receiver_id": "98e807b2-2a3f-4edd-a1b2-39250fd08327",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "原始分配比",
+                        "value": "0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+                "transition_id": [
+                    "04817930-4014-4794-b3f5-449730ec9c9e"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "驾驶模式信号": "7",
+                    "总扭矩需求": "-22",
+                    "车速信号": "10"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驾驶模式信号",
+                        "value": "7",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "总扭矩需求",
+                        "value": "-22",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "车速信号",
+                        "value": "10",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号==4 and 驾驶模式信号==7",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+                "id": "98e807b2-2a3f-4edd-a1b2-39250fd08327",
+                "next_receiver_id": "98e807b2-2a3f-4edd-a1b2-39250fd08327",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "原始分配比",
+                        "value": "0.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+                "transition_id": [
+                    "04817930-4014-4794-b3f5-449730ec9c9e"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "驾驶模式信号": "7",
+                    "总扭矩需求": "0",
+                    "车速信号": "10"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驾驶模式信号",
+                        "value": "7",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "总扭矩需求",
+                        "value": "0",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "车速信号",
+                        "value": "10",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号==4 and 驾驶模式信号==7",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+                "id": "98e807b2-2a3f-4edd-a1b2-39250fd08327",
+                "next_receiver_id": "98e807b2-2a3f-4edd-a1b2-39250fd08327",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "原始分配比",
+                        "value": "0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+                "transition_id": [
+                    "04817930-4014-4794-b3f5-449730ec9c9e"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "驾驶模式信号": "7",
+                    "总扭矩需求": "-22",
+                    "车速信号": "12"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驾驶模式信号",
+                        "value": "7",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "总扭矩需求",
+                        "value": "-22",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "车速信号",
+                        "value": "12",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号==4 and 驾驶模式信号==7",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+                "id": "98e807b2-2a3f-4edd-a1b2-39250fd08327",
+                "next_receiver_id": "98e807b2-2a3f-4edd-a1b2-39250fd08327",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "原始分配比",
+                        "value": "0.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+                "transition_id": [
+                    "04817930-4014-4794-b3f5-449730ec9c9e"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "驾驶模式信号": "7",
+                    "总扭矩需求": "0",
+                    "车速信号": "12"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驾驶模式信号",
+                        "value": "7",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "总扭矩需求",
+                        "value": "0",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "车速信号",
+                        "value": "12",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号==4 and 驾驶模式信号==7",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+                "id": "98e807b2-2a3f-4edd-a1b2-39250fd08327",
+                "next_receiver_id": "98e807b2-2a3f-4edd-a1b2-39250fd08327",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "原始分配比",
+                        "value": "0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+                "transition_id": [
+                    "04817930-4014-4794-b3f5-449730ec9c9e"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "驾驶模式信号": "7",
+                    "总扭矩需求": "400",
+                    "车速信号": "10"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驾驶模式信号",
+                        "value": "7",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "总扭矩需求",
+                        "value": "400",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "车速信号",
+                        "value": "10",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号==4 and 驾驶模式信号==7",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+                "id": "98e807b2-2a3f-4edd-a1b2-39250fd08327",
+                "next_receiver_id": "98e807b2-2a3f-4edd-a1b2-39250fd08327",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "原始分配比",
+                        "value": "0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+                "transition_id": [
+                    "04817930-4014-4794-b3f5-449730ec9c9e"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "驾驶模式信号": "7",
+                    "总扭矩需求": "400",
+                    "车速信号": "12"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驾驶模式信号",
+                        "value": "7",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "总扭矩需求",
+                        "value": "400",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "车速信号",
+                        "value": "12",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号==4 and 驾驶模式信号==7",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+                "id": "98e807b2-2a3f-4edd-a1b2-39250fd08327",
+                "next_receiver_id": "98e807b2-2a3f-4edd-a1b2-39250fd08327",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "原始分配比",
+                        "value": "0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+                "transition_id": [
+                    "04817930-4014-4794-b3f5-449730ec9c9e"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "驾驶模式信号": "7",
+                    "总扭矩需求": "600",
+                    "车速信号": "10"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驾驶模式信号",
+                        "value": "7",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "总扭矩需求",
+                        "value": "600",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "车速信号",
+                        "value": "10",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号==4 and 驾驶模式信号==7",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+                "id": "98e807b2-2a3f-4edd-a1b2-39250fd08327",
+                "next_receiver_id": "98e807b2-2a3f-4edd-a1b2-39250fd08327",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "原始分配比",
+                        "value": "0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+                "transition_id": [
+                    "04817930-4014-4794-b3f5-449730ec9c9e"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "驾驶模式信号": "7",
+                    "总扭矩需求": "600",
+                    "车速信号": "12"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驾驶模式信号",
+                        "value": "7",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "总扭矩需求",
+                        "value": "600",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "车速信号",
+                        "value": "12",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号==4 and 驾驶模式信号==7",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4",
+                "id": "98e807b2-2a3f-4edd-a1b2-39250fd08327",
+                "next_receiver_id": null,
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "原始分配比",
+                        "value": "0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        }
+    ]
+}

@@ -1,0 +1,125 @@
+{
+    "case_info": {
+        "main_requirement_path_id": [
+            "894f3cc6-f7ca-11ee-9e3e-59c479e9b0e2",
+            "5cc8ae80-fd54-11ee-bf11-c731b702cd0d",
+            "5cc57a30-fd54-11ee-bf11-c731b702cd0d"
+        ],
+        "main_requirement_graph_id": "894f63d2-f7ca-11ee-9e3e-59c479e9b0e2",
+        "graph_type": "request",
+        "group_name": "default_group"
+    },
+    "observe_signals": [],
+    "test_case": [
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "894f63d2-f7ca-11ee-9e3e-59c479e9b0e2",
+                "id": "894f3cc6-f7ca-11ee-9e3e-59c479e9b0e2",
+                "next_receiver_id": "5cc57a30-fd54-11ee-bf11-c731b702cd0d",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "894f63d2-f7ca-11ee-9e3e-59c479e9b0e2",
+                "transition_id": [
+                    "5cc8ae80-fd54-11ee-bf11-c731b702cd0d"
+                ],
+                "points_combination": {
+                    "TR故障": "0"
+                },
+                "action_send": [
+                    {
+                        "name": "TR故障",
+                        "value": "0",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    false
+                ],
+                "is_origin_node": true,
+                "condition": "TR故障==1",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "894f63d2-f7ca-11ee-9e3e-59c479e9b0e2",
+                "id": "894f3cc6-f7ca-11ee-9e3e-59c479e9b0e2",
+                "next_receiver_id": "5cc57a30-fd54-11ee-bf11-c731b702cd0d",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "894f63d2-f7ca-11ee-9e3e-59c479e9b0e2",
+                "transition_id": [
+                    "5cc8ae80-fd54-11ee-bf11-c731b702cd0d"
+                ],
+                "points_combination": {
+                    "TR故障": "1"
+                },
+                "action_send": [
+                    {
+                        "name": "TR故障",
+                        "value": "1",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "TR故障==1",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "894f63d2-f7ca-11ee-9e3e-59c479e9b0e2",
+                "id": "5cc57a30-fd54-11ee-bf11-c731b702cd0d",
+                "next_receiver_id": null,
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        }
+    ]
+}

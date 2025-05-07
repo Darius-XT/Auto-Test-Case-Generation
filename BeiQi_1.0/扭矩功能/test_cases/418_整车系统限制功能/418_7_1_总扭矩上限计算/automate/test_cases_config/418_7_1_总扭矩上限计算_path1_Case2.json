@@ -1,0 +1,35 @@
+{
+    "case_info": {
+        "main_requirement_path_id": [
+            "0bc6a3fc-c44d-4bc7-b3c1-f974debdf70a",
+            "e60b9c63-7132-49b3-a39e-87d567d4dea0",
+            "beb27861-e394-45c6-82d7-d7f2a78e5cbf"
+        ],
+        "main_requirement_graph_id": "cc0d38ce-2c69-11ef-9ff8-c8cb9e4ad5d4",
+        "graph_type": "request",
+        "group_name": "default_group"
+    },
+    "observe_signals": [],
+    "test_case": [
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "cc0d38ce-2c69-11ef-9ff8-c8cb9e4ad5d4",
+                "id": "0bc6a3fc-c44d-4bc7-b3c1-f974debdf70a",
+                "next_receiver_id": "beb27861-e394-45c6-82d7-d7f2a78e5cbf",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        }
+    ]
+}

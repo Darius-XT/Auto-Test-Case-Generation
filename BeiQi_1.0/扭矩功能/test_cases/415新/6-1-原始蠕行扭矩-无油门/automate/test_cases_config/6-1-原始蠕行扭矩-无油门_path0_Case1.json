@@ -1,0 +1,609 @@
+{
+    "case_info": {
+        "main_requirement_path_id": [
+            "f480b3e1-3bda-417d-af6f-1b688382482e",
+            "970a0d0c-df9a-4447-aee5-9569b542c3ba",
+            "b112fa3d-1a71-452d-b88d-a3260ebe1b58"
+        ],
+        "main_requirement_graph_id": "032fd6a0-2c7c-11ef-ac6b-c8cb9e4ad5d4",
+        "graph_type": "request",
+        "group_name": "default_group"
+    },
+    "observe_signals": [],
+    "test_case": [
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "032fd6a0-2c7c-11ef-ac6b-c8cb9e4ad5d4",
+                "id": "f480b3e1-3bda-417d-af6f-1b688382482e",
+                "next_receiver_id": "b112fa3d-1a71-452d-b88d-a3260ebe1b58",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "032fd6a0-2c7c-11ef-ac6b-c8cb9e4ad5d4",
+                "transition_id": [
+                    "970a0d0c-df9a-4447-aee5-9569b542c3ba"
+                ],
+                "points_combination": {
+                    "车速信号": "15",
+                    "加速踏板": "0.5",
+                    "蠕行扭矩激活标志位": "1",
+                    "策略挡位信号": "3"
+                },
+                "action_send": [
+                    {
+                        "name": "车速信号",
+                        "value": "15",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "加速踏板",
+                        "value": "0.5",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "蠕行扭矩激活标志位",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true,
+                    true,
+                    false
+                ],
+                "is_origin_node": true,
+                "condition": "车速信号<16 and 加速踏板<1.5 and 蠕行扭矩激活标志位==1 and 策略挡位信号==4",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "032fd6a0-2c7c-11ef-ac6b-c8cb9e4ad5d4",
+                "id": "f480b3e1-3bda-417d-af6f-1b688382482e",
+                "next_receiver_id": "b112fa3d-1a71-452d-b88d-a3260ebe1b58",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "032fd6a0-2c7c-11ef-ac6b-c8cb9e4ad5d4",
+                "transition_id": [
+                    "970a0d0c-df9a-4447-aee5-9569b542c3ba"
+                ],
+                "points_combination": {
+                    "车速信号": "15",
+                    "加速踏板": "0.5",
+                    "蠕行扭矩激活标志位": "1",
+                    "策略挡位信号": "5"
+                },
+                "action_send": [
+                    {
+                        "name": "车速信号",
+                        "value": "15",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "加速踏板",
+                        "value": "0.5",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "蠕行扭矩激活标志位",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "策略挡位信号",
+                        "value": "5",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true,
+                    true,
+                    false
+                ],
+                "is_origin_node": true,
+                "condition": "车速信号<16 and 加速踏板<1.5 and 蠕行扭矩激活标志位==1 and 策略挡位信号==4",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "032fd6a0-2c7c-11ef-ac6b-c8cb9e4ad5d4",
+                "id": "f480b3e1-3bda-417d-af6f-1b688382482e",
+                "next_receiver_id": "b112fa3d-1a71-452d-b88d-a3260ebe1b58",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "032fd6a0-2c7c-11ef-ac6b-c8cb9e4ad5d4",
+                "transition_id": [
+                    "970a0d0c-df9a-4447-aee5-9569b542c3ba"
+                ],
+                "points_combination": {
+                    "车速信号": "15",
+                    "加速踏板": "0.5",
+                    "蠕行扭矩激活标志位": "0",
+                    "策略挡位信号": "4"
+                },
+                "action_send": [
+                    {
+                        "name": "车速信号",
+                        "value": "15",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "加速踏板",
+                        "value": "0.5",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "蠕行扭矩激活标志位",
+                        "value": "0",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true,
+                    false,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "车速信号<16 and 加速踏板<1.5 and 蠕行扭矩激活标志位==1 and 策略挡位信号==4",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "032fd6a0-2c7c-11ef-ac6b-c8cb9e4ad5d4",
+                "id": "f480b3e1-3bda-417d-af6f-1b688382482e",
+                "next_receiver_id": "b112fa3d-1a71-452d-b88d-a3260ebe1b58",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "032fd6a0-2c7c-11ef-ac6b-c8cb9e4ad5d4",
+                "transition_id": [
+                    "970a0d0c-df9a-4447-aee5-9569b542c3ba"
+                ],
+                "points_combination": {
+                    "车速信号": "15",
+                    "加速踏板": "0.5",
+                    "蠕行扭矩激活标志位": "2",
+                    "策略挡位信号": "4"
+                },
+                "action_send": [
+                    {
+                        "name": "车速信号",
+                        "value": "15",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "加速踏板",
+                        "value": "0.5",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "蠕行扭矩激活标志位",
+                        "value": "2",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true,
+                    false,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "车速信号<16 and 加速踏板<1.5 and 蠕行扭矩激活标志位==1 and 策略挡位信号==4",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "032fd6a0-2c7c-11ef-ac6b-c8cb9e4ad5d4",
+                "id": "f480b3e1-3bda-417d-af6f-1b688382482e",
+                "next_receiver_id": "b112fa3d-1a71-452d-b88d-a3260ebe1b58",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "032fd6a0-2c7c-11ef-ac6b-c8cb9e4ad5d4",
+                "transition_id": [
+                    "970a0d0c-df9a-4447-aee5-9569b542c3ba"
+                ],
+                "points_combination": {
+                    "车速信号": "15",
+                    "加速踏板": "1.5",
+                    "蠕行扭矩激活标志位": "1",
+                    "策略挡位信号": "4"
+                },
+                "action_send": [
+                    {
+                        "name": "车速信号",
+                        "value": "15",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "加速踏板",
+                        "value": "1.5",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "蠕行扭矩激活标志位",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    false,
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "车速信号<16 and 加速踏板<1.5 and 蠕行扭矩激活标志位==1 and 策略挡位信号==4",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "032fd6a0-2c7c-11ef-ac6b-c8cb9e4ad5d4",
+                "id": "f480b3e1-3bda-417d-af6f-1b688382482e",
+                "next_receiver_id": "b112fa3d-1a71-452d-b88d-a3260ebe1b58",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "032fd6a0-2c7c-11ef-ac6b-c8cb9e4ad5d4",
+                "transition_id": [
+                    "970a0d0c-df9a-4447-aee5-9569b542c3ba"
+                ],
+                "points_combination": {
+                    "车速信号": "15",
+                    "加速踏板": "2.5",
+                    "蠕行扭矩激活标志位": "1",
+                    "策略挡位信号": "4"
+                },
+                "action_send": [
+                    {
+                        "name": "车速信号",
+                        "value": "15",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "加速踏板",
+                        "value": "2.5",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "蠕行扭矩激活标志位",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    false,
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "车速信号<16 and 加速踏板<1.5 and 蠕行扭矩激活标志位==1 and 策略挡位信号==4",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "032fd6a0-2c7c-11ef-ac6b-c8cb9e4ad5d4",
+                "id": "f480b3e1-3bda-417d-af6f-1b688382482e",
+                "next_receiver_id": "b112fa3d-1a71-452d-b88d-a3260ebe1b58",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "032fd6a0-2c7c-11ef-ac6b-c8cb9e4ad5d4",
+                "transition_id": [
+                    "970a0d0c-df9a-4447-aee5-9569b542c3ba"
+                ],
+                "points_combination": {
+                    "车速信号": "16",
+                    "加速踏板": "0.5",
+                    "蠕行扭矩激活标志位": "1",
+                    "策略挡位信号": "4"
+                },
+                "action_send": [
+                    {
+                        "name": "车速信号",
+                        "value": "16",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "加速踏板",
+                        "value": "0.5",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "蠕行扭矩激活标志位",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    false,
+                    true,
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "车速信号<16 and 加速踏板<1.5 and 蠕行扭矩激活标志位==1 and 策略挡位信号==4",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "032fd6a0-2c7c-11ef-ac6b-c8cb9e4ad5d4",
+                "id": "f480b3e1-3bda-417d-af6f-1b688382482e",
+                "next_receiver_id": "b112fa3d-1a71-452d-b88d-a3260ebe1b58",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "032fd6a0-2c7c-11ef-ac6b-c8cb9e4ad5d4",
+                "transition_id": [
+                    "970a0d0c-df9a-4447-aee5-9569b542c3ba"
+                ],
+                "points_combination": {
+                    "车速信号": "17",
+                    "加速踏板": "0.5",
+                    "蠕行扭矩激活标志位": "1",
+                    "策略挡位信号": "4"
+                },
+                "action_send": [
+                    {
+                        "name": "车速信号",
+                        "value": "17",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "加速踏板",
+                        "value": "0.5",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "蠕行扭矩激活标志位",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    false,
+                    true,
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "车速信号<16 and 加速踏板<1.5 and 蠕行扭矩激活标志位==1 and 策略挡位信号==4",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "032fd6a0-2c7c-11ef-ac6b-c8cb9e4ad5d4",
+                "id": "f480b3e1-3bda-417d-af6f-1b688382482e",
+                "next_receiver_id": "b112fa3d-1a71-452d-b88d-a3260ebe1b58",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "032fd6a0-2c7c-11ef-ac6b-c8cb9e4ad5d4",
+                "transition_id": [
+                    "970a0d0c-df9a-4447-aee5-9569b542c3ba"
+                ],
+                "points_combination": {
+                    "车速信号": "15",
+                    "加速踏板": "0.5",
+                    "蠕行扭矩激活标志位": "1",
+                    "策略挡位信号": "4"
+                },
+                "action_send": [
+                    {
+                        "name": "车速信号",
+                        "value": "15",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "加速踏板",
+                        "value": "0.5",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "蠕行扭矩激活标志位",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true,
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "车速信号<16 and 加速踏板<1.5 and 蠕行扭矩激活标志位==1 and 策略挡位信号==4",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "032fd6a0-2c7c-11ef-ac6b-c8cb9e4ad5d4",
+                "id": "b112fa3d-1a71-452d-b88d-a3260ebe1b58",
+                "next_receiver_id": null,
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "原始蠕行扭矩",
+                        "value": "12",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "原始蠕行扭矩",
+                        "value": "2600",
+                        "type": "le",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        }
+    ]
+}

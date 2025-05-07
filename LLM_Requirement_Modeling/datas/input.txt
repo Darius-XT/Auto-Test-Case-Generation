@@ -1,0 +1,477 @@
+graph_id: EBC-3-1
+graph_name: EBC-3-1
+node_id: Start
+node_type: write
+node_information: START
+node_over
+node_id: EBC-3-1_node_0
+node_type: read
+branch_no: EBC-3-1_edge_2
+branch_yes: EBC-3-1_edge_1
+node_information: VCU_APSPerc > KfEBC_APSBrkMax_Pct
+node_over
+node_id: EBC-3-1_node_1
+node_type: write
+node_information: VbEBC_AclPedApled_flg = 1
+node_over
+node_id: EBC-3-1_node_2
+node_type: read
+branch_yes: EBC-3-1_edge_3
+node_information: VCU_APSPerc < KfEBC_APSBrkMin_Pct
+node_over
+node_id: EBC-3-1_node_3
+node_type: write
+node_information: VbEBC_AclPedApled_flg = 0
+node_over
+edge_id: EBC-3-1_edge_0
+source_node_id: Start
+target_node_id: EBC-3-1_node_0
+edge_information: 
+edge_over
+edge_id: EBC-3-1_edge_1
+source_node_id: EBC-3-1_node_0
+target_node_id: EBC-3-1_node_1
+edge_information: 
+edge_over
+edge_id: EBC-3-1_edge_2
+source_node_id: EBC-3-1_node_0
+target_node_id: EBC-3-1_node_2
+edge_information: 
+edge_over
+edge_id: EBC-3-1_edge_3
+source_node_id: EBC-3-1_node_2
+target_node_id: EBC-3-1_node_3
+edge_information: 
+edge_over
+graph_over
+graph_id: EBC-4-1
+graph_name: EBC-4-1
+node_id: Start
+node_type: write
+node_information: START
+node_over
+node_id: EBC-4-1_node_0
+node_type: read
+branch_no: EBC-4-1_edge_2
+branch_yes: EBC-4-1_edge_1
+node_information: (Mot_Spd >= -KfEBC_MotSpdZeroThrd_rpm and Mot_Spd <= KfEBC_MotSpdZeroThrd_rpm) and (VbEBC_AclPedApled_flg == 0) and (ESP_SysSts_EPB == "Released") and (VCU_GearSig == "D") and (VCU_WormSts == "关闭")
+node_over
+node_id: EBC-4-1_node_1
+node_type: write
+node_information: VbEBC_VehStop_flg = 1
+node_over
+node_id: EBC-4-1_node_3
+node_type: write
+node_information: VbEBC_VehStop_flg = 0
+node_over
+edge_id: EBC-4-1_edge_0
+source_node_id: Start
+target_node_id: EBC-4-1_node_0
+edge_information: 
+edge_over
+edge_id: EBC-4-1_edge_1
+source_node_id: EBC-4-1_node_0
+target_node_id: EBC-4-1_node_1
+edge_information: 
+edge_over
+edge_id: EBC-4-1_edge_2
+source_node_id: EBC-4-1_node_0
+target_node_id: EBC-4-1_node_3
+edge_information: 
+edge_over
+graph_over
+graph_id: EBC-5-1
+graph_name: EBC-5-1
+node_id: Start
+node_type: write
+node_information: START
+node_over
+node_id: EBC-5-1_node_0
+node_type: read
+branch_yes: EBC-5-1_edge_1
+node_information: (abs(motor_speed) <= KfEBC_MotSpdZeroThrd_rpm) and (duration >= KfEBC_SpdZeroDebounceThreshold_s) and (VbEBC_VehRelease_flg == 0)
+node_over
+node_id: EBC-5-1_node_1
+node_type: write
+node_information: VfEBC_SlopeTorqueMemy_Nm = lookup_table(YRS_LgtAcce, [KtEBC_SlopeTqMem_1X_null, KtEBC_SlopeTqMem_1Y_Nm])
+node_over
+node_id: EBC-5-1_node_2
+node_type: write
+node_information: VfEBC_LongitAccMem_Null = YRS_LgtAcce
+node_over
+edge_id: EBC-5-1_edge_0
+source_node_id: Start
+target_node_id: EBC-5-1_node_0
+edge_information: 
+edge_over
+edge_id: EBC-5-1_edge_1
+source_node_id: EBC-5-1_node_0
+target_node_id: EBC-5-1_node_1
+edge_information: 
+edge_over
+edge_id: EBC-5-1_edge_2
+source_node_id: EBC-5-1_node_1
+target_node_id: EBC-5-1_node_2
+edge_information: 
+edge_over
+graph_over
+graph_id: EBC-6-1
+graph_name: EBC-6-1
+node_id: Start
+node_type: write
+node_information: START
+node_over
+node_id: EBC-6-1_node_0
+node_type: read
+branch_yes: EBC-6-1_edge_1
+node_information: (VfEBC_SlopeTorqueMemy_Nm >= 0 and VbEBC_AclPedApled_flg == 1 and VCU_FrntMotTarTqCmd + VCU_ReMotTarTqCmd >= VfEBC_SlopeTorqueMemy_Nm + KfEBC_ParkRecoOffset_Nm and VfEBC_DrvReq_Nm >= VfEBC_SlopeTorqueMemy_Nm + KfEBC_ParkRecoOffset_Nm) or (VfEBC_SlopeTorqueMemy_Nm < 0 and VbEBC_AclPedApled_flg == 1 and VCU_FrntMotTarTqCmd + VCU_ReMotTarTqCmd >= KfEBC_ParkRecoOffset_Nm and VfEBC_DrvReq_Nm >= KfEBC_ParkRecoOffset_Nm) or (VCU_GearSig == 'R' or VCU_GearSig == 'N') or (abs(motor_speed) > KfEBC_MotSpdMoveThrd_rpm and duration >= KfEBC_SpdZeroDebounceThreshold_s)
+node_over
+node_id: EBC-6-1_node_1
+node_type: write
+node_information: VbEBC_VehRelease_flg = 1
+node_over
+edge_id: EBC-6-1_edge_0
+source_node_id: Start
+target_node_id: EBC-6-1_node_0
+edge_information: 
+edge_over
+edge_id: EBC-6-1_edge_1
+source_node_id: EBC-6-1_node_0
+target_node_id: EBC-6-1_node_1
+edge_information: 
+edge_over
+graph_over
+graph_id: EBC-7-1
+graph_name: EBC-7-1
+node_id: Start
+node_type: write
+node_information: START
+node_over
+node_id: EBC-7-1_node_0
+node_type: read
+branch_yes: EBC-7-1_edge_1
+node_information: VbEBC_GearPState_flg == 0 and VbEBC_VehRelease_flg == 0 and VbEBC_VehStop_flg == 1
+node_over
+node_id: EBC-7-1_node_1
+node_type: write
+node_information: VbEBC_PState_flg = 1
+node_over
+node_id: EBC-7-1_node_2
+node_type: read
+branch_no: EBC-7-1_edge_4
+branch_yes: EBC-7-1_edge_3
+node_information: EBCReqTq >= abs(驻车扭矩) + 驻车扭矩补偿值
+node_over
+node_id: EBC-7-1_node_3
+node_type: write
+node_information: EBCReqTq = EBCReqTq
+node_over
+node_id: EBC-7-1_node_5
+node_type: write
+node_information: EBCReqTq = abs(驻车扭矩) + 驻车扭矩补偿值
+node_over
+node_id: EBC-7-1_node_6
+node_type: read
+branch_yes: EBC-7-1_edge_7
+node_information: 加速踏板踩下标志位 == 1
+node_over
+node_id: EBC-7-1_node_7
+node_type: write
+node_information: while Mot_Spd <= KfEBC_MotSpdForThrd_rpm and EBCReqTq > 0:
+node_over
+node_id: EBC-7-1_node_8
+node_type: write
+node_information: EBCReqTq = EBCReqTq - 梯度
+node_over
+node_id: EBC-7-1_node_9
+node_type: write
+node_information: VbEBC_PState_flg = 0
+node_over
+node_id: EBC-7-1_node_10
+node_type: read
+branch_yes: EBC-7-1_edge_11
+node_information: EBC-6-1中条件3 == 1 or EBC-6-1中条件4 == 1 or VbEBC_GearPState_flg == 1
+node_over
+node_id: EBC-7-1_node_11
+node_type: write
+node_information: VbEBC_PState_flg = 0
+node_over
+edge_id: EBC-7-1_edge_0
+source_node_id: Start
+target_node_id: EBC-7-1_node_0
+edge_information: 
+edge_over
+edge_id: EBC-7-1_edge_1
+source_node_id: EBC-7-1_node_0
+target_node_id: EBC-7-1_node_1
+edge_information: 
+edge_over
+edge_id: EBC-7-1_edge_2
+source_node_id: EBC-7-1_node_1
+target_node_id: EBC-7-1_node_2
+edge_information: 
+edge_over
+edge_id: EBC-7-1_edge_3
+source_node_id: EBC-7-1_node_2
+target_node_id: EBC-7-1_node_3
+edge_information: 
+edge_over
+edge_id: EBC-7-1_edge_4
+source_node_id: EBC-7-1_node_2
+target_node_id: EBC-7-1_node_5
+edge_information: 
+edge_over
+edge_id: EBC-7-1_edge_5
+source_node_id: EBC-7-1_node_3
+target_node_id: EBC-7-1_node_6
+edge_information: 
+edge_over
+edge_id: EBC-7-1_edge_6
+source_node_id: EBC-7-1_node_5
+target_node_id: EBC-7-1_node_6
+edge_information: 
+edge_over
+edge_id: EBC-7-1_edge_7
+source_node_id: EBC-7-1_node_6
+target_node_id: EBC-7-1_node_7
+edge_information: 
+edge_over
+edge_id: EBC-7-1_edge_8
+source_node_id: EBC-7-1_node_7
+target_node_id: EBC-7-1_node_9
+edge_information: 
+edge_over
+edge_id: EBC-7-1_edge_9
+source_node_id: EBC-7-1_node_8
+target_node_id: EBC-7-1_node_9
+edge_information: 
+edge_over
+edge_id: EBC-7-1_edge_10
+source_node_id: EBC-7-1_node_9
+target_node_id: EBC-7-1_node_10
+edge_information: 
+edge_over
+edge_id: EBC-7-1_edge_11
+source_node_id: EBC-7-1_node_10
+target_node_id: EBC-7-1_node_11
+edge_information: 
+edge_over
+graph_over
+graph_id: EBC-9-3
+graph_name: EBC-9-3
+node_id: Start
+node_type: write
+node_information: START
+node_over
+node_id: EBC-9-3_node_0
+node_type: read
+branch_yes: EBC-9-3_edge_1
+node_information: VbEBC_GearPState_flg == 0 and GearSignal == P
+node_over
+node_id: EBC-9-3_node_1
+node_type: write
+node_information: VbEBC_GearPState_flg = 1
+node_over
+node_id: EBC-9-3_node_2
+node_type: write
+node_information: VbEBC_PState_flg = 0
+node_over
+node_id: EBC-9-3_node_3
+node_type: read
+branch_no: EBC-9-3_edge_5
+branch_yes: EBC-9-3_edge_4
+node_information: EBCReqTq >= abs(ParkTq) + KfEBC_ParkTqOffset_Nm
+node_over
+node_id: EBC-9-3_node_4
+node_type: write
+node_information: pass
+node_over
+node_id: EBC-9-3_node_6
+node_type: write
+node_information: EBCReqTq = abs(ParkTq) + KfEBC_ParkTqOffset_Nm
+node_over
+node_id: EBC-9-3_node_7
+node_type: write
+node_information: while ESP_SysSts_EPB != Closed:
+node_over
+node_id: EBC-9-3_node_8
+node_type: write
+node_information: pass
+node_over
+node_id: EBC-9-3_node_9
+node_type: write
+node_information: EBCReqTq = 0
+node_over
+node_id: EBC-9-3_node_10
+node_type: read
+branch_yes: EBC-9-3_edge_11
+node_information: ESP_SysSts_EPB == Closed
+node_over
+node_id: EBC-9-3_node_11
+node_type: write
+node_information: EBCReqTq = 0
+node_over
+node_id: EBC-9-3_node_12
+node_type: read
+branch_yes: EBC-9-3_edge_13
+node_information: GearSignal != P and ESP_SysSts_EPB != Closed
+node_over
+node_id: EBC-9-3_node_13
+node_type: write
+node_information: EBCReqTq = 0
+node_over
+node_id: EBC-9-3_node_14
+node_type: read
+branch_yes: EBC-9-3_edge_15
+node_information: EBCReqTq == 0
+node_over
+node_id: EBC-9-3_node_15
+node_type: write
+node_information: VbEBC_GearPState_flg = 0
+node_over
+edge_id: EBC-9-3_edge_0
+source_node_id: Start
+target_node_id: EBC-9-3_node_0
+edge_information: 
+edge_over
+edge_id: EBC-9-3_edge_1
+source_node_id: EBC-9-3_node_0
+target_node_id: EBC-9-3_node_1
+edge_information: 
+edge_over
+edge_id: EBC-9-3_edge_2
+source_node_id: EBC-9-3_node_1
+target_node_id: EBC-9-3_node_2
+edge_information: 
+edge_over
+edge_id: EBC-9-3_edge_3
+source_node_id: EBC-9-3_node_2
+target_node_id: EBC-9-3_node_3
+edge_information: 
+edge_over
+edge_id: EBC-9-3_edge_4
+source_node_id: EBC-9-3_node_3
+target_node_id: EBC-9-3_node_4
+edge_information: 
+edge_over
+edge_id: EBC-9-3_edge_5
+source_node_id: EBC-9-3_node_3
+target_node_id: EBC-9-3_node_6
+edge_information: 
+edge_over
+edge_id: EBC-9-3_edge_6
+source_node_id: EBC-9-3_node_6
+target_node_id: EBC-9-3_node_7
+edge_information: 
+edge_over
+edge_id: EBC-9-3_edge_7
+source_node_id: EBC-9-3_node_7
+target_node_id: EBC-9-3_node_9
+edge_information: 
+edge_over
+edge_id: EBC-9-3_edge_8
+source_node_id: EBC-9-3_node_8
+target_node_id: EBC-9-3_node_9
+edge_information: 
+edge_over
+edge_id: EBC-9-3_edge_9
+source_node_id: EBC-9-3_node_4
+target_node_id: EBC-9-3_node_10
+edge_information: 
+edge_over
+edge_id: EBC-9-3_edge_10
+source_node_id: EBC-9-3_node_9
+target_node_id: EBC-9-3_node_10
+edge_information: 
+edge_over
+edge_id: EBC-9-3_edge_11
+source_node_id: EBC-9-3_node_10
+target_node_id: EBC-9-3_node_11
+edge_information: 
+edge_over
+edge_id: EBC-9-3_edge_12
+source_node_id: EBC-9-3_node_11
+target_node_id: EBC-9-3_node_12
+edge_information: 
+edge_over
+edge_id: EBC-9-3_edge_13
+source_node_id: EBC-9-3_node_12
+target_node_id: EBC-9-3_node_13
+edge_information: 
+edge_over
+edge_id: EBC-9-3_edge_14
+source_node_id: EBC-9-3_node_13
+target_node_id: EBC-9-3_node_14
+edge_information: 
+edge_over
+edge_id: EBC-9-3_edge_15
+source_node_id: EBC-9-3_node_14
+target_node_id: EBC-9-3_node_15
+edge_information: 
+edge_over
+graph_over
+graph_id: EBC-14-1
+graph_name: EBC-14-1
+node_id: Start
+node_type: write
+node_information: START
+node_over
+node_id: EBC-14-1_node_0
+node_type: read
+branch_yes: EBC-14-1_edge_1
+node_information: hydraulic_parking_status == 0 and VbEBC_MotTqNega_flg_rising_edge == 1 and VCU_BrkSig == 0
+node_over
+node_id: EBC-14-1_node_1
+node_type: write
+node_information: slope_recognition_status = 2
+node_over
+node_id: EBC-14-1_node_2
+node_type: write
+node_information: record_acceleration_and_calculate_slope()
+node_over
+node_id: EBC-14-1_node_3
+node_type: read
+branch_yes: EBC-14-1_edge_4
+node_information: hydraulic_parking_status == 1 or (VeEBC_RecoState_enum == 2 and duration >= 100) or VCU_BrkSig == 1
+node_over
+node_id: EBC-14-1_node_4
+node_type: write
+node_information: exit_slope_recognition()
+node_over
+edge_id: EBC-14-1_edge_0
+source_node_id: Start
+target_node_id: EBC-14-1_node_0
+edge_information: 
+edge_over
+edge_id: EBC-14-1_edge_1
+source_node_id: EBC-14-1_node_0
+target_node_id: EBC-14-1_node_1
+edge_information: 
+edge_over
+edge_id: EBC-14-1_edge_2
+source_node_id: EBC-14-1_node_1
+target_node_id: EBC-14-1_node_2
+edge_information: 
+edge_over
+edge_id: EBC-14-1_edge_3
+source_node_id: EBC-14-1_node_2
+target_node_id: EBC-14-1_node_3
+edge_information: 
+edge_over
+edge_id: EBC-14-1_edge_4
+source_node_id: EBC-14-1_node_3
+target_node_id: EBC-14-1_node_4
+edge_information: 
+edge_over
+graph_over
+graph_id: EBC-16-1
+graph_name: EBC-16-1
+node_id: Start
+node_type: write
+node_information: START
+node_over
+node_id: EBC-16-1_node_0
+node_type: write
+node_information: VfEBC_EleBrkTqMiddle_Nm = lookup_table(VfEBC_EBCRequest_2X_null, VfEBC_EBCRequest_2Y_rpm, VfEBC_EBCRequest_2Z_Nm)
+node_over
+graph_over

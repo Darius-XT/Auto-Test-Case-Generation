@@ -1,0 +1,4993 @@
+{
+    "case_info": {
+        "main_requirement_path_id": [
+            "3d876369-2c55-11ef-b414-a9d76e88cb45",
+            "3d876366-2c55-11ef-b414-a9d76e88cb45",
+            "3d878a78-2c55-11ef-b414-a9d76e88cb45",
+            "3d876367-2c55-11ef-b414-a9d76e88cb45",
+            "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+            "3d876360-2c55-11ef-b414-a9d76e88cb45",
+            "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+            "3d876361-2c55-11ef-b414-a9d76e88cb45",
+            "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+            "3d876364-2c55-11ef-b414-a9d76e88cb45",
+            "fef603b0-2d1a-11ef-b7b9-b137f0a20b71",
+            "3d876365-2c55-11ef-b414-a9d76e88cb45",
+            "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+            "3d876360-2c55-11ef-b414-a9d76e88cb45",
+            "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+            "3d876361-2c55-11ef-b414-a9d76e88cb45",
+            "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+            "3d876364-2c55-11ef-b414-a9d76e88cb45",
+            "fef603b0-2d1a-11ef-b7b9-b137f0a20b71",
+            "3d876363-2c55-11ef-b414-a9d76e88cb45",
+            "3d878a73-2c55-11ef-b414-a9d76e88cb45"
+        ],
+        "main_requirement_graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+        "graph_type": "request",
+        "group_name": "default_group"
+    },
+    "observe_signals": [],
+    "test_case": [
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d876369-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876366-2c55-11ef-b414-a9d76e88cb45",
+                    "3d878a78-2c55-11ef-b414-a9d76e88cb45",
+                    "3d876367-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "驱动电机转速": "0",
+                    "后驱动电机最大驱动转矩": "-400",
+                    "后驱动电机最大制动转矩": "-400"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "0",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "-400",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "-400",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号!= 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "330.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-330.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "-400",
+                    "驱动电机转速": "0",
+                    "后驱动电机最大制动转矩": "-400"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "-400",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "0",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "-400",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "330.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-330.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "-100",
+                    "驱动电机转速": "500",
+                    "后驱动电机最大制动转矩": "-100"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "-100",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "500",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "-100",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "100.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-100.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "-50",
+                    "驱动电机转速": "1000",
+                    "后驱动电机最大制动转矩": "-50"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "-50",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "1000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "-50",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "50.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-50.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "0",
+                    "驱动电机转速": "1500",
+                    "后驱动电机最大制动转矩": "0"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "0",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "1500",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "0",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "0.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-0.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "50",
+                    "驱动电机转速": "2000",
+                    "后驱动电机最大制动转矩": "50"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "50",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "2000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "50",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "50.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-50.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "100",
+                    "驱动电机转速": "2500",
+                    "后驱动电机最大制动转矩": "100"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "100",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "2500",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "100",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "100.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-100.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "150",
+                    "驱动电机转速": "3000",
+                    "后驱动电机最大制动转矩": "150"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "150",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "3000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "150",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "150.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-150.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "200",
+                    "驱动电机转速": "3500",
+                    "后驱动电机最大制动转矩": "200"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "200",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "3500",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "200",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "200.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-200.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "300",
+                    "驱动电机转速": "4000",
+                    "后驱动电机最大制动转矩": "300"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "300",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "4000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "300",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "300.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-300.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "365",
+                    "驱动电机转速": "4840",
+                    "后驱动电机最大制动转矩": "365"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "365",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "4840",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "365",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "330.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-330.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "380",
+                    "驱动电机转速": "5000",
+                    "后驱动电机最大制动转矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "5000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "330.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-330.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "380",
+                    "驱动电机转速": "5500",
+                    "后驱动电机最大制动转矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "5500",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "329.8884462151394",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-329.8884462151394",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "380",
+                    "驱动电机转速": "6000",
+                    "后驱动电机最大制动转矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "6000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "302.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-302.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "380",
+                    "驱动电机转速": "6500",
+                    "后驱动电机最大制动转矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "6500",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "280.5",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-280.5",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "380",
+                    "驱动电机转速": "7500",
+                    "后驱动电机最大制动转矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "7500",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "243.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-243.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "380",
+                    "驱动电机转速": "8000",
+                    "后驱动电机最大制动转矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "8000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "227.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-227.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "380",
+                    "驱动电机转速": "9000",
+                    "后驱动电机最大制动转矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "9000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "202.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-202.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "380",
+                    "驱动电机转速": "10000",
+                    "后驱动电机最大制动转矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "10000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "181.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-181.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "380",
+                    "驱动电机转速": "11000",
+                    "后驱动电机最大制动转矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "11000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "165.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-165.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "380",
+                    "驱动电机转速": "12000",
+                    "后驱动电机最大制动转矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "12000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "151.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-151.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "380",
+                    "驱动电机转速": "13000",
+                    "后驱动电机最大制动转矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "13000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "140.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-140.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876364-2c55-11ef-b414-a9d76e88cb45",
+                    "fef603b0-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876365-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "后驱动电机最大驱动转矩": "-400",
+                    "驱动电机转速": "0",
+                    "后驱动电机最大制动转矩": "-400"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "-400",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "0",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "-400",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 4 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "330.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-330.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876364-2c55-11ef-b414-a9d76e88cb45",
+                    "fef603b0-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876365-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "后驱动电机最大驱动转矩": "-100",
+                    "驱动电机转速": "500",
+                    "后驱动电机最大制动转矩": "-100"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "-100",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "500",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "-100",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 4 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "100.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-100.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876364-2c55-11ef-b414-a9d76e88cb45",
+                    "fef603b0-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876365-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "后驱动电机最大驱动转矩": "-50",
+                    "驱动电机转速": "1000",
+                    "后驱动电机最大制动转矩": "-50"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "-50",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "1000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "-50",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 4 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "50.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-50.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876364-2c55-11ef-b414-a9d76e88cb45",
+                    "fef603b0-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876365-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "后驱动电机最大驱动转矩": "0",
+                    "驱动电机转速": "1500",
+                    "后驱动电机最大制动转矩": "0"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "0",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "1500",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "0",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 4 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "0.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-0.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876364-2c55-11ef-b414-a9d76e88cb45",
+                    "fef603b0-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876365-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "后驱动电机最大驱动转矩": "50",
+                    "驱动电机转速": "2000",
+                    "后驱动电机最大制动转矩": "50"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "50",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "2000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "50",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 4 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "50.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-50.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876364-2c55-11ef-b414-a9d76e88cb45",
+                    "fef603b0-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876365-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "后驱动电机最大驱动转矩": "100",
+                    "驱动电机转速": "2500",
+                    "后驱动电机最大制动转矩": "100"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "100",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "2500",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "100",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 4 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "100.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-100.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876364-2c55-11ef-b414-a9d76e88cb45",
+                    "fef603b0-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876365-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "后驱动电机最大驱动转矩": "150",
+                    "驱动电机转速": "3000",
+                    "后驱动电机最大制动转矩": "150"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "150",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "3000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "150",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 4 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "150.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-150.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876364-2c55-11ef-b414-a9d76e88cb45",
+                    "fef603b0-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876365-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "后驱动电机最大驱动转矩": "200",
+                    "驱动电机转速": "3500",
+                    "后驱动电机最大制动转矩": "200"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "200",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "3500",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "200",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 4 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "200.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-200.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876364-2c55-11ef-b414-a9d76e88cb45",
+                    "fef603b0-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876365-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "后驱动电机最大驱动转矩": "300",
+                    "驱动电机转速": "4000",
+                    "后驱动电机最大制动转矩": "300"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "300",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "4000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "300",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 4 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "300.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-300.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876364-2c55-11ef-b414-a9d76e88cb45",
+                    "fef603b0-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876365-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "后驱动电机最大驱动转矩": "365",
+                    "驱动电机转速": "4840",
+                    "后驱动电机最大制动转矩": "365"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "365",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "4840",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "365",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 4 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "330.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-330.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876364-2c55-11ef-b414-a9d76e88cb45",
+                    "fef603b0-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876365-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "后驱动电机最大驱动转矩": "380",
+                    "驱动电机转速": "5000",
+                    "后驱动电机最大制动转矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "5000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 4 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "330.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-330.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876364-2c55-11ef-b414-a9d76e88cb45",
+                    "fef603b0-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876365-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "后驱动电机最大驱动转矩": "380",
+                    "驱动电机转速": "5500",
+                    "后驱动电机最大制动转矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "5500",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 4 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "329.8884462151394",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-329.8884462151394",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876364-2c55-11ef-b414-a9d76e88cb45",
+                    "fef603b0-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876365-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "后驱动电机最大驱动转矩": "380",
+                    "驱动电机转速": "6000",
+                    "后驱动电机最大制动转矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "6000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 4 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "302.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-302.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876364-2c55-11ef-b414-a9d76e88cb45",
+                    "fef603b0-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876365-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "后驱动电机最大驱动转矩": "380",
+                    "驱动电机转速": "6500",
+                    "后驱动电机最大制动转矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "6500",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 4 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "280.5",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-280.5",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876364-2c55-11ef-b414-a9d76e88cb45",
+                    "fef603b0-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876365-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "后驱动电机最大驱动转矩": "380",
+                    "驱动电机转速": "7500",
+                    "后驱动电机最大制动转矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "7500",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 4 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "243.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-243.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876364-2c55-11ef-b414-a9d76e88cb45",
+                    "fef603b0-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876365-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "后驱动电机最大驱动转矩": "380",
+                    "驱动电机转速": "8000",
+                    "后驱动电机最大制动转矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "8000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 4 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "227.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-227.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876364-2c55-11ef-b414-a9d76e88cb45",
+                    "fef603b0-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876365-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "后驱动电机最大驱动转矩": "380",
+                    "驱动电机转速": "9000",
+                    "后驱动电机最大制动转矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "9000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 4 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "202.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-202.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876364-2c55-11ef-b414-a9d76e88cb45",
+                    "fef603b0-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876365-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "后驱动电机最大驱动转矩": "380",
+                    "驱动电机转速": "10000",
+                    "后驱动电机最大制动转矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "10000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 4 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "181.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-181.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876364-2c55-11ef-b414-a9d76e88cb45",
+                    "fef603b0-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876365-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "后驱动电机最大驱动转矩": "380",
+                    "驱动电机转速": "11000",
+                    "后驱动电机最大制动转矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "11000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 4 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "165.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-165.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876364-2c55-11ef-b414-a9d76e88cb45",
+                    "fef603b0-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876365-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "后驱动电机最大驱动转矩": "380",
+                    "驱动电机转速": "12000",
+                    "后驱动电机最大制动转矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "12000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 4 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "151.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-151.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876364-2c55-11ef-b414-a9d76e88cb45",
+                    "fef603b0-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876365-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "后驱动电机最大驱动转矩": "380",
+                    "驱动电机转速": "13000",
+                    "后驱动电机最大制动转矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "13000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 4 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a76-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "140.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-140.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "-400",
+                    "驱动电机转速": "0",
+                    "后驱动电机最大制动转矩": "-400"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "-400",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "0",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "-400",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "330.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-330.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "-100",
+                    "驱动电机转速": "500",
+                    "后驱动电机最大制动转矩": "-100"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "-100",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "500",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "-100",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "100.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-100.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "-50",
+                    "驱动电机转速": "1000",
+                    "后驱动电机最大制动转矩": "-50"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "-50",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "1000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "-50",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "50.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-50.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "0",
+                    "驱动电机转速": "1500",
+                    "后驱动电机最大制动转矩": "0"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "0",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "1500",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "0",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "0.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-0.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "50",
+                    "驱动电机转速": "2000",
+                    "后驱动电机最大制动转矩": "50"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "50",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "2000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "50",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "50.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-50.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "100",
+                    "驱动电机转速": "2500",
+                    "后驱动电机最大制动转矩": "100"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "100",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "2500",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "100",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "100.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-100.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "150",
+                    "驱动电机转速": "3000",
+                    "后驱动电机最大制动转矩": "150"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "150",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "3000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "150",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "150.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-150.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "200",
+                    "驱动电机转速": "3500",
+                    "后驱动电机最大制动转矩": "200"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "200",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "3500",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "200",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "200.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-200.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "300",
+                    "驱动电机转速": "4000",
+                    "后驱动电机最大制动转矩": "300"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "300",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "4000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "300",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "300.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-300.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "365",
+                    "驱动电机转速": "4840",
+                    "后驱动电机最大制动转矩": "365"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "365",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "4840",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "365",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "330.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-330.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "380",
+                    "驱动电机转速": "5000",
+                    "后驱动电机最大制动转矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "5000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "330.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-330.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "380",
+                    "驱动电机转速": "5500",
+                    "后驱动电机最大制动转矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "5500",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "329.8884462151394",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-329.8884462151394",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "380",
+                    "驱动电机转速": "6000",
+                    "后驱动电机最大制动转矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "6000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "302.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-302.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "380",
+                    "驱动电机转速": "6500",
+                    "后驱动电机最大制动转矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "6500",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "280.5",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-280.5",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "380",
+                    "驱动电机转速": "7500",
+                    "后驱动电机最大制动转矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "7500",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "243.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-243.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "380",
+                    "驱动电机转速": "8000",
+                    "后驱动电机最大制动转矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "8000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "227.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-227.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "380",
+                    "驱动电机转速": "9000",
+                    "后驱动电机最大制动转矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "9000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "202.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-202.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "380",
+                    "驱动电机转速": "10000",
+                    "后驱动电机最大制动转矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "10000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "181.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-181.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "380",
+                    "驱动电机转速": "11000",
+                    "后驱动电机最大制动转矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "11000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "165.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-165.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "380",
+                    "驱动电机转速": "12000",
+                    "后驱动电机最大制动转矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "12000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "151.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-151.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876360-2c55-11ef-b414-a9d76e88cb45",
+                    "fcaa8d10-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876361-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3",
+                    "后驱动电机最大驱动转矩": "380",
+                    "驱动电机转速": "13000",
+                    "后驱动电机最大制动转矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "13000",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号== 3 ",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a79-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": "3d878a73-2c55-11ef-b414-a9d76e88cb45",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "140.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "-140.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "transition_id": [
+                    "3d876364-2c55-11ef-b414-a9d76e88cb45",
+                    "fef603b0-2d1a-11ef-b7b9-b137f0a20b71",
+                    "3d876363-2c55-11ef-b414-a9d76e88cb45"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "5",
+                    "驱动电机转速": "0",
+                    "后驱动电机最大驱动转矩": "-400",
+                    "后驱动电机最大制动转矩": "-400"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "5",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "0",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大驱动转矩",
+                        "value": "-400",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后驱动电机最大制动转矩",
+                        "value": "-400",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号 != 4",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb1eae07-2c69-11ef-80dd-c8cb9e4ad5d4",
+                "id": "3d878a73-2c55-11ef-b414-a9d76e88cb45",
+                "next_receiver_id": null,
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "后电机轴端扭矩上限",
+                        "value": "1",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "后电机轴端扭矩下限",
+                        "value": "1",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        }
+    ]
+}

@@ -1,0 +1,153 @@
+需求ID: EBC-3-1
+原始输入:
+1）加速踏板开度（VCU_APSPerc）大于KfEBC_APSBrkMax_Pct，则认为加速踏板踩下，加速踏板踩下标志位（VbEBC_AclPedApled_flg）为1；
+2）加速踏板开度小于KfEBC_APSBrkMin_Pct，则加速踏板踩下标志位置0；
+3）加速踏板开度介于两者之间，加速踏板踩下标志位则维持上一周期值不变。
+
+结构化输出:
+if VCU_APSPerc > KfEBC_APSBrkMax_Pct:
+    VbEBC_AclPedApled_flg = 1
+elif VCU_APSPerc < KfEBC_APSBrkMin_Pct:
+    VbEBC_AclPedApled_flg = 0
+============================================================
+
+需求ID: EBC-4-1
+原始输入:
+当以下所有条件同时满足时，车辆静止标志位（VbEBC_VehStop_flg）置1；否则置0：
+1）电机转速（Mot_Spd）介于[-KfEBC_MotSpdZeroThrd_rpm,KfEBC_MotSpdZeroThrd_rpm]区间内且持续KfEBC_SpdZeroDebounceThreshold_s + KfEBC_RecoStopDebounceThreshold_s时间；
+2）加速踏板踩下标志位（VbEBC_AclPedApled_flg）置0；
+3）EPB状态（ESP_SysSts_EPB）处于释放状态（Released）；
+4）挡位信号（VCU_GearSig）为D挡；
+5) 蠕行状态（VCU_WormSts）为关闭。
+
+结构化输出:
+if (duration(abs(Mot_Spd) <= KfEBC_MotSpdZeroThrd_rpm, KfEBC_SpdZeroDebounceThreshold_s + KfEBC_RecoStopDebounceThreshold_s, s) 
+    and VbEBC_AclPedApled_flg == 0 
+    and ESP_SysSts_EPB == "Released" 
+    and VCU_GearSig == "D" 
+    and VCU_WormSts == "关闭"):
+    VbEBC_VehStop_flg = 1
+else:
+    VbEBC_VehStop_flg = 0
+============================================================
+
+需求ID: EBC-5-1
+原始输入:
+1）当电机转速介于[-KfEBC_MotSpdZeroThrd_rpm,KfEBC_MotSpdZeroThrd_rpm]区间内且持续KfEBC_SpdZeroDebounceThreshold_s时间（识别上升沿）且液压驻车退出标志位（VbEBC_VehRelease_flg）（见EBC-6-1）为0，驻车扭矩（VfEBC_SlopeTorqueMemy_Nm）立即根据此时刻纵向加速度（YRS_LgtAcce）换算坡度查一维表（[KtEBC_SlopeTqMem_1X_null,KtEBC_SlopeTqMem_1Y_Nm]）得到；驻车纵向加速度（VfEBC_LongitAccMem_Null）立即变为此时刻纵向加速度；
+2）当前液压驻车退出标志位（VbEBC_VehRelease_flg）为1，则当条件1）再次满足时，驻车扭矩与驻车纵向加速度可再次更新。
+
+注：纵向加速度与坡度换算方式为：坡度（%） = 纵向加速度（g） * 100；
+
+结构化输出:
+if abs(motor_speed) <= KfEBC_MotSpdZeroThrd_rpm and duration(abs(motor_speed) <= KfEBC_MotSpdZeroThrd_rpm, KfEBC_SpdZeroDebounceThreshold_s, sec) and VbEBC_VehRelease_flg == 0:
+    VfEBC_SlopeTorqueMemy_Nm = lookup_table([KtEBC_SlopeTqMem_1X_null, KtEBC_SlopeTqMem_1Y_Nm], YRS_LgtAcce)
+    VfEBC_LongitAccMem_Null = YRS_LgtAcce
+
+if VbEBC_VehRelease_flg == 1 and abs(motor_speed) <= KfEBC_MotSpdZeroThrd_rpm and duration(abs(motor_speed) <= KfEBC_MotSpdZeroThrd_rpm, KfEBC_SpdZeroDebounceThreshold_s, sec):
+    VfEBC_SlopeTorqueMemy_Nm = lookup_table([KtEBC_SlopeTqMem_1X_null, KtEBC_SlopeTqMem_1Y_Nm], YRS_LgtAcce)
+    VfEBC_LongitAccMem_Null = YRS_LgtAcce
+============================================================
+
+需求ID: EBC-6-1
+原始输入:
+当满足以下任一条件时，液压驻车退出标志位（VbEBC_VehRelease_flg）为1，下一个控制器运行周期该标志位即置0：
+1）当驻车扭矩（VfEBC_SlopeTorqueMemy_Nm）≥ 0 、且加速踏板踩下标志位（VbEBC_AclPedApled_flg）为1、且前驱动电机目标转矩命令（VCU_FrntMotTarTqCmd）+ 后驱动电机目标转矩命令（VCU_ReMotTarTqCmd）≥ 驻车扭矩 + KfEBC_ParkRecoOffset_Nm、且轴端油门扭矩需求(VfEBC_DrvReq_Nm)≥ 驻车扭矩 + KfEBC_ParkRecoOffset_Nm；
+2）当驻车扭矩＜ 0 、且加速踏板踩下标志位为1、且前驱动电机目标转矩命令 + 后驱动电机目标转矩命令≥ KfEBC_ParkRecoOffset_Nm、且轴端油门扭矩需求(VfEBC_DrvReq_Nm)≥KfEBC_ParkRecoOffset_Nm；
+3）挡位信号（VCU_GearSig）从其他挡位切入R挡或N挡；
+4）电机转速的绝对值超过KfEBC_MotSpdMoveThrd_rpm并持续KfEBC_SpdZeroDebounceThreshold_s时间。
+
+注：模型采用四驱架构，轴端油门扭矩需求为油门扭矩需求(TqReq_tqDrvReq)（轮端）转换为轴端得到。
+    轮端扭矩 = 轴端扭矩 * 传动比（Ratio） * 传动效率 （Effi）。
+    模型采用两驱架构，不需要经过轮端转换为轴端扭矩计算。
+    模型架构见配置页测试项备注。
+
+结构化输出:
+if (VfEBC_SlopeTorqueMemy_Nm >= 0 and VbEBC_AclPedApled_flg == 1 and VCU_FrntMotTarTqCmd + VCU_ReMotTarTqCmd >= VfEBC_SlopeTorqueMemy_Nm + KfEBC_ParkRecoOffset_Nm and VfEBC_DrvReq_Nm >= VfEBC_SlopeTorqueMemy_Nm + KfEBC_ParkRecoOffset_Nm) or (VfEBC_SlopeTorqueMemy_Nm < 0 and VbEBC_AclPedApled_flg == 1 and VCU_FrntMotTarTqCmd + VCU_ReMotTarTqCmd >= KfEBC_ParkRecoOffset_Nm and VfEBC_DrvReq_Nm >= KfEBC_ParkRecoOffset_Nm) or (VCU_GearSig == 'R' or VCU_GearSig == 'N') or duration(abs(motor_speed) > KfEBC_MotSpdMoveThrd_rpm, KfEBC_SpdZeroDebounceThreshold_s, sec):
+    VbEBC_VehRelease_flg = 1
+else:
+    VbEBC_VehRelease_flg = 0
+============================================================
+
+需求ID: EBC-7-1
+原始输入:
+当以下三个条件同时满足时，进入液压驻车状态（VbEBC_PState_flg），该标志信号置1：
+1）P挡联动标志位（VbEBC_GearPState_flg）（见EBC-9-3）为0；
+2）液压驻车退出标志位（VbEBC_VehRelease_flg）为0；
+3）车辆静止标志位（VbEBC_VehStop_flg）由0置1的上升沿；
+
+此时若当前VCU需求扭矩补偿目标值（EBCReqTq） ≥ |驻车扭矩| +  驻车扭矩补偿值，则VCU需求扭矩补偿目标值维持不变；若当前VCU需求扭矩补偿目标值（VCU_BECTrTar） ＜ |驻车扭矩| + 驻车扭矩补偿值，则按照一定梯度上升为|驻车扭矩| +  驻车扭矩补偿值，并保持。
+驻车扭矩补偿值为根据驻车纵向加速度（VfEBC_LongitAccMem_Null）换算坡度查一维表（[KtEBC_ParkTqOffset_1X_null,KtEBC_ParkTqOffset_1Y_Nm]）
+
+加速踏板踩下标志位置位时，VCU需求扭矩补偿目标值随电机目标扭矩指令增加逐步降低，直至电机转速（Mot_Spd）> KfEBC_MotSpdForThrd_rpm或VCU需求扭矩补偿目标值降为0,液压驻车状态置0。
+当EBC-6-1中条件3）或条件4）置1或P挡联动标志位置位，液压驻车状态置0。
+
+
+
+结构化输出:
+if VbEBC_GearPState_flg == 0 and VbEBC_VehRelease_flg == 0 and VbEBC_VehStop_flg == 1:
+    VbEBC_PState_flg = 1
+    if EBCReqTq >= abs(KtEBC_ParkTqOffset_1Y_Nm) + KtEBC_ParkTqOffset_1X_null:
+        pass
+    else:
+        EBCReqTq = abs(KtEBC_ParkTqOffset_1Y_Nm) + KtEBC_ParkTqOffset_1X_null
+if VfEBC_LongitAccMem_Null == 1:
+    if Mot_Spd > KfEBC_MotSpdForThrd_rpm or EBCReqTq == 0:
+        VbEBC_PState_flg = 0
+if VbEBC_GearPState_flg == 1 or (EBC-6-1 condition 3 == 1 or EBC-6-1 condition 4 == 1):
+    VbEBC_PState_flg = 0
+============================================================
+
+需求ID: EBC-9-3
+原始输入:
+当挡位信号从其他任何挡位挂入P挡，进入P挡联动状态，P挡联动标志位（VbEBC_GearPState_flg）置1，液压驻车状态（VbEBC_PState_flg）置0；此时若当前VCU需求扭矩补偿目标值（EBCReqTq） ≥ |驻车扭矩| + KfEBC_ParkTqOffset_Nm，则VCU需求扭矩补偿目标值维持不变；若当前VCU需求扭矩补偿目标值 ＜ |驻车扭矩| + KfEBC_ParkTqOffset_Nm，则按照一定梯度上升为|驻车扭矩| + KfEBC_ParkTqOffset_Nm，并保持直到EPB状态（ESP_SysSts_EPB）处于夹紧状态（Closed）；当EPB状态处于夹紧状态（Closed）时，VCU需求扭矩补偿目标值按照一定梯度降低至0；当EPB仍未夹紧时，识别到挡位信号不为P挡，则VCU需求扭矩补偿目标值直接降为0；
+VCU需求扭矩补偿目标值降为0后，P挡联动标志位置0。
+
+结构化输出:
+if gear_signal == 'P' and gear_signal_prev != 'P':
+    VbEBC_GearPState_flg = 1
+    VbEBC_PState_flg = 0
+    if EBCReqTq >= abs(ParkTq) + KfEBC_ParkTqOffset_Nm:
+        EBCReqTq = EBCReqTq
+    elif EBCReqTq < abs(ParkTq) + KfEBC_ParkTqOffset_Nm:
+        EBCReqTq = gradient_increase(EBCReqTq, abs(ParkTq) + KfEBC_ParkTqOffset_Nm)
+        if ESP_SysSts_EPB == 'Closed':
+            EBCReqTq = gradient_decrease(EBCReqTq, 0)
+    if gear_signal != 'P' and ESP_SysSts_EPB != 'Closed':
+        EBCReqTq = 0
+    if EBCReqTq == 0:
+        VbEBC_GearPState_flg = 0
+============================================================
+
+需求ID: EBC-14-1
+原始输入:
+同时满足以下条件时，进入扭矩过零坡度识别，坡度识别状态为2：
+1）液压驻车状态置0；
+2）VbEBC_MotTqNega_flg 0 → 1的上升沿；
+3）制动信号（VCU_BrkSig）置0；
+
+当坡度识别状态为2瞬间，记录此时刻之后的100ms时间内的连续5个周期的纵向加速度，此5个纵向加速的的算术平均值换算的坡度为识别坡道坡度。
+
+当满足任一以下条件时，退出扭矩过零坡度识别：
+1）液压驻车状态置1；
+2）进入扭矩过零坡度识别（VeEBC_RecoState_enum = 2）持续100ms；
+3）制动信号置1；
+
+注：VbEBC_MotTqNega_flg信号定义：当驱动电机目标转矩命令 ＜ KfEBC_MotToqZeroThrd_Nm 且持续KfEBC_MotTqNegaThreshold_s后，触发VbEBC_MotTqNega_flg的 0 → 1的上升沿。
+
+结构化输出:
+if hydraulic_parking_status == 0 and VbEBC_MotTqNega_flg == rising_edge(0, 1) and VCU_BrkSig == 0:
+    VeEBC_RecoState_enum = 2
+    slope = average(longitudinal_acceleration[0:5]) * conversion_factor
+
+if hydraulic_parking_status == 1 or duration(VeEBC_RecoState_enum == 2, 100, ms) or VCU_BrkSig == 1:
+    VeEBC_RecoState_enum = 0
+============================================================
+
+需求ID: EBC-16-1
+原始输入:
+低速刹停查表扭矩（VfEBC_EleBrkTqMiddle_Nm）为根据识别坡道坡度及电机转速的二维查表值（[VfEBC_EBCRequest_2X_null,VfEBC_EBCRequest_2Y_rpm,VfEBC_EBCRequest_2Z_Nm]）。
+
+结构化输出:
+该需求文档描述的是一个查表操作，但没有提供具体的条件判断和对应的操作。因此，无法提取出if-else结构化的语句。
+============================================================
+

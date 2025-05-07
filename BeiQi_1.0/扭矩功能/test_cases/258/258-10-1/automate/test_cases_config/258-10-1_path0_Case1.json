@@ -1,0 +1,1052 @@
+{
+    "case_info": {
+        "main_requirement_path_id": [
+            "7d8c9862-3fb3-43d5-ad9a-e8234c139bf8",
+            "a15a941e-0f82-4c6b-b9fa-1f80e8c22904",
+            "5a77f4ec-ef08-4043-b69a-bdd04b0b1ff6"
+        ],
+        "main_requirement_graph_id": "5915518c-2c46-11ef-97ca-c8cb9e4ad5d4",
+        "graph_type": "request",
+        "group_name": "default_group"
+    },
+    "observe_signals": [],
+    "test_case": [
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "5915518c-2c46-11ef-97ca-c8cb9e4ad5d4",
+                "id": "7d8c9862-3fb3-43d5-ad9a-e8234c139bf8",
+                "next_receiver_id": "5a77f4ec-ef08-4043-b69a-bdd04b0b1ff6",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "5915518c-2c46-11ef-97ca-c8cb9e4ad5d4",
+                "transition_id": [
+                    "a15a941e-0f82-4c6b-b9fa-1f80e8c22904"
+                ],
+                "points_combination": {
+                    "前电机ESP干涉状态": "1",
+                    "后电机ESP干涉状态": "0"
+                },
+                "action_send": [
+                    {
+                        "name": "前电机ESP干涉状态",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后电机ESP干涉状态",
+                        "value": "0",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    false
+                ],
+                "is_origin_node": true,
+                "condition": "前电机ESP干涉状态==1 and 后电机ESP干涉状态==1",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "5915518c-2c46-11ef-97ca-c8cb9e4ad5d4",
+                "id": "7d8c9862-3fb3-43d5-ad9a-e8234c139bf8",
+                "next_receiver_id": "5a77f4ec-ef08-4043-b69a-bdd04b0b1ff6",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "5915518c-2c46-11ef-97ca-c8cb9e4ad5d4",
+                "transition_id": [
+                    "a15a941e-0f82-4c6b-b9fa-1f80e8c22904"
+                ],
+                "points_combination": {
+                    "前电机ESP干涉状态": "1",
+                    "后电机ESP干涉状态": "2"
+                },
+                "action_send": [
+                    {
+                        "name": "前电机ESP干涉状态",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后电机ESP干涉状态",
+                        "value": "2",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    false
+                ],
+                "is_origin_node": true,
+                "condition": "前电机ESP干涉状态==1 and 后电机ESP干涉状态==1",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "5915518c-2c46-11ef-97ca-c8cb9e4ad5d4",
+                "id": "7d8c9862-3fb3-43d5-ad9a-e8234c139bf8",
+                "next_receiver_id": "5a77f4ec-ef08-4043-b69a-bdd04b0b1ff6",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "5915518c-2c46-11ef-97ca-c8cb9e4ad5d4",
+                "transition_id": [
+                    "a15a941e-0f82-4c6b-b9fa-1f80e8c22904"
+                ],
+                "points_combination": {
+                    "前电机ESP干涉状态": "0",
+                    "后电机ESP干涉状态": "1"
+                },
+                "action_send": [
+                    {
+                        "name": "前电机ESP干涉状态",
+                        "value": "0",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后电机ESP干涉状态",
+                        "value": "1",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    false,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "前电机ESP干涉状态==1 and 后电机ESP干涉状态==1",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "5915518c-2c46-11ef-97ca-c8cb9e4ad5d4",
+                "id": "7d8c9862-3fb3-43d5-ad9a-e8234c139bf8",
+                "next_receiver_id": "5a77f4ec-ef08-4043-b69a-bdd04b0b1ff6",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "5915518c-2c46-11ef-97ca-c8cb9e4ad5d4",
+                "transition_id": [
+                    "a15a941e-0f82-4c6b-b9fa-1f80e8c22904"
+                ],
+                "points_combination": {
+                    "前电机ESP干涉状态": "2",
+                    "后电机ESP干涉状态": "1"
+                },
+                "action_send": [
+                    {
+                        "name": "前电机ESP干涉状态",
+                        "value": "2",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后电机ESP干涉状态",
+                        "value": "1",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    false,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "前电机ESP干涉状态==1 and 后电机ESP干涉状态==1",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "5915518c-2c46-11ef-97ca-c8cb9e4ad5d4",
+                "id": "7d8c9862-3fb3-43d5-ad9a-e8234c139bf8",
+                "next_receiver_id": "5a77f4ec-ef08-4043-b69a-bdd04b0b1ff6",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "5915518c-2c46-11ef-97ca-c8cb9e4ad5d4",
+                "transition_id": [
+                    "a15a941e-0f82-4c6b-b9fa-1f80e8c22904"
+                ],
+                "points_combination": {
+                    "前电机ESP干涉状态": "1",
+                    "后电机ESP干涉状态": "1",
+                    "分配后后轴需求扭矩": "-400",
+                    "分配后前轴需求扭矩": "-400"
+                },
+                "action_send": [
+                    {
+                        "name": "前电机ESP干涉状态",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后电机ESP干涉状态",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "分配后后轴需求扭矩",
+                        "value": "-400",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "分配后前轴需求扭矩",
+                        "value": "-400",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "前电机ESP干涉状态==1 and 后电机ESP干涉状态==1",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "5915518c-2c46-11ef-97ca-c8cb9e4ad5d4",
+                "id": "5a77f4ec-ef08-4043-b69a-bdd04b0b1ff6",
+                "next_receiver_id": "5a77f4ec-ef08-4043-b69a-bdd04b0b1ff6",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "ESC干涉后的前轴轮端扭矩",
+                        "value": "-400",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "ESC干涉后的后轴轮端扭矩",
+                        "value": "-400",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "5915518c-2c46-11ef-97ca-c8cb9e4ad5d4",
+                "transition_id": [
+                    "a15a941e-0f82-4c6b-b9fa-1f80e8c22904"
+                ],
+                "points_combination": {
+                    "前电机ESP干涉状态": "1",
+                    "后电机ESP干涉状态": "1",
+                    "分配后后轴需求扭矩": "-100",
+                    "分配后前轴需求扭矩": "-100"
+                },
+                "action_send": [
+                    {
+                        "name": "前电机ESP干涉状态",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后电机ESP干涉状态",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "分配后后轴需求扭矩",
+                        "value": "-100",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "分配后前轴需求扭矩",
+                        "value": "-100",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "前电机ESP干涉状态==1 and 后电机ESP干涉状态==1",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "5915518c-2c46-11ef-97ca-c8cb9e4ad5d4",
+                "id": "5a77f4ec-ef08-4043-b69a-bdd04b0b1ff6",
+                "next_receiver_id": "5a77f4ec-ef08-4043-b69a-bdd04b0b1ff6",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "ESC干涉后的前轴轮端扭矩",
+                        "value": "-100",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "ESC干涉后的后轴轮端扭矩",
+                        "value": "-100",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "5915518c-2c46-11ef-97ca-c8cb9e4ad5d4",
+                "transition_id": [
+                    "a15a941e-0f82-4c6b-b9fa-1f80e8c22904"
+                ],
+                "points_combination": {
+                    "前电机ESP干涉状态": "1",
+                    "后电机ESP干涉状态": "1",
+                    "分配后后轴需求扭矩": "-50",
+                    "分配后前轴需求扭矩": "-50"
+                },
+                "action_send": [
+                    {
+                        "name": "前电机ESP干涉状态",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后电机ESP干涉状态",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "分配后后轴需求扭矩",
+                        "value": "-50",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "分配后前轴需求扭矩",
+                        "value": "-50",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "前电机ESP干涉状态==1 and 后电机ESP干涉状态==1",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "5915518c-2c46-11ef-97ca-c8cb9e4ad5d4",
+                "id": "5a77f4ec-ef08-4043-b69a-bdd04b0b1ff6",
+                "next_receiver_id": "5a77f4ec-ef08-4043-b69a-bdd04b0b1ff6",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "ESC干涉后的前轴轮端扭矩",
+                        "value": "-50",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "ESC干涉后的后轴轮端扭矩",
+                        "value": "-50",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "5915518c-2c46-11ef-97ca-c8cb9e4ad5d4",
+                "transition_id": [
+                    "a15a941e-0f82-4c6b-b9fa-1f80e8c22904"
+                ],
+                "points_combination": {
+                    "前电机ESP干涉状态": "1",
+                    "后电机ESP干涉状态": "1",
+                    "分配后后轴需求扭矩": "0",
+                    "分配后前轴需求扭矩": "0"
+                },
+                "action_send": [
+                    {
+                        "name": "前电机ESP干涉状态",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后电机ESP干涉状态",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "分配后后轴需求扭矩",
+                        "value": "0",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "分配后前轴需求扭矩",
+                        "value": "0",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "前电机ESP干涉状态==1 and 后电机ESP干涉状态==1",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "5915518c-2c46-11ef-97ca-c8cb9e4ad5d4",
+                "id": "5a77f4ec-ef08-4043-b69a-bdd04b0b1ff6",
+                "next_receiver_id": "5a77f4ec-ef08-4043-b69a-bdd04b0b1ff6",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "ESC干涉后的前轴轮端扭矩",
+                        "value": "0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "ESC干涉后的后轴轮端扭矩",
+                        "value": "0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "5915518c-2c46-11ef-97ca-c8cb9e4ad5d4",
+                "transition_id": [
+                    "a15a941e-0f82-4c6b-b9fa-1f80e8c22904"
+                ],
+                "points_combination": {
+                    "前电机ESP干涉状态": "1",
+                    "后电机ESP干涉状态": "1",
+                    "分配后后轴需求扭矩": "50",
+                    "分配后前轴需求扭矩": "50"
+                },
+                "action_send": [
+                    {
+                        "name": "前电机ESP干涉状态",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后电机ESP干涉状态",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "分配后后轴需求扭矩",
+                        "value": "50",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "分配后前轴需求扭矩",
+                        "value": "50",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "前电机ESP干涉状态==1 and 后电机ESP干涉状态==1",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "5915518c-2c46-11ef-97ca-c8cb9e4ad5d4",
+                "id": "5a77f4ec-ef08-4043-b69a-bdd04b0b1ff6",
+                "next_receiver_id": "5a77f4ec-ef08-4043-b69a-bdd04b0b1ff6",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "ESC干涉后的前轴轮端扭矩",
+                        "value": "50",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "ESC干涉后的后轴轮端扭矩",
+                        "value": "50",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "5915518c-2c46-11ef-97ca-c8cb9e4ad5d4",
+                "transition_id": [
+                    "a15a941e-0f82-4c6b-b9fa-1f80e8c22904"
+                ],
+                "points_combination": {
+                    "前电机ESP干涉状态": "1",
+                    "后电机ESP干涉状态": "1",
+                    "分配后后轴需求扭矩": "100",
+                    "分配后前轴需求扭矩": "100"
+                },
+                "action_send": [
+                    {
+                        "name": "前电机ESP干涉状态",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后电机ESP干涉状态",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "分配后后轴需求扭矩",
+                        "value": "100",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "分配后前轴需求扭矩",
+                        "value": "100",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "前电机ESP干涉状态==1 and 后电机ESP干涉状态==1",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "5915518c-2c46-11ef-97ca-c8cb9e4ad5d4",
+                "id": "5a77f4ec-ef08-4043-b69a-bdd04b0b1ff6",
+                "next_receiver_id": "5a77f4ec-ef08-4043-b69a-bdd04b0b1ff6",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "ESC干涉后的前轴轮端扭矩",
+                        "value": "100",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "ESC干涉后的后轴轮端扭矩",
+                        "value": "100",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "5915518c-2c46-11ef-97ca-c8cb9e4ad5d4",
+                "transition_id": [
+                    "a15a941e-0f82-4c6b-b9fa-1f80e8c22904"
+                ],
+                "points_combination": {
+                    "前电机ESP干涉状态": "1",
+                    "后电机ESP干涉状态": "1",
+                    "分配后后轴需求扭矩": "150",
+                    "分配后前轴需求扭矩": "150"
+                },
+                "action_send": [
+                    {
+                        "name": "前电机ESP干涉状态",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后电机ESP干涉状态",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "分配后后轴需求扭矩",
+                        "value": "150",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "分配后前轴需求扭矩",
+                        "value": "150",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "前电机ESP干涉状态==1 and 后电机ESP干涉状态==1",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "5915518c-2c46-11ef-97ca-c8cb9e4ad5d4",
+                "id": "5a77f4ec-ef08-4043-b69a-bdd04b0b1ff6",
+                "next_receiver_id": "5a77f4ec-ef08-4043-b69a-bdd04b0b1ff6",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "ESC干涉后的前轴轮端扭矩",
+                        "value": "150",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "ESC干涉后的后轴轮端扭矩",
+                        "value": "150",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "5915518c-2c46-11ef-97ca-c8cb9e4ad5d4",
+                "transition_id": [
+                    "a15a941e-0f82-4c6b-b9fa-1f80e8c22904"
+                ],
+                "points_combination": {
+                    "前电机ESP干涉状态": "1",
+                    "后电机ESP干涉状态": "1",
+                    "分配后后轴需求扭矩": "200",
+                    "分配后前轴需求扭矩": "200"
+                },
+                "action_send": [
+                    {
+                        "name": "前电机ESP干涉状态",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后电机ESP干涉状态",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "分配后后轴需求扭矩",
+                        "value": "200",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "分配后前轴需求扭矩",
+                        "value": "200",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "前电机ESP干涉状态==1 and 后电机ESP干涉状态==1",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "5915518c-2c46-11ef-97ca-c8cb9e4ad5d4",
+                "id": "5a77f4ec-ef08-4043-b69a-bdd04b0b1ff6",
+                "next_receiver_id": "5a77f4ec-ef08-4043-b69a-bdd04b0b1ff6",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "ESC干涉后的前轴轮端扭矩",
+                        "value": "200",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "ESC干涉后的后轴轮端扭矩",
+                        "value": "200",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "5915518c-2c46-11ef-97ca-c8cb9e4ad5d4",
+                "transition_id": [
+                    "a15a941e-0f82-4c6b-b9fa-1f80e8c22904"
+                ],
+                "points_combination": {
+                    "前电机ESP干涉状态": "1",
+                    "后电机ESP干涉状态": "1",
+                    "分配后后轴需求扭矩": "300",
+                    "分配后前轴需求扭矩": "300"
+                },
+                "action_send": [
+                    {
+                        "name": "前电机ESP干涉状态",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后电机ESP干涉状态",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "分配后后轴需求扭矩",
+                        "value": "300",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "分配后前轴需求扭矩",
+                        "value": "300",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "前电机ESP干涉状态==1 and 后电机ESP干涉状态==1",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "5915518c-2c46-11ef-97ca-c8cb9e4ad5d4",
+                "id": "5a77f4ec-ef08-4043-b69a-bdd04b0b1ff6",
+                "next_receiver_id": "5a77f4ec-ef08-4043-b69a-bdd04b0b1ff6",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "ESC干涉后的前轴轮端扭矩",
+                        "value": "300",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "ESC干涉后的后轴轮端扭矩",
+                        "value": "300",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "5915518c-2c46-11ef-97ca-c8cb9e4ad5d4",
+                "transition_id": [
+                    "a15a941e-0f82-4c6b-b9fa-1f80e8c22904"
+                ],
+                "points_combination": {
+                    "前电机ESP干涉状态": "1",
+                    "后电机ESP干涉状态": "1",
+                    "分配后后轴需求扭矩": "365",
+                    "分配后前轴需求扭矩": "365"
+                },
+                "action_send": [
+                    {
+                        "name": "前电机ESP干涉状态",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后电机ESP干涉状态",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "分配后后轴需求扭矩",
+                        "value": "365",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "分配后前轴需求扭矩",
+                        "value": "365",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "前电机ESP干涉状态==1 and 后电机ESP干涉状态==1",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "5915518c-2c46-11ef-97ca-c8cb9e4ad5d4",
+                "id": "5a77f4ec-ef08-4043-b69a-bdd04b0b1ff6",
+                "next_receiver_id": "5a77f4ec-ef08-4043-b69a-bdd04b0b1ff6",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "ESC干涉后的前轴轮端扭矩",
+                        "value": "365",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "ESC干涉后的后轴轮端扭矩",
+                        "value": "365",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "5915518c-2c46-11ef-97ca-c8cb9e4ad5d4",
+                "transition_id": [
+                    "a15a941e-0f82-4c6b-b9fa-1f80e8c22904"
+                ],
+                "points_combination": {
+                    "前电机ESP干涉状态": "1",
+                    "后电机ESP干涉状态": "1",
+                    "分配后后轴需求扭矩": "380",
+                    "分配后前轴需求扭矩": "380"
+                },
+                "action_send": [
+                    {
+                        "name": "前电机ESP干涉状态",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "后电机ESP干涉状态",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "分配后后轴需求扭矩",
+                        "value": "380",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "分配后前轴需求扭矩",
+                        "value": "380",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "前电机ESP干涉状态==1 and 后电机ESP干涉状态==1",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "5915518c-2c46-11ef-97ca-c8cb9e4ad5d4",
+                "id": "5a77f4ec-ef08-4043-b69a-bdd04b0b1ff6",
+                "next_receiver_id": null,
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "ESC干涉后的前轴轮端扭矩",
+                        "value": "380",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "ESC干涉后的后轴轮端扭矩",
+                        "value": "380",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        }
+    ]
+}

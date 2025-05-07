@@ -1,0 +1,95 @@
+{
+    "case_info": {
+        "main_requirement_path_id": [
+            "30c4a132-7b3c-462f-9ca1-4b1cc9e542e4",
+            "161a4b01-8712-40ad-b5b1-d6fdfee0f39c",
+            "7a6d3b39-290e-4245-8df0-bcca85e4b852",
+            "9c234bc5-f519-413b-a6bd-b9bd57a02c1c",
+            "600673d0-2184-11ef-a581-db23211c0fbf"
+        ],
+        "main_requirement_graph_id": "6b708006-2c46-11ef-b5bc-c8cb9e4ad5d4",
+        "graph_type": "request",
+        "group_name": "default_group"
+    },
+    "observe_signals": [],
+    "test_case": [
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "6b708006-2c46-11ef-b5bc-c8cb9e4ad5d4",
+                "id": "30c4a132-7b3c-462f-9ca1-4b1cc9e542e4",
+                "next_receiver_id": "600673d0-2184-11ef-a581-db23211c0fbf",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "6b708006-2c46-11ef-b5bc-c8cb9e4ad5d4",
+                "transition_id": [
+                    "161a4b01-8712-40ad-b5b1-d6fdfee0f39c",
+                    "7a6d3b39-290e-4245-8df0-bcca85e4b852",
+                    "9c234bc5-f519-413b-a6bd-b9bd57a02c1c"
+                ],
+                "points_combination": {
+                    "扭矩分配模式位使能开关": "1",
+                    "前电机峰值功率禁止状态": "2"
+                },
+                "action_send": [
+                    {
+                        "name": "扭矩分配模式位使能开关",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "前电机峰值功率禁止状态",
+                        "value": "2",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    false
+                ],
+                "is_origin_node": true,
+                "condition": "(扭矩分配模式位使能开关 == 1 or 前电机峰值功率禁止状态 == 1)",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "6b708006-2c46-11ef-b5bc-c8cb9e4ad5d4",
+                "id": "600673d0-2184-11ef-a581-db23211c0fbf",
+                "next_receiver_id": null,
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "前电机最大轮端扭矩分配比限制",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        }
+    ]
+}

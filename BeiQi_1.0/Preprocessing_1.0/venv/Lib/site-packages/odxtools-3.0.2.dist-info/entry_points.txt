@@ -1,0 +1,2 @@
+[console_scripts]
+odxtools = odxtools.__init__:_main

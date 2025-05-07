@@ -1,0 +1,92 @@
+{
+    "case_info": {
+        "main_requirement_path_id": [
+            "2e4c4857-2a31-11ef-b441-9543add878bf",
+            "406fba6c-0316-47ad-b0e2-c8e75f32a93f",
+            "7593b2a0-2c59-11ef-bad1-f318d45b1445",
+            "ae4d530b-24a8-4470-93a0-c3b8ff3fc62d",
+            "413627e5-2e0d-4074-acc8-05ae5e219c78",
+            "2686d834-b851-4820-a9dc-baa5352d910a",
+            "005b6a02-e0fe-4128-b8aa-74225fcdb5e7",
+            "25453153-b9d1-4b23-8f2f-0b7030c314f9"
+        ],
+        "main_requirement_graph_id": "cc497b4e-2c69-11ef-848b-c8cb9e4ad5d4",
+        "graph_type": "request",
+        "group_name": "default_group"
+    },
+    "observe_signals": [],
+    "test_case": [
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "cc497b4e-2c69-11ef-848b-c8cb9e4ad5d4",
+                "id": "2e4c4857-2a31-11ef-b441-9543add878bf",
+                "next_receiver_id": "25453153-b9d1-4b23-8f2f-0b7030c314f9",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cc497b4e-2c69-11ef-848b-c8cb9e4ad5d4",
+                "transition_id": [
+                    "406fba6c-0316-47ad-b0e2-c8e75f32a93f",
+                    "7593b2a0-2c59-11ef-bad1-f318d45b1445",
+                    "ae4d530b-24a8-4470-93a0-c3b8ff3fc62d",
+                    "005b6a02-e0fe-4128-b8aa-74225fcdb5e7"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "3"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "3",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号 != 2",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cc497b4e-2c69-11ef-848b-c8cb9e4ad5d4",
+                "id": "25453153-b9d1-4b23-8f2f-0b7030c314f9",
+                "next_receiver_id": null,
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "钥匙开关",
+                        "value": "1",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        }
+    ]
+}

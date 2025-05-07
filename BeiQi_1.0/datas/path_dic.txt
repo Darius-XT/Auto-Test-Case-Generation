@@ -1,0 +1,484 @@
+图id：EBC-3-1
+  路径id：EBC-3-1_1
+    节点id：Start
+    节点类型：write
+    节点原始信息：START
+    节点id：EBC-3-1_node_0
+    节点类型：read
+    节点原始信息：VCU_APSPerc > KfEBC_APSBrkMax_Pct
+    节点id：EBC-3-1_node_1
+    节点类型：write
+    节点原始信息：VbEBC_AclPedApled_flg = 1
+    边id：EBC-3-1_edge_0
+    源节点id：Start
+    目标节点id：EBC-3-1_node_0
+    边原始信息：
+    边id：EBC-3-1_edge_1
+    源节点id：EBC-3-1_node_0
+    目标节点id：EBC-3-1_node_1
+    边原始信息：
+  路径id：EBC-3-1_2
+    节点id：Start
+    节点类型：write
+    节点原始信息：START
+    节点id：EBC-3-1_node_0
+    节点类型：read
+    节点原始信息：VCU_APSPerc > KfEBC_APSBrkMax_Pct
+    节点id：EBC-3-1_node_2
+    节点类型：read
+    节点原始信息：VCU_APSPerc < KfEBC_APSBrkMin_Pct
+    节点id：EBC-3-1_node_3
+    节点类型：write
+    节点原始信息：VbEBC_AclPedApled_flg = 0
+    边id：EBC-3-1_edge_0
+    源节点id：Start
+    目标节点id：EBC-3-1_node_0
+    边原始信息：
+    边id：EBC-3-1_edge_2
+    源节点id：EBC-3-1_node_0
+    目标节点id：EBC-3-1_node_2
+    边原始信息：
+    边id：EBC-3-1_edge_3
+    源节点id：EBC-3-1_node_2
+    目标节点id：EBC-3-1_node_3
+    边原始信息：
+图id：EBC-4-1
+  路径id：EBC-4-1_1
+    节点id：Start
+    节点类型：write
+    节点原始信息：START
+    节点id：EBC-4-1_node_0
+    节点类型：read
+    节点原始信息：(Mot_Spd >= -KfEBC_MotSpdZeroThrd_rpm and Mot_Spd <= KfEBC_MotSpdZeroThrd_rpm) and (VbEBC_AclPedApled_flg == 0) and (ESP_SysSts_EPB == "Released") and (VCU_GearSig == "D") and (VCU_WormSts == "关闭")
+    节点id：EBC-4-1_node_1
+    节点类型：write
+    节点原始信息：VbEBC_VehStop_flg = 1
+    边id：EBC-4-1_edge_0
+    源节点id：Start
+    目标节点id：EBC-4-1_node_0
+    边原始信息：
+    边id：EBC-4-1_edge_1
+    源节点id：EBC-4-1_node_0
+    目标节点id：EBC-4-1_node_1
+    边原始信息：
+  路径id：EBC-4-1_2
+    节点id：Start
+    节点类型：write
+    节点原始信息：START
+    节点id：EBC-4-1_node_0
+    节点类型：read
+    节点原始信息：(Mot_Spd >= -KfEBC_MotSpdZeroThrd_rpm and Mot_Spd <= KfEBC_MotSpdZeroThrd_rpm) and (VbEBC_AclPedApled_flg == 0) and (ESP_SysSts_EPB == "Released") and (VCU_GearSig == "D") and (VCU_WormSts == "关闭")
+    节点id：EBC-4-1_node_3
+    节点类型：write
+    节点原始信息：VbEBC_VehStop_flg = 0
+    边id：EBC-4-1_edge_0
+    源节点id：Start
+    目标节点id：EBC-4-1_node_0
+    边原始信息：
+    边id：EBC-4-1_edge_2
+    源节点id：EBC-4-1_node_0
+    目标节点id：EBC-4-1_node_3
+    边原始信息：
+图id：EBC-5-1
+  路径id：EBC-5-1_1
+    节点id：Start
+    节点类型：write
+    节点原始信息：START
+    节点id：EBC-5-1_node_0
+    节点类型：read
+    节点原始信息：(abs(motor_speed) <= KfEBC_MotSpdZeroThrd_rpm) and (duration >= KfEBC_SpdZeroDebounceThreshold_s) and (VbEBC_VehRelease_flg == 0)
+    节点id：EBC-5-1_node_1
+    节点类型：write
+    节点原始信息：VfEBC_SlopeTorqueMemy_Nm = lookup_table(YRS_LgtAcce, [KtEBC_SlopeTqMem_1X_null, KtEBC_SlopeTqMem_1Y_Nm])
+    节点id：EBC-5-1_node_2
+    节点类型：write
+    节点原始信息：VfEBC_LongitAccMem_Null = YRS_LgtAcce
+    边id：EBC-5-1_edge_0
+    源节点id：Start
+    目标节点id：EBC-5-1_node_0
+    边原始信息：
+    边id：EBC-5-1_edge_1
+    源节点id：EBC-5-1_node_0
+    目标节点id：EBC-5-1_node_1
+    边原始信息：
+    边id：EBC-5-1_edge_2
+    源节点id：EBC-5-1_node_1
+    目标节点id：EBC-5-1_node_2
+    边原始信息：
+图id：EBC-6-1
+  路径id：EBC-6-1_1
+    节点id：Start
+    节点类型：write
+    节点原始信息：START
+    节点id：EBC-6-1_node_0
+    节点类型：read
+    节点原始信息：(VfEBC_SlopeTorqueMemy_Nm >= 0 and VbEBC_AclPedApled_flg == 1 and VCU_FrntMotTarTqCmd + VCU_ReMotTarTqCmd >= VfEBC_SlopeTorqueMemy_Nm + KfEBC_ParkRecoOffset_Nm and VfEBC_DrvReq_Nm >= VfEBC_SlopeTorqueMemy_Nm + KfEBC_ParkRecoOffset_Nm) or (VfEBC_SlopeTorqueMemy_Nm < 0 and VbEBC_AclPedApled_flg == 1 and VCU_FrntMotTarTqCmd + VCU_ReMotTarTqCmd >= KfEBC_ParkRecoOffset_Nm and VfEBC_DrvReq_Nm >= KfEBC_ParkRecoOffset_Nm) or (VCU_GearSig == 'R' or VCU_GearSig == 'N') or (abs(motor_speed) > KfEBC_MotSpdMoveThrd_rpm and duration >= KfEBC_SpdZeroDebounceThreshold_s)
+    节点id：EBC-6-1_node_1
+    节点类型：write
+    节点原始信息：VbEBC_VehRelease_flg = 1
+    边id：EBC-6-1_edge_0
+    源节点id：Start
+    目标节点id：EBC-6-1_node_0
+    边原始信息：
+    边id：EBC-6-1_edge_1
+    源节点id：EBC-6-1_node_0
+    目标节点id：EBC-6-1_node_1
+    边原始信息：
+图id：EBC-7-1
+  路径id：EBC-7-1_1
+    节点id：Start
+    节点类型：write
+    节点原始信息：START
+    节点id：EBC-7-1_node_0
+    节点类型：read
+    节点原始信息：VbEBC_GearPState_flg == 0 and VbEBC_VehRelease_flg == 0 and VbEBC_VehStop_flg == 1
+    节点id：EBC-7-1_node_1
+    节点类型：write
+    节点原始信息：VbEBC_PState_flg = 1
+    节点id：EBC-7-1_node_2
+    节点类型：read
+    节点原始信息：EBCReqTq >= abs(驻车扭矩) + 驻车扭矩补偿值
+    节点id：EBC-7-1_node_3
+    节点类型：write
+    节点原始信息：EBCReqTq = EBCReqTq
+    节点id：EBC-7-1_node_6
+    节点类型：read
+    节点原始信息：加速踏板踩下标志位 == 1
+    节点id：EBC-7-1_node_7
+    节点类型：write
+    节点原始信息：while Mot_Spd <= KfEBC_MotSpdForThrd_rpm and EBCReqTq > 0:
+    节点id：EBC-7-1_node_9
+    节点类型：write
+    节点原始信息：VbEBC_PState_flg = 0
+    节点id：EBC-7-1_node_10
+    节点类型：read
+    节点原始信息：EBC-6-1中条件3 == 1 or EBC-6-1中条件4 == 1 or VbEBC_GearPState_flg == 1
+    节点id：EBC-7-1_node_11
+    节点类型：write
+    节点原始信息：VbEBC_PState_flg = 0
+    边id：EBC-7-1_edge_0
+    源节点id：Start
+    目标节点id：EBC-7-1_node_0
+    边原始信息：
+    边id：EBC-7-1_edge_1
+    源节点id：EBC-7-1_node_0
+    目标节点id：EBC-7-1_node_1
+    边原始信息：
+    边id：EBC-7-1_edge_2
+    源节点id：EBC-7-1_node_1
+    目标节点id：EBC-7-1_node_2
+    边原始信息：
+    边id：EBC-7-1_edge_3
+    源节点id：EBC-7-1_node_2
+    目标节点id：EBC-7-1_node_3
+    边原始信息：
+    边id：EBC-7-1_edge_5
+    源节点id：EBC-7-1_node_3
+    目标节点id：EBC-7-1_node_6
+    边原始信息：
+    边id：EBC-7-1_edge_7
+    源节点id：EBC-7-1_node_6
+    目标节点id：EBC-7-1_node_7
+    边原始信息：
+    边id：EBC-7-1_edge_8
+    源节点id：EBC-7-1_node_7
+    目标节点id：EBC-7-1_node_9
+    边原始信息：
+    边id：EBC-7-1_edge_10
+    源节点id：EBC-7-1_node_9
+    目标节点id：EBC-7-1_node_10
+    边原始信息：
+    边id：EBC-7-1_edge_11
+    源节点id：EBC-7-1_node_10
+    目标节点id：EBC-7-1_node_11
+    边原始信息：
+  路径id：EBC-7-1_2
+    节点id：Start
+    节点类型：write
+    节点原始信息：START
+    节点id：EBC-7-1_node_0
+    节点类型：read
+    节点原始信息：VbEBC_GearPState_flg == 0 and VbEBC_VehRelease_flg == 0 and VbEBC_VehStop_flg == 1
+    节点id：EBC-7-1_node_1
+    节点类型：write
+    节点原始信息：VbEBC_PState_flg = 1
+    节点id：EBC-7-1_node_2
+    节点类型：read
+    节点原始信息：EBCReqTq >= abs(驻车扭矩) + 驻车扭矩补偿值
+    节点id：EBC-7-1_node_5
+    节点类型：write
+    节点原始信息：EBCReqTq = abs(驻车扭矩) + 驻车扭矩补偿值
+    节点id：EBC-7-1_node_6
+    节点类型：read
+    节点原始信息：加速踏板踩下标志位 == 1
+    节点id：EBC-7-1_node_7
+    节点类型：write
+    节点原始信息：while Mot_Spd <= KfEBC_MotSpdForThrd_rpm and EBCReqTq > 0:
+    节点id：EBC-7-1_node_9
+    节点类型：write
+    节点原始信息：VbEBC_PState_flg = 0
+    节点id：EBC-7-1_node_10
+    节点类型：read
+    节点原始信息：EBC-6-1中条件3 == 1 or EBC-6-1中条件4 == 1 or VbEBC_GearPState_flg == 1
+    节点id：EBC-7-1_node_11
+    节点类型：write
+    节点原始信息：VbEBC_PState_flg = 0
+    边id：EBC-7-1_edge_0
+    源节点id：Start
+    目标节点id：EBC-7-1_node_0
+    边原始信息：
+    边id：EBC-7-1_edge_1
+    源节点id：EBC-7-1_node_0
+    目标节点id：EBC-7-1_node_1
+    边原始信息：
+    边id：EBC-7-1_edge_2
+    源节点id：EBC-7-1_node_1
+    目标节点id：EBC-7-1_node_2
+    边原始信息：
+    边id：EBC-7-1_edge_4
+    源节点id：EBC-7-1_node_2
+    目标节点id：EBC-7-1_node_5
+    边原始信息：
+    边id：EBC-7-1_edge_6
+    源节点id：EBC-7-1_node_5
+    目标节点id：EBC-7-1_node_6
+    边原始信息：
+    边id：EBC-7-1_edge_7
+    源节点id：EBC-7-1_node_6
+    目标节点id：EBC-7-1_node_7
+    边原始信息：
+    边id：EBC-7-1_edge_8
+    源节点id：EBC-7-1_node_7
+    目标节点id：EBC-7-1_node_9
+    边原始信息：
+    边id：EBC-7-1_edge_10
+    源节点id：EBC-7-1_node_9
+    目标节点id：EBC-7-1_node_10
+    边原始信息：
+    边id：EBC-7-1_edge_11
+    源节点id：EBC-7-1_node_10
+    目标节点id：EBC-7-1_node_11
+    边原始信息：
+图id：EBC-9-3
+  路径id：EBC-9-3_1
+    节点id：Start
+    节点类型：write
+    节点原始信息：START
+    节点id：EBC-9-3_node_0
+    节点类型：read
+    节点原始信息：VbEBC_GearPState_flg == 0 and GearSignal == P
+    节点id：EBC-9-3_node_1
+    节点类型：write
+    节点原始信息：VbEBC_GearPState_flg = 1
+    节点id：EBC-9-3_node_2
+    节点类型：write
+    节点原始信息：VbEBC_PState_flg = 0
+    节点id：EBC-9-3_node_3
+    节点类型：read
+    节点原始信息：EBCReqTq >= abs(ParkTq) + KfEBC_ParkTqOffset_Nm
+    节点id：EBC-9-3_node_4
+    节点类型：write
+    节点原始信息：pass
+    节点id：EBC-9-3_node_10
+    节点类型：read
+    节点原始信息：ESP_SysSts_EPB == Closed
+    节点id：EBC-9-3_node_11
+    节点类型：write
+    节点原始信息：EBCReqTq = 0
+    节点id：EBC-9-3_node_12
+    节点类型：read
+    节点原始信息：GearSignal != P and ESP_SysSts_EPB != Closed
+    节点id：EBC-9-3_node_13
+    节点类型：write
+    节点原始信息：EBCReqTq = 0
+    节点id：EBC-9-3_node_14
+    节点类型：read
+    节点原始信息：EBCReqTq == 0
+    节点id：EBC-9-3_node_15
+    节点类型：write
+    节点原始信息：VbEBC_GearPState_flg = 0
+    边id：EBC-9-3_edge_0
+    源节点id：Start
+    目标节点id：EBC-9-3_node_0
+    边原始信息：
+    边id：EBC-9-3_edge_1
+    源节点id：EBC-9-3_node_0
+    目标节点id：EBC-9-3_node_1
+    边原始信息：
+    边id：EBC-9-3_edge_2
+    源节点id：EBC-9-3_node_1
+    目标节点id：EBC-9-3_node_2
+    边原始信息：
+    边id：EBC-9-3_edge_3
+    源节点id：EBC-9-3_node_2
+    目标节点id：EBC-9-3_node_3
+    边原始信息：
+    边id：EBC-9-3_edge_4
+    源节点id：EBC-9-3_node_3
+    目标节点id：EBC-9-3_node_4
+    边原始信息：
+    边id：EBC-9-3_edge_9
+    源节点id：EBC-9-3_node_4
+    目标节点id：EBC-9-3_node_10
+    边原始信息：
+    边id：EBC-9-3_edge_11
+    源节点id：EBC-9-3_node_10
+    目标节点id：EBC-9-3_node_11
+    边原始信息：
+    边id：EBC-9-3_edge_12
+    源节点id：EBC-9-3_node_11
+    目标节点id：EBC-9-3_node_12
+    边原始信息：
+    边id：EBC-9-3_edge_13
+    源节点id：EBC-9-3_node_12
+    目标节点id：EBC-9-3_node_13
+    边原始信息：
+    边id：EBC-9-3_edge_14
+    源节点id：EBC-9-3_node_13
+    目标节点id：EBC-9-3_node_14
+    边原始信息：
+    边id：EBC-9-3_edge_15
+    源节点id：EBC-9-3_node_14
+    目标节点id：EBC-9-3_node_15
+    边原始信息：
+  路径id：EBC-9-3_2
+    节点id：Start
+    节点类型：write
+    节点原始信息：START
+    节点id：EBC-9-3_node_0
+    节点类型：read
+    节点原始信息：VbEBC_GearPState_flg == 0 and GearSignal == P
+    节点id：EBC-9-3_node_1
+    节点类型：write
+    节点原始信息：VbEBC_GearPState_flg = 1
+    节点id：EBC-9-3_node_2
+    节点类型：write
+    节点原始信息：VbEBC_PState_flg = 0
+    节点id：EBC-9-3_node_3
+    节点类型：read
+    节点原始信息：EBCReqTq >= abs(ParkTq) + KfEBC_ParkTqOffset_Nm
+    节点id：EBC-9-3_node_6
+    节点类型：write
+    节点原始信息：EBCReqTq = abs(ParkTq) + KfEBC_ParkTqOffset_Nm
+    节点id：EBC-9-3_node_7
+    节点类型：write
+    节点原始信息：while ESP_SysSts_EPB != Closed:
+    节点id：EBC-9-3_node_9
+    节点类型：write
+    节点原始信息：EBCReqTq = 0
+    节点id：EBC-9-3_node_10
+    节点类型：read
+    节点原始信息：ESP_SysSts_EPB == Closed
+    节点id：EBC-9-3_node_11
+    节点类型：write
+    节点原始信息：EBCReqTq = 0
+    节点id：EBC-9-3_node_12
+    节点类型：read
+    节点原始信息：GearSignal != P and ESP_SysSts_EPB != Closed
+    节点id：EBC-9-3_node_13
+    节点类型：write
+    节点原始信息：EBCReqTq = 0
+    节点id：EBC-9-3_node_14
+    节点类型：read
+    节点原始信息：EBCReqTq == 0
+    节点id：EBC-9-3_node_15
+    节点类型：write
+    节点原始信息：VbEBC_GearPState_flg = 0
+    边id：EBC-9-3_edge_0
+    源节点id：Start
+    目标节点id：EBC-9-3_node_0
+    边原始信息：
+    边id：EBC-9-3_edge_1
+    源节点id：EBC-9-3_node_0
+    目标节点id：EBC-9-3_node_1
+    边原始信息：
+    边id：EBC-9-3_edge_2
+    源节点id：EBC-9-3_node_1
+    目标节点id：EBC-9-3_node_2
+    边原始信息：
+    边id：EBC-9-3_edge_3
+    源节点id：EBC-9-3_node_2
+    目标节点id：EBC-9-3_node_3
+    边原始信息：
+    边id：EBC-9-3_edge_5
+    源节点id：EBC-9-3_node_3
+    目标节点id：EBC-9-3_node_6
+    边原始信息：
+    边id：EBC-9-3_edge_6
+    源节点id：EBC-9-3_node_6
+    目标节点id：EBC-9-3_node_7
+    边原始信息：
+    边id：EBC-9-3_edge_7
+    源节点id：EBC-9-3_node_7
+    目标节点id：EBC-9-3_node_9
+    边原始信息：
+    边id：EBC-9-3_edge_10
+    源节点id：EBC-9-3_node_9
+    目标节点id：EBC-9-3_node_10
+    边原始信息：
+    边id：EBC-9-3_edge_11
+    源节点id：EBC-9-3_node_10
+    目标节点id：EBC-9-3_node_11
+    边原始信息：
+    边id：EBC-9-3_edge_12
+    源节点id：EBC-9-3_node_11
+    目标节点id：EBC-9-3_node_12
+    边原始信息：
+    边id：EBC-9-3_edge_13
+    源节点id：EBC-9-3_node_12
+    目标节点id：EBC-9-3_node_13
+    边原始信息：
+    边id：EBC-9-3_edge_14
+    源节点id：EBC-9-3_node_13
+    目标节点id：EBC-9-3_node_14
+    边原始信息：
+    边id：EBC-9-3_edge_15
+    源节点id：EBC-9-3_node_14
+    目标节点id：EBC-9-3_node_15
+    边原始信息：
+图id：EBC-14-1
+  路径id：EBC-14-1_1
+    节点id：Start
+    节点类型：write
+    节点原始信息：START
+    节点id：EBC-14-1_node_0
+    节点类型：read
+    节点原始信息：hydraulic_parking_status == 0 and VbEBC_MotTqNega_flg_rising_edge == 1 and VCU_BrkSig == 0
+    节点id：EBC-14-1_node_1
+    节点类型：write
+    节点原始信息：slope_recognition_status = 2
+    节点id：EBC-14-1_node_2
+    节点类型：write
+    节点原始信息：record_acceleration_and_calculate_slope()
+    节点id：EBC-14-1_node_3
+    节点类型：read
+    节点原始信息：hydraulic_parking_status == 1 or (VeEBC_RecoState_enum == 2 and duration >= 100) or VCU_BrkSig == 1
+    节点id：EBC-14-1_node_4
+    节点类型：write
+    节点原始信息：exit_slope_recognition()
+    边id：EBC-14-1_edge_0
+    源节点id：Start
+    目标节点id：EBC-14-1_node_0
+    边原始信息：
+    边id：EBC-14-1_edge_1
+    源节点id：EBC-14-1_node_0
+    目标节点id：EBC-14-1_node_1
+    边原始信息：
+    边id：EBC-14-1_edge_2
+    源节点id：EBC-14-1_node_1
+    目标节点id：EBC-14-1_node_2
+    边原始信息：
+    边id：EBC-14-1_edge_3
+    源节点id：EBC-14-1_node_2
+    目标节点id：EBC-14-1_node_3
+    边原始信息：
+    边id：EBC-14-1_edge_4
+    源节点id：EBC-14-1_node_3
+    目标节点id：EBC-14-1_node_4
+    边原始信息：
+图id：EBC-16-1
+  路径id：EBC-16-1_1
+    节点id：Start
+    节点类型：write
+    节点原始信息：START
+路径总数：12

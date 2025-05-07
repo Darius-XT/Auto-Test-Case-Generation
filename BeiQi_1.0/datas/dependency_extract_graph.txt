@@ -1,0 +1,11 @@
+<依赖图名：EBC-4-1 被依赖图名：EBC-3-1 数据名称：VbEBC_AclPedApled_flg>
+<依赖图名：EBC-4-1 被依赖图名：EBC-7-1 数据名称：Mot_Spd>
+<依赖图名：EBC-4-1 被依赖图名：EBC-9-3 数据名称：ESP_SysSts_EPB>
+<依赖图名：EBC-5-1 被依赖图名：EBC-6-1 数据名称：VbEBC_VehRelease_flg>
+<依赖图名：EBC-6-1 被依赖图名：EBC-3-1 数据名称：VbEBC_AclPedApled_flg>
+<依赖图名：EBC-6-1 被依赖图名：EBC-5-1 数据名称：VfEBC_SlopeTorqueMemy_Nm>
+<依赖图名：EBC-7-1 被依赖图名：EBC-4-1 数据名称：VbEBC_VehStop_flg>
+<依赖图名：EBC-7-1 被依赖图名：EBC-6-1 数据名称：VbEBC_VehRelease_flg>
+<依赖图名：EBC-7-1 被依赖图名：EBC-9-3 数据名称：EBCReqTq>
+<依赖图名：EBC-7-1 被依赖图名：EBC-9-3 数据名称：VbEBC_GearPState_flg>
+<依赖图名：EBC-9-3 被依赖图名：EBC-7-1 数据名称：EBCReqTq>

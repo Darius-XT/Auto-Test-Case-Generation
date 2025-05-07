@@ -1,0 +1,155 @@
+==== Requiement ID: EBC-3-1 ====
+```mermaid
+flowchart TD
+    Start([Start])
+    End([End])
+    EBC_3_1_0{"VCU_APSPerc > KfEBC_APSBrkMax_Pct?"}
+    EBC_3_1_1["VbEBC_AclPedApled_flg = 1"]
+    EBC_3_1_2{"VCU_APSPerc < KfEBC_APSBrkMin_Pct?"}
+    EBC_3_1_3["VbEBC_AclPedApled_flg = 0"]
+    Start --> EBC_3_1_0
+    EBC_3_1_0 -->|yes| EBC_3_1_1
+    EBC_3_1_0 -->|no| EBC_3_1_2
+    EBC_3_1_2 -->|yes| EBC_3_1_3
+    EBC_3_1_1 --> End
+    EBC_3_1_3 --> End
+```
+
+==== Requiement ID: EBC-4-1 ====
+```mermaid
+flowchart TD
+    Start([Start])
+    End([End])
+    EBC_4_1_0{"(Mot_Spd >= -KfEBC_MotSpdZeroThrd_rpm and Mot_Spd <= KfEBC_MotSpdZeroThrd_rpm) and (VbEBC_AclPedApled_flg == 0) and (ESP_SysSts_EPB == "Released") and (VCU_GearSig == "D") and (VCU_WormSts == "关闭")?"}
+    EBC_4_1_1["VbEBC_VehStop_flg = 1"]
+    EBC_4_1_3["VbEBC_VehStop_flg = 0"]
+    Start --> EBC_4_1_0
+    EBC_4_1_0 -->|yes| EBC_4_1_1
+    EBC_4_1_0 -->|no| EBC_4_1_3
+    EBC_4_1_1 --> End
+    EBC_4_1_3 --> End
+```
+
+==== Requiement ID: EBC-5-1 ====
+```mermaid
+flowchart TD
+    Start([Start])
+    End([End])
+    EBC_5_1_0{"(abs(motor_speed) <= KfEBC_MotSpdZeroThrd_rpm) and (duration >= KfEBC_SpdZeroDebounceThreshold_s) and (VbEBC_VehRelease_flg == 0)?"}
+    EBC_5_1_1["VfEBC_SlopeTorqueMemy_Nm = lookup_table(YRS_LgtAcce, [KtEBC_SlopeTqMem_1X_null, KtEBC_SlopeTqMem_1Y_Nm])"]
+    EBC_5_1_2["VfEBC_LongitAccMem_Null = YRS_LgtAcce"]
+    Start --> EBC_5_1_0
+    EBC_5_1_0 -->|yes| EBC_5_1_1
+    EBC_5_1_1 --> EBC_5_1_2
+    EBC_5_1_2 --> End
+```
+
+==== Requiement ID: EBC-6-1 ====
+```mermaid
+flowchart TD
+    Start([Start])
+    End([End])
+    EBC_6_1_0{"(VfEBC_SlopeTorqueMemy_Nm >= 0 and VbEBC_AclPedApled_flg == 1 and VCU_FrntMotTarTqCmd + VCU_ReMotTarTqCmd >= VfEBC_SlopeTorqueMemy_Nm + KfEBC_ParkRecoOffset_Nm and VfEBC_DrvReq_Nm >= VfEBC_SlopeTorqueMemy_Nm + KfEBC_ParkRecoOffset_Nm) or (VfEBC_SlopeTorqueMemy_Nm < 0 and VbEBC_AclPedApled_flg == 1 and VCU_FrntMotTarTqCmd + VCU_ReMotTarTqCmd >= KfEBC_ParkRecoOffset_Nm and VfEBC_DrvReq_Nm >= KfEBC_ParkRecoOffset_Nm) or (VCU_GearSig == 'R' or VCU_GearSig == 'N') or (abs(motor_speed) > KfEBC_MotSpdMoveThrd_rpm and duration >= KfEBC_SpdZeroDebounceThreshold_s)?"}
+    EBC_6_1_1["VbEBC_VehRelease_flg = 1"]
+    Start --> EBC_6_1_0
+    EBC_6_1_0 -->|yes| EBC_6_1_1
+    EBC_6_1_1 --> End
+```
+
+==== Requiement ID: EBC-7-1 ====
+```mermaid
+flowchart TD
+    Start([Start])
+    End([End])
+    EBC_7_1_0{"VbEBC_GearPState_flg == 0 and VbEBC_VehRelease_flg == 0 and VbEBC_VehStop_flg == 1?"}
+    EBC_7_1_1["VbEBC_PState_flg = 1"]
+    EBC_7_1_2{"EBCReqTq >= abs(驻车扭矩) + 驻车扭矩补偿值?"}
+    EBC_7_1_3["EBCReqTq = EBCReqTq"]
+    EBC_7_1_5["EBCReqTq = abs(驻车扭矩) + 驻车扭矩补偿值"]
+    EBC_7_1_6{"加速踏板踩下标志位 == 1?"}
+    EBC_7_1_7["while Mot_Spd <= KfEBC_MotSpdForThrd_rpm and EBCReqTq > 0:"]
+    EBC_7_1_8["EBCReqTq = EBCReqTq - 梯度"]
+    EBC_7_1_9["VbEBC_PState_flg = 0"]
+    EBC_7_1_10{"EBC-6-1中条件3 == 1 or EBC-6-1中条件4 == 1 or VbEBC_GearPState_flg == 1?"}
+    EBC_7_1_11["VbEBC_PState_flg = 0"]
+    Start --> EBC_7_1_0
+    EBC_7_1_0 -->|yes| EBC_7_1_1
+    EBC_7_1_1 --> EBC_7_1_2
+    EBC_7_1_2 -->|yes| EBC_7_1_3
+    EBC_7_1_2 -->|no| EBC_7_1_5
+    EBC_7_1_3 --> EBC_7_1_6
+    EBC_7_1_5 --> EBC_7_1_6
+    EBC_7_1_6 -->|yes| EBC_7_1_7
+    EBC_7_1_7 --> EBC_7_1_9
+    EBC_7_1_8 --> EBC_7_1_9
+    EBC_7_1_9 --> EBC_7_1_10
+    EBC_7_1_10 -->|yes| EBC_7_1_11
+    EBC_7_1_11 --> End
+```
+
+==== Requiement ID: EBC-9-3 ====
+```mermaid
+flowchart TD
+    Start([Start])
+    End([End])
+    EBC_9_3_0{"VbEBC_GearPState_flg == 0 and GearSignal == P?"}
+    EBC_9_3_1["VbEBC_GearPState_flg = 1"]
+    EBC_9_3_2["VbEBC_PState_flg = 0"]
+    EBC_9_3_3{"EBCReqTq >= abs(ParkTq) + KfEBC_ParkTqOffset_Nm?"}
+    EBC_9_3_4["pass"]
+    EBC_9_3_6["EBCReqTq = abs(ParkTq) + KfEBC_ParkTqOffset_Nm"]
+    EBC_9_3_7["while ESP_SysSts_EPB != Closed:"]
+    EBC_9_3_8["pass"]
+    EBC_9_3_9["EBCReqTq = 0"]
+    EBC_9_3_10{"ESP_SysSts_EPB == Closed?"}
+    EBC_9_3_11["EBCReqTq = 0"]
+    EBC_9_3_12{"GearSignal != P and ESP_SysSts_EPB != Closed?"}
+    EBC_9_3_13["EBCReqTq = 0"]
+    EBC_9_3_14{"EBCReqTq == 0?"}
+    EBC_9_3_15["VbEBC_GearPState_flg = 0"]
+    Start --> EBC_9_3_0
+    EBC_9_3_0 -->|yes| EBC_9_3_1
+    EBC_9_3_1 --> EBC_9_3_2
+    EBC_9_3_2 --> EBC_9_3_3
+    EBC_9_3_3 -->|yes| EBC_9_3_4
+    EBC_9_3_3 -->|no| EBC_9_3_6
+    EBC_9_3_6 --> EBC_9_3_7
+    EBC_9_3_7 --> EBC_9_3_9
+    EBC_9_3_8 --> EBC_9_3_9
+    EBC_9_3_4 --> EBC_9_3_10
+    EBC_9_3_9 --> EBC_9_3_10
+    EBC_9_3_10 -->|yes| EBC_9_3_11
+    EBC_9_3_11 --> EBC_9_3_12
+    EBC_9_3_12 -->|yes| EBC_9_3_13
+    EBC_9_3_13 --> EBC_9_3_14
+    EBC_9_3_14 -->|yes| EBC_9_3_15
+    EBC_9_3_15 --> End
+```
+
+==== Requiement ID: EBC-14-1 ====
+```mermaid
+flowchart TD
+    Start([Start])
+    End([End])
+    EBC_14_1_0{"hydraulic_parking_status == 0 and VbEBC_MotTqNega_flg_rising_edge == 1 and VCU_BrkSig == 0?"}
+    EBC_14_1_1["slope_recognition_status = 2"]
+    EBC_14_1_2["record_acceleration_and_calculate_slope()"]
+    EBC_14_1_3{"hydraulic_parking_status == 1 or (VeEBC_RecoState_enum == 2 and duration >= 100) or VCU_BrkSig == 1?"}
+    EBC_14_1_4["exit_slope_recognition()"]
+    Start --> EBC_14_1_0
+    EBC_14_1_0 -->|yes| EBC_14_1_1
+    EBC_14_1_1 --> EBC_14_1_2
+    EBC_14_1_2 --> EBC_14_1_3
+    EBC_14_1_3 -->|yes| EBC_14_1_4
+    EBC_14_1_4 --> End
+```
+
+==== Requiement ID: EBC-16-1 ====
+```mermaid
+flowchart TD
+    Start([Start])
+    End([End])
+    EBC_16_1_0["VfEBC_EleBrkTqMiddle_Nm = lookup_table(VfEBC_EBCRequest_2X_null, VfEBC_EBCRequest_2Y_rpm, VfEBC_EBCRequest_2Z_Nm)"]
+    EBC_16_1_0 --> End
+```
+

@@ -1,0 +1,98 @@
+{
+    "case_info": {
+        "main_requirement_path_id": [
+            "000a7611-ed19-44ff-9c1f-5cda31fd48b2",
+            "68039511-6367-4429-b10a-95f3aaf428c3",
+            "04182ddd-7ea4-459a-8599-4907e7640a5a",
+            "af9b6a5d-4e6a-4e8b-a6cd-810acf3b519b",
+            "56ce7649-f4d0-418b-b81a-64cfb8dad40c",
+            "9694e98c-9e7d-4847-86d6-da28b7e68a35",
+            "0ac48a60-218e-11ef-84f6-9394c851dea5"
+        ],
+        "main_requirement_graph_id": "01e06fdc-2c7c-11ef-bdd1-c8cb9e4ad5d4",
+        "graph_type": "request",
+        "group_name": "default_group"
+    },
+    "observe_signals": [],
+    "test_case": [
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "01e06fdc-2c7c-11ef-bdd1-c8cb9e4ad5d4",
+                "id": "000a7611-ed19-44ff-9c1f-5cda31fd48b2",
+                "next_receiver_id": "0ac48a60-218e-11ef-84f6-9394c851dea5",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "01e06fdc-2c7c-11ef-bdd1-c8cb9e4ad5d4",
+                "transition_id": [
+                    "68039511-6367-4429-b10a-95f3aaf428c3",
+                    "af9b6a5d-4e6a-4e8b-a6cd-810acf3b519b",
+                    "56ce7649-f4d0-418b-b81a-64cfb8dad40c",
+                    "9694e98c-9e7d-4847-86d6-da28b7e68a35"
+                ],
+                "points_combination": {
+                    "车速信号有效性": "1",
+                    "驱动电机转速": "1"
+                },
+                "action_send": [
+                    {
+                        "name": "车速信号有效性",
+                        "value": "1",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "1",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "(车速信号有效性==1) and (驱动电机转速 <= 0)",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "01e06fdc-2c7c-11ef-bdd1-c8cb9e4ad5d4",
+                "id": "0ac48a60-218e-11ef-84f6-9394c851dea5",
+                "next_receiver_id": null,
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "车速信号",
+                        "value": "-1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        }
+    ]
+}

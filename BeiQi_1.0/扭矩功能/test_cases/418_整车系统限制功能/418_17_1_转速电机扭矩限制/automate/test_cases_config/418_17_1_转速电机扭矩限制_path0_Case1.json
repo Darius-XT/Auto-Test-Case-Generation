@@ -1,0 +1,427 @@
+{
+    "case_info": {
+        "main_requirement_path_id": [
+            "d5459c79-2a3f-11ef-811a-1105cfa30ef0",
+            "d5459c70-2a3f-11ef-811a-1105cfa30ef0",
+            "d5459c7b-2a3f-11ef-811a-1105cfa30ef0"
+        ],
+        "main_requirement_graph_id": "cb753274-2c69-11ef-8c25-c8cb9e4ad5d4",
+        "graph_type": "request",
+        "group_name": "default_group"
+    },
+    "observe_signals": [],
+    "test_case": [
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "cb753274-2c69-11ef-8c25-c8cb9e4ad5d4",
+                "id": "d5459c79-2a3f-11ef-811a-1105cfa30ef0",
+                "next_receiver_id": "d5459c7b-2a3f-11ef-811a-1105cfa30ef0",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb753274-2c69-11ef-8c25-c8cb9e4ad5d4",
+                "transition_id": [
+                    "d5459c70-2a3f-11ef-811a-1105cfa30ef0"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "2"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "2",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    false
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号 == 4",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb753274-2c69-11ef-8c25-c8cb9e4ad5d4",
+                "id": "d5459c79-2a3f-11ef-811a-1105cfa30ef0",
+                "next_receiver_id": "d5459c7b-2a3f-11ef-811a-1105cfa30ef0",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb753274-2c69-11ef-8c25-c8cb9e4ad5d4",
+                "transition_id": [
+                    "d5459c70-2a3f-11ef-811a-1105cfa30ef0"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "5"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "5",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    false
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号 == 4",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb753274-2c69-11ef-8c25-c8cb9e4ad5d4",
+                "id": "d5459c79-2a3f-11ef-811a-1105cfa30ef0",
+                "next_receiver_id": "d5459c7b-2a3f-11ef-811a-1105cfa30ef0",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb753274-2c69-11ef-8c25-c8cb9e4ad5d4",
+                "transition_id": [
+                    "d5459c70-2a3f-11ef-811a-1105cfa30ef0"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "驱动电机转速": "13000"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "13000",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号 == 4",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb753274-2c69-11ef-8c25-c8cb9e4ad5d4",
+                "id": "d5459c7b-2a3f-11ef-811a-1105cfa30ef0",
+                "next_receiver_id": "d5459c7b-2a3f-11ef-811a-1105cfa30ef0",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "前电机轴端扭矩上限",
+                        "value": "1.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "前电机轴端扭矩下限",
+                        "value": "-1.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb753274-2c69-11ef-8c25-c8cb9e4ad5d4",
+                "transition_id": [
+                    "d5459c70-2a3f-11ef-811a-1105cfa30ef0"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "驱动电机转速": "13100"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "13100",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号 == 4",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb753274-2c69-11ef-8c25-c8cb9e4ad5d4",
+                "id": "d5459c7b-2a3f-11ef-811a-1105cfa30ef0",
+                "next_receiver_id": "d5459c7b-2a3f-11ef-811a-1105cfa30ef0",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "前电机轴端扭矩上限",
+                        "value": "1.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "前电机轴端扭矩下限",
+                        "value": "-1.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb753274-2c69-11ef-8c25-c8cb9e4ad5d4",
+                "transition_id": [
+                    "d5459c70-2a3f-11ef-811a-1105cfa30ef0"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "驱动电机转速": "13250"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "13250",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号 == 4",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb753274-2c69-11ef-8c25-c8cb9e4ad5d4",
+                "id": "d5459c7b-2a3f-11ef-811a-1105cfa30ef0",
+                "next_receiver_id": "d5459c7b-2a3f-11ef-811a-1105cfa30ef0",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "前电机轴端扭矩上限",
+                        "value": "1.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "前电机轴端扭矩下限",
+                        "value": "-1.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb753274-2c69-11ef-8c25-c8cb9e4ad5d4",
+                "transition_id": [
+                    "d5459c70-2a3f-11ef-811a-1105cfa30ef0"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "驱动电机转速": "13500"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "13500",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号 == 4",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb753274-2c69-11ef-8c25-c8cb9e4ad5d4",
+                "id": "d5459c7b-2a3f-11ef-811a-1105cfa30ef0",
+                "next_receiver_id": "d5459c7b-2a3f-11ef-811a-1105cfa30ef0",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "前电机轴端扭矩上限",
+                        "value": "0.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "前电机轴端扭矩下限",
+                        "value": "-1.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "cb753274-2c69-11ef-8c25-c8cb9e4ad5d4",
+                "transition_id": [
+                    "d5459c70-2a3f-11ef-811a-1105cfa30ef0"
+                ],
+                "points_combination": {
+                    "策略挡位信号": "4",
+                    "驱动电机转速": "14000"
+                },
+                "action_send": [
+                    {
+                        "name": "策略挡位信号",
+                        "value": "4",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "驱动电机转速",
+                        "value": "14000",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "策略挡位信号 == 4",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "cb753274-2c69-11ef-8c25-c8cb9e4ad5d4",
+                "id": "d5459c7b-2a3f-11ef-811a-1105cfa30ef0",
+                "next_receiver_id": null,
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "前电机轴端扭矩上限",
+                        "value": "0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "前电机轴端扭矩下限",
+                        "value": "-1.0",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        }
+    ]
+}

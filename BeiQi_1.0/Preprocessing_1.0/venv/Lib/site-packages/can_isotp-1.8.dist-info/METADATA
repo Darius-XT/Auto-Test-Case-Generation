@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: can-isotp
+Version: 1.8
+Summary: Module enabling the IsoTP protocol defined by ISO-15765
+Home-page: https://github.com/pylessard/python-can-isotp
+Author: Pier-Yves Lessard
+Author-email: py.lessard@gmail.com
+License: MIT
+Download-URL: https://github.com/pylessard/python-can-isotp/archive/v1.8.tar.gz
+
+python-can-isotp
+
+

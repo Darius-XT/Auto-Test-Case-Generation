@@ -1,0 +1,129 @@
+{
+    "case_info": {
+        "main_requirement_path_id": [
+            "f552c329-6b24-4db7-a8b5-e730e88bb721",
+            "df9e341c-162a-433e-a379-48e4dfd7f09f",
+            "26620331-bbd9-41ce-bfd3-ca190743e3ff"
+        ],
+        "main_requirement_graph_id": "626c53b8-2c6a-11ef-9a88-c8cb9e4ad5d4",
+        "graph_type": "request",
+        "group_name": "default_group"
+    },
+    "observe_signals": [],
+    "test_case": [
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "626c53b8-2c6a-11ef-9a88-c8cb9e4ad5d4",
+                "id": "f552c329-6b24-4db7-a8b5-e730e88bb721",
+                "next_receiver_id": "26620331-bbd9-41ce-bfd3-ca190743e3ff",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "626c53b8-2c6a-11ef-9a88-c8cb9e4ad5d4",
+                "transition_id": [
+                    "df9e341c-162a-433e-a379-48e4dfd7f09f"
+                ],
+                "points_combination": {
+                    "油门扭矩需求": "-10000"
+                },
+                "action_send": [
+                    {
+                        "name": "油门扭矩需求",
+                        "value": "-10000",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [],
+                "is_origin_node": true,
+                "condition": "",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "626c53b8-2c6a-11ef-9a88-c8cb9e4ad5d4",
+                "id": "26620331-bbd9-41ce-bfd3-ca190743e3ff",
+                "next_receiver_id": "26620331-bbd9-41ce-bfd3-ca190743e3ff",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "轴端油门扭矩需求",
+                        "value": "-1156.7379988432622",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "626c53b8-2c6a-11ef-9a88-c8cb9e4ad5d4",
+                "transition_id": [
+                    "df9e341c-162a-433e-a379-48e4dfd7f09f"
+                ],
+                "points_combination": {
+                    "油门扭矩需求": "10000"
+                },
+                "action_send": [
+                    {
+                        "name": "油门扭矩需求",
+                        "value": "10000",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [],
+                "is_origin_node": true,
+                "condition": "",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "626c53b8-2c6a-11ef-9a88-c8cb9e4ad5d4",
+                "id": "26620331-bbd9-41ce-bfd3-ca190743e3ff",
+                "next_receiver_id": null,
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [
+                    {
+                        "name": "轴端油门扭矩需求",
+                        "value": "1156.7379988432622",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        }
+    ]
+}

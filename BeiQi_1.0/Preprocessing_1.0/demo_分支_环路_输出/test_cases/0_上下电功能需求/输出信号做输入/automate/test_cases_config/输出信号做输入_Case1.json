@@ -1,0 +1,2476 @@
+{
+    "case_info": {
+        "main_requirement_path_id": [
+            "fbdf516f-ea86-4b08-aa88-c445514116f6",
+            "73d1426f-2da0-40c5-9b0b-ad39cdc22049",
+            "cbcdb30d-1701-45c4-8e1e-fba56fc47384"
+        ],
+        "main_requirement_graph_id": "4b229250-f7cc-11ee-9e3e-59c479e9b0e2",
+        "graph_type": "request",
+        "group_name": "default_group"
+    },
+    "observe_signals": [],
+    "test_case": [
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "id": "12141366-b382-11ee-a83c-6fe3d85e02b5",
+                "next_receiver_id": "12146171-b382-11ee-a83c-6fe3d85e02b5",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "id": "12146171-b382-11ee-a83c-6fe3d85e02b5",
+                "next_receiver_id": "12146172-b382-11ee-a83c-6fe3d85e02b5",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "30",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "2",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "PDCU监控TR故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "9.00",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "transition_id": [
+                    "12141362-b382-11ee-a83c-6fe3d85e02b5"
+                ],
+                "points_combination": {
+                    "钥匙开关": "2"
+                },
+                "action_send": [
+                    {
+                        "name": "钥匙开关",
+                        "value": "2",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "钥匙开关 == 2 and after(10, sec)",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "id": "12146171-b382-11ee-a83c-6fe3d85e02b5",
+                "next_receiver_id": "12146172-b382-11ee-a83c-6fe3d85e02b5",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "30",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "2",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "PDCU监控TR故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "1.00",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "transition_id": [
+                    "12141350-b382-11ee-a83c-6fe3d85e02b5"
+                ],
+                "points_combination": {
+                    "TR故障": "1"
+                },
+                "action_send": [
+                    {
+                        "name": "TR故障",
+                        "value": "1",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "TR故障 == 1",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "id": "12146172-b382-11ee-a83c-6fe3d85e02b5",
+                "next_receiver_id": "12141367-b382-11ee-a83c-6fe3d85e02b5",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "30",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "2",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "PDCU监控TR故障",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "id": "12141367-b382-11ee-a83c-6fe3d85e02b5",
+                "next_receiver_id": "12146173-b382-11ee-a83c-6fe3d85e02b5",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "49",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "PDCU监控TR故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "54.00",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "transition_id": [
+                    "12141351-b382-11ee-a83c-6fe3d85e02b5"
+                ],
+                "points_combination": {
+                    "钥匙开关": "0",
+                    "TR故障": "0"
+                },
+                "action_send": [
+                    {
+                        "name": "钥匙开关",
+                        "value": "0",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "TR故障",
+                        "value": "0",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "钥匙开关 == 0 and TR故障 == 0 and after(60, sec)",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "id": "12141367-b382-11ee-a83c-6fe3d85e02b5",
+                "next_receiver_id": "12146173-b382-11ee-a83c-6fe3d85e02b5",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "49",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "PDCU监控TR故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "6.00",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "id": "12146173-b382-11ee-a83c-6fe3d85e02b5",
+                "next_receiver_id": "12146174-b382-11ee-a83c-6fe3d85e02b5",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "30",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "2",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "PDCU监控TR故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "9.00",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "transition_id": [
+                    "12141352-b382-11ee-a83c-6fe3d85e02b5"
+                ],
+                "points_combination": {
+                    "钥匙开关": "2"
+                },
+                "action_send": [
+                    {
+                        "name": "钥匙开关",
+                        "value": "2",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "钥匙开关 == 2 and after(10, sec)",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "id": "12146173-b382-11ee-a83c-6fe3d85e02b5",
+                "next_receiver_id": "12146174-b382-11ee-a83c-6fe3d85e02b5",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "30",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "2",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "PDCU监控TR故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "1.00",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "transition_id": [
+                    "12141353-b382-11ee-a83c-6fe3d85e02b5"
+                ],
+                "points_combination": {
+                    "TR故障": "1"
+                },
+                "action_send": [
+                    {
+                        "name": "TR故障",
+                        "value": "1",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "TR故障 == 1",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "id": "12146174-b382-11ee-a83c-6fe3d85e02b5",
+                "next_receiver_id": "12146175-b382-11ee-a83c-6fe3d85e02b5",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "30",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "2",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "PDCU监控TR故障",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "id": "12146175-b382-11ee-a83c-6fe3d85e02b5",
+                "next_receiver_id": "12146176-b382-11ee-a83c-6fe3d85e02b5",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "30",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "2",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "PDCU监控TR故障",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "2",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "4.6",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "transition_id": [
+                    "12141355-b382-11ee-a83c-6fe3d85e02b5"
+                ],
+                "points_combination": {
+                    "P挡按键状态": "1"
+                },
+                "action_send": [
+                    {
+                        "name": "P挡按键状态",
+                        "value": "1",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "P挡按键状态 == 1 and after(5, sec)",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "id": "12146175-b382-11ee-a83c-6fe3d85e02b5",
+                "next_receiver_id": "12146176-b382-11ee-a83c-6fe3d85e02b5",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "30",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "2",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "PDCU监控TR故障",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "2",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "0.5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "id": "12146176-b382-11ee-a83c-6fe3d85e02b5",
+                "next_receiver_id": "12146177-b382-11ee-a83c-6fe3d85e02b5",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "49",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "PDCU监控TR故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "54.00",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "transition_id": [
+                    "12141358-b382-11ee-a83c-6fe3d85e02b5"
+                ],
+                "points_combination": {
+                    "钥匙开关": "0",
+                    "TR故障": "0",
+                    "P挡按键状态": "0"
+                },
+                "action_send": [
+                    {
+                        "name": "钥匙开关",
+                        "value": "0",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "TR故障",
+                        "value": "0",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "P挡按键状态",
+                        "value": "0",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true,
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "钥匙开关 == 0 and TR故障 == 0 and  P挡按键状态 == 0 and after(60, sec)",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "id": "12146176-b382-11ee-a83c-6fe3d85e02b5",
+                "next_receiver_id": "12146177-b382-11ee-a83c-6fe3d85e02b5",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "49",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "PDCU监控TR故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "6.00",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "id": "12146177-b382-11ee-a83c-6fe3d85e02b5",
+                "next_receiver_id": "12146178-b382-11ee-a83c-6fe3d85e02b5",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "30",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "2",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "PDCU监控TR故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "9.00",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "transition_id": [
+                    "12141354-b382-11ee-a83c-6fe3d85e02b5"
+                ],
+                "points_combination": {
+                    "钥匙开关": "2"
+                },
+                "action_send": [
+                    {
+                        "name": "钥匙开关",
+                        "value": "2",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "钥匙开关 == 2 and after(10, sec)",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "id": "12146177-b382-11ee-a83c-6fe3d85e02b5",
+                "next_receiver_id": "12146178-b382-11ee-a83c-6fe3d85e02b5",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "30",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "2",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "PDCU监控TR故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "1.00",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "id": "12146178-b382-11ee-a83c-6fe3d85e02b5",
+                "next_receiver_id": "12146179-b382-11ee-a83c-6fe3d85e02b5",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "30",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "2",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "PDCU监控TR故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "4.7",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "transition_id": [
+                    "12141357-b382-11ee-a83c-6fe3d85e02b5"
+                ],
+                "points_combination": {
+                    "P挡按键状态": "1"
+                },
+                "action_send": [
+                    {
+                        "name": "P挡按键状态",
+                        "value": "1",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "P挡按键状态 == 1 and after(5, sec)",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "id": "12146178-b382-11ee-a83c-6fe3d85e02b5",
+                "next_receiver_id": "12146179-b382-11ee-a83c-6fe3d85e02b5",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "30",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "2",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "PDCU监控TR故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "0.5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "transition_id": [
+                    "12141356-b382-11ee-a83c-6fe3d85e02b5"
+                ],
+                "points_combination": {
+                    "TR故障": "1"
+                },
+                "action_send": [
+                    {
+                        "name": "TR故障",
+                        "value": "1",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "TR故障 == 1",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "id": "12146179-b382-11ee-a83c-6fe3d85e02b5",
+                "next_receiver_id": "1214617a-b382-11ee-a83c-6fe3d85e02b5",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "30",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "2",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "PDCU监控TR故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "id": "1214617a-b382-11ee-a83c-6fe3d85e02b5",
+                "next_receiver_id": "1214617b-b382-11ee-a83c-6fe3d85e02b5",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "49",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "PDCU监控TR故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "54.00",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "transition_id": [
+                    "12141359-b382-11ee-a83c-6fe3d85e02b5"
+                ],
+                "points_combination": {
+                    "钥匙开关": "0",
+                    "TR故障": "0",
+                    "P挡按键状态": "0"
+                },
+                "action_send": [
+                    {
+                        "name": "钥匙开关",
+                        "value": "0",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "TR故障",
+                        "value": "0",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "P挡按键状态",
+                        "value": "0",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true,
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "钥匙开关 == 0 and TR故障 == 0 and  P挡按键状态 == 0 and after(60, sec)",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "id": "1214617a-b382-11ee-a83c-6fe3d85e02b5",
+                "next_receiver_id": "1214617b-b382-11ee-a83c-6fe3d85e02b5",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "49",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "PDCU监控TR故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "6.00",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "id": "1214617b-b382-11ee-a83c-6fe3d85e02b5",
+                "next_receiver_id": "1214617c-b382-11ee-a83c-6fe3d85e02b5",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "30",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "2",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "PDCU监控TR故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "9.00",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "transition_id": [
+                    "1214135c-b382-11ee-a83c-6fe3d85e02b5"
+                ],
+                "points_combination": {
+                    "钥匙开关": "2"
+                },
+                "action_send": [
+                    {
+                        "name": "钥匙开关",
+                        "value": "2",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "钥匙开关 == 2 and after(10, sec)",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "id": "1214617b-b382-11ee-a83c-6fe3d85e02b5",
+                "next_receiver_id": "1214617c-b382-11ee-a83c-6fe3d85e02b5",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "30",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "2",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "PDCU监控TR故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "1.00",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "transition_id": [
+                    "1214135a-b382-11ee-a83c-6fe3d85e02b5"
+                ],
+                "points_combination": {
+                    "TR故障": "1"
+                },
+                "action_send": [
+                    {
+                        "name": "TR故障",
+                        "value": "1",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "TR故障 == 1",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "id": "1214617c-b382-11ee-a83c-6fe3d85e02b5",
+                "next_receiver_id": "1214617d-b382-11ee-a83c-6fe3d85e02b5",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "30",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "2",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "PDCU监控TR故障",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "transition_id": [
+                    "1214135b-b382-11ee-a83c-6fe3d85e02b5"
+                ],
+                "points_combination": {
+                    "蓄电池电压": "8.5"
+                },
+                "action_send": [
+                    {
+                        "name": "蓄电池电压",
+                        "value": "8.5",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "蓄电池电压 == 8.5",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "id": "1214617d-b382-11ee-a83c-6fe3d85e02b5",
+                "next_receiver_id": "1214af90-b382-11ee-a83c-6fe3d85e02b5",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "46",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "2",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "PDCU监控TR故障",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "id": "1214af90-b382-11ee-a83c-6fe3d85e02b5",
+                "next_receiver_id": "1214af91-b382-11ee-a83c-6fe3d85e02b5",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "49",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "PDCU监控TR故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "54.00",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "transition_id": [
+                    "12141360-b382-11ee-a83c-6fe3d85e02b5"
+                ],
+                "points_combination": {
+                    "钥匙开关": "0",
+                    "TR故障": "0",
+                    "蓄电池电压": "13"
+                },
+                "action_send": [
+                    {
+                        "name": "钥匙开关",
+                        "value": "0",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "TR故障",
+                        "value": "0",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "蓄电池电压",
+                        "value": "13",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true,
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "钥匙开关 == 0 and TR故障 == 0 and 蓄电池电压 == 13 and after(60, sec)",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "id": "1214af90-b382-11ee-a83c-6fe3d85e02b5",
+                "next_receiver_id": "1214af91-b382-11ee-a83c-6fe3d85e02b5",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "49",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "PDCU监控TR故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "6.00",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "id": "1214af91-b382-11ee-a83c-6fe3d85e02b5",
+                "next_receiver_id": "1214af92-b382-11ee-a83c-6fe3d85e02b5",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "30",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "2",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "PDCU监控TR故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "9.00",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "transition_id": [
+                    "1214135d-b382-11ee-a83c-6fe3d85e02b5"
+                ],
+                "points_combination": {
+                    "钥匙开关": "2"
+                },
+                "action_send": [
+                    {
+                        "name": "钥匙开关",
+                        "value": "2",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "钥匙开关 == 2 and after(10, sec)",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "id": "1214af91-b382-11ee-a83c-6fe3d85e02b5",
+                "next_receiver_id": "1214af92-b382-11ee-a83c-6fe3d85e02b5",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "30",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "2",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "PDCU监控TR故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "1.00",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "transition_id": [
+                    "1214135e-b382-11ee-a83c-6fe3d85e02b5"
+                ],
+                "points_combination": {
+                    "蓄电池电压": "8.5"
+                },
+                "action_send": [
+                    {
+                        "name": "蓄电池电压",
+                        "value": "8.5",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "蓄电池电压 == 8.5",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "id": "1214af92-b382-11ee-a83c-6fe3d85e02b5",
+                "next_receiver_id": "1214af93-b382-11ee-a83c-6fe3d85e02b5",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "46",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "2",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "PDCU监控TR故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "transition_id": [
+                    "1214135f-b382-11ee-a83c-6fe3d85e02b5"
+                ],
+                "points_combination": {
+                    "TR故障": "1"
+                },
+                "action_send": [
+                    {
+                        "name": "TR故障",
+                        "value": "1",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "TR故障 == 1",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "id": "1214af93-b382-11ee-a83c-6fe3d85e02b5",
+                "next_receiver_id": "1214af94-b382-11ee-a83c-6fe3d85e02b5",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "46",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "2",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "PDCU监控TR故障",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "id": "1214af94-b382-11ee-a83c-6fe3d85e02b5",
+                "next_receiver_id": "cbcdb30d-1701-45c4-8e1e-fba56fc47384",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "49",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "PDCU监控TR故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "54.00",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "transition_id": [
+                    "12141361-b382-11ee-a83c-6fe3d85e02b5"
+                ],
+                "points_combination": {
+                    "钥匙开关": "0",
+                    "TR故障": "0",
+                    "蓄电池电压": "13"
+                },
+                "action_send": [
+                    {
+                        "name": "钥匙开关",
+                        "value": "0",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "TR故障",
+                        "value": "0",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "蓄电池电压",
+                        "value": "13",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true,
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "钥匙开关 == 0 and TR故障 == 0 and 蓄电池电压 == 13 and after(60, sec)",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "1214fdb0-b382-11ee-a83c-6fe3d85e02b5",
+                "id": "1214af94-b382-11ee-a83c-6fe3d85e02b5",
+                "next_receiver_id": "cbcdb30d-1701-45c4-8e1e-fba56fc47384",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "49",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "PDCU监控TR故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "6.00",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "4b229250-f7cc-11ee-9e3e-59c479e9b0e2",
+                "id": "cbcdb30d-1701-45c4-8e1e-fba56fc47384",
+                "next_receiver_id": null,
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "2",
+                        "type": "equal",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        }
+    ]
+}

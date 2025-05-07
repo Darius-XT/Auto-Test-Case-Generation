@@ -1,0 +1,719 @@
+{
+    "case_info": {
+        "main_requirement_path_id": [
+            "894f3cc6-f7ca-11ee-9e3e-59c479e9b0e2",
+            "894f3cc3-f7ca-11ee-9e3e-59c479e9b0e2",
+            "894f3cc8-f7ca-11ee-9e3e-59c479e9b0e2",
+            "894f3cc5-f7ca-11ee-9e3e-59c479e9b0e2",
+            "894f3cc9-f7ca-11ee-9e3e-59c479e9b0e2",
+            "894f3cc4-f7ca-11ee-9e3e-59c479e9b0e2",
+            "894f3cca-f7ca-11ee-9e3e-59c479e9b0e2"
+        ],
+        "main_requirement_graph_id": "894f63d2-f7ca-11ee-9e3e-59c479e9b0e2",
+        "graph_type": "request",
+        "group_name": "default_group"
+    },
+    "observe_signals": [],
+    "test_case": [
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "894f63d2-f7ca-11ee-9e3e-59c479e9b0e2",
+                "id": "894f3cc6-f7ca-11ee-9e3e-59c479e9b0e2",
+                "next_receiver_id": "894f3cc8-f7ca-11ee-9e3e-59c479e9b0e2",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "894f63d2-f7ca-11ee-9e3e-59c479e9b0e2",
+                "id": "894f3cc8-f7ca-11ee-9e3e-59c479e9b0e2",
+                "next_receiver_id": "894f3cc8-f7ca-11ee-9e3e-59c479e9b0e2",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "30",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "2",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "动力电池热失控故障标志位",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "9.00",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "894f63d2-f7ca-11ee-9e3e-59c479e9b0e2",
+                "transition_id": [
+                    "894f3cc3-f7ca-11ee-9e3e-59c479e9b0e2"
+                ],
+                "points_combination": {
+                    "钥匙开关": "2",
+                    "单体电芯最高温度": "65"
+                },
+                "action_send": [
+                    {
+                        "name": "钥匙开关",
+                        "value": "2",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "单体电芯最高温度",
+                        "value": "65",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "钥匙开关 == 2 and 单体电芯最高温度 == 65 and after(10, sec)",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "894f63d2-f7ca-11ee-9e3e-59c479e9b0e2",
+                "id": "894f3cc8-f7ca-11ee-9e3e-59c479e9b0e2",
+                "next_receiver_id": "894f3cc8-f7ca-11ee-9e3e-59c479e9b0e2",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "30",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "2",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "动力电池热失控故障标志位",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "1.00",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "894f63d2-f7ca-11ee-9e3e-59c479e9b0e2",
+                "transition_id": [
+                    "894f3cc3-f7ca-11ee-9e3e-59c479e9b0e2"
+                ],
+                "points_combination": {},
+                "action_send": [],
+                "conditional_bool_combination": null,
+                "is_origin_node": false,
+                "condition": "",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "894f63d2-f7ca-11ee-9e3e-59c479e9b0e2",
+                "id": "894f3cc8-f7ca-11ee-9e3e-59c479e9b0e2",
+                "next_receiver_id": "894f3cc9-f7ca-11ee-9e3e-59c479e9b0e2",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "30",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "2",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "动力电池热失控故障标志位",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": false,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": "sustain"
+            },
+            "timeout": "5",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "894f63d2-f7ca-11ee-9e3e-59c479e9b0e2",
+                "id": "894f3cc9-f7ca-11ee-9e3e-59c479e9b0e2",
+                "next_receiver_id": "894f3cc9-f7ca-11ee-9e3e-59c479e9b0e2",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "46",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "2",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "动力电池热失控故障标志位",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "13.5",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "894f63d2-f7ca-11ee-9e3e-59c479e9b0e2",
+                "transition_id": [
+                    "894f3cc5-f7ca-11ee-9e3e-59c479e9b0e2"
+                ],
+                "points_combination": {
+                    "BMS报文丢失": "0"
+                },
+                "action_send": [
+                    {
+                        "name": "BMS报文丢失",
+                        "value": "0",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "BMS报文丢失 == 0 and after(15, sec)",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "894f63d2-f7ca-11ee-9e3e-59c479e9b0e2",
+                "id": "894f3cc9-f7ca-11ee-9e3e-59c479e9b0e2",
+                "next_receiver_id": "894f3cc9-f7ca-11ee-9e3e-59c479e9b0e2",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "46",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "2",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "动力电池热失控故障标志位",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "1.5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "894f63d2-f7ca-11ee-9e3e-59c479e9b0e2",
+                "transition_id": [
+                    "894f3cc5-f7ca-11ee-9e3e-59c479e9b0e2"
+                ],
+                "points_combination": {},
+                "action_send": [],
+                "conditional_bool_combination": null,
+                "is_origin_node": false,
+                "condition": "",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "894f63d2-f7ca-11ee-9e3e-59c479e9b0e2",
+                "id": "894f3cc9-f7ca-11ee-9e3e-59c479e9b0e2",
+                "next_receiver_id": "894f3cca-f7ca-11ee-9e3e-59c479e9b0e2",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "46",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "2",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "动力电池热失控故障标志位",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": false,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": "sustain"
+            },
+            "timeout": "5",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "894f63d2-f7ca-11ee-9e3e-59c479e9b0e2",
+                "id": "894f3cca-f7ca-11ee-9e3e-59c479e9b0e2",
+                "next_receiver_id": "894f3cca-f7ca-11ee-9e3e-59c479e9b0e2",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "49",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "动力电池热失控故障标志位",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "54.00",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "894f63d2-f7ca-11ee-9e3e-59c479e9b0e2",
+                "transition_id": [
+                    "894f3cc4-f7ca-11ee-9e3e-59c479e9b0e2"
+                ],
+                "points_combination": {
+                    "钥匙开关": "0",
+                    "BMS_0x248报文丢失": "1"
+                },
+                "action_send": [
+                    {
+                        "name": "钥匙开关",
+                        "value": "0",
+                        "type": "assignment"
+                    },
+                    {
+                        "name": "BMS_0x248报文丢失",
+                        "value": "1",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true,
+                    true,
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "钥匙开关 == 0 and BMS_0x248报文丢失 == 1 and after(60, sec)",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "894f63d2-f7ca-11ee-9e3e-59c479e9b0e2",
+                "id": "894f3cca-f7ca-11ee-9e3e-59c479e9b0e2",
+                "next_receiver_id": "894f3cca-f7ca-11ee-9e3e-59c479e9b0e2",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "49",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "动力电池热失控故障标志位",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "6.00",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "894f63d2-f7ca-11ee-9e3e-59c479e9b0e2",
+                "transition_id": [
+                    "894f3cc4-f7ca-11ee-9e3e-59c479e9b0e2"
+                ],
+                "points_combination": {},
+                "action_send": [],
+                "conditional_bool_combination": null,
+                "is_origin_node": false,
+                "condition": "",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "894f63d2-f7ca-11ee-9e3e-59c479e9b0e2",
+                "id": "894f3cca-f7ca-11ee-9e3e-59c479e9b0e2",
+                "next_receiver_id": null,
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车State状态",
+                        "value": "49",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "整车模式",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "TR故障低压保持需求",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "VCU检蓄电池电压过低故障",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "上下电控制指令",
+                        "value": "0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    },
+                    {
+                        "name": "动力电池热失控故障标志位",
+                        "value": "1",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": false,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": "sustain"
+            },
+            "timeout": "5",
+            "timeout_type": "sustain"
+        }
+    ]
+}

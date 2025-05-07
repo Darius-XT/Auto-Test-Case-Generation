@@ -1,0 +1,207 @@
+{
+    "case_info": {
+        "main_requirement_path_id": [
+            "9e1fc809-d167-4281-b2cf-2dd9bce06eb1",
+            "5fdb5508-73e0-4e63-ad51-4dace4364642",
+            "1be6da0a-0b01-4754-93fc-1f5c20f121f5"
+        ],
+        "main_requirement_graph_id": "116dde70-f871-11ee-8f78-5de70c77b56e",
+        "graph_type": "request",
+        "group_name": "default_group"
+    },
+    "observe_signals": [],
+    "test_case": [
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "116dde70-f871-11ee-8f78-5de70c77b56e",
+                "id": "9e1fc809-d167-4281-b2cf-2dd9bce06eb1",
+                "next_receiver_id": "1be6da0a-0b01-4754-93fc-1f5c20f121f5",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "116dde70-f871-11ee-8f78-5de70c77b56e",
+                "transition_id": [
+                    "5fdb5508-73e0-4e63-ad51-4dace4364642"
+                ],
+                "points_combination": {
+                    "钥匙开关": "0"
+                },
+                "action_send": [
+                    {
+                        "name": "钥匙开关",
+                        "value": "0",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    false
+                ],
+                "is_origin_node": true,
+                "condition": "钥匙开关 == 2",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "116dde70-f871-11ee-8f78-5de70c77b56e",
+                "id": "9e1fc809-d167-4281-b2cf-2dd9bce06eb1",
+                "next_receiver_id": "1be6da0a-0b01-4754-93fc-1f5c20f121f5",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "116dde70-f871-11ee-8f78-5de70c77b56e",
+                "transition_id": [
+                    "5fdb5508-73e0-4e63-ad51-4dace4364642"
+                ],
+                "points_combination": {
+                    "钥匙开关": "1"
+                },
+                "action_send": [
+                    {
+                        "name": "钥匙开关",
+                        "value": "1",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    false
+                ],
+                "is_origin_node": true,
+                "condition": "钥匙开关 == 2",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "116dde70-f871-11ee-8f78-5de70c77b56e",
+                "id": "9e1fc809-d167-4281-b2cf-2dd9bce06eb1",
+                "next_receiver_id": "1be6da0a-0b01-4754-93fc-1f5c20f121f5",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "116dde70-f871-11ee-8f78-5de70c77b56e",
+                "transition_id": [
+                    "5fdb5508-73e0-4e63-ad51-4dace4364642"
+                ],
+                "points_combination": {
+                    "钥匙开关": "3"
+                },
+                "action_send": [
+                    {
+                        "name": "钥匙开关",
+                        "value": "3",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    false
+                ],
+                "is_origin_node": true,
+                "condition": "钥匙开关 == 2",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "116dde70-f871-11ee-8f78-5de70c77b56e",
+                "id": "9e1fc809-d167-4281-b2cf-2dd9bce06eb1",
+                "next_receiver_id": "1be6da0a-0b01-4754-93fc-1f5c20f121f5",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "sustain"
+        },
+        {
+            "sender_part": {
+                "graph_id": "116dde70-f871-11ee-8f78-5de70c77b56e",
+                "transition_id": [
+                    "5fdb5508-73e0-4e63-ad51-4dace4364642"
+                ],
+                "points_combination": {
+                    "钥匙开关": "2"
+                },
+                "action_send": [
+                    {
+                        "name": "钥匙开关",
+                        "value": "2",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [
+                    true
+                ],
+                "is_origin_node": true,
+                "condition": "钥匙开关 == 2",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "116dde70-f871-11ee-8f78-5de70c77b56e",
+                "id": "1be6da0a-0b01-4754-93fc-1f5c20f121f5",
+                "next_receiver_id": null,
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "整车模式",
+                        "value": "2",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        }
+    ]
+}

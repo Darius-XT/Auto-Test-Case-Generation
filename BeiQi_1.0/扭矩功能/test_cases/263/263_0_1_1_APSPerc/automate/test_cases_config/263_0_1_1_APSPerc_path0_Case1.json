@@ -1,0 +1,176 @@
+{
+    "case_info": {
+        "main_requirement_path_id": [
+            "0ae075a1-aa63-449b-8db0-8163f3305a15",
+            "d615e385-a00f-4504-b7ef-bc6e4520f1c9",
+            "f338b19b-c5f1-47b9-9f6c-d1333043429c"
+        ],
+        "main_requirement_graph_id": "60b0667e-2c6a-11ef-8cfb-c8cb9e4ad5d4",
+        "graph_type": "request",
+        "group_name": "default_group"
+    },
+    "observe_signals": [],
+    "test_case": [
+        {
+            "sender_part": null,
+            "receiver_part": {
+                "graph_id": "60b0667e-2c6a-11ef-8cfb-c8cb9e4ad5d4",
+                "id": "0ae075a1-aa63-449b-8db0-8163f3305a15",
+                "next_receiver_id": "f338b19b-c5f1-47b9-9f6c-d1333043429c",
+                "entry_action_check": [],
+                "during_action_check": [],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "60b0667e-2c6a-11ef-8cfb-c8cb9e4ad5d4",
+                "transition_id": [
+                    "d615e385-a00f-4504-b7ef-bc6e4520f1c9"
+                ],
+                "points_combination": {
+                    "加速踏板": "0"
+                },
+                "action_send": [
+                    {
+                        "name": "加速踏板",
+                        "value": "0",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [],
+                "is_origin_node": true,
+                "condition": "",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "60b0667e-2c6a-11ef-8cfb-c8cb9e4ad5d4",
+                "id": "f338b19b-c5f1-47b9-9f6c-d1333043429c",
+                "next_receiver_id": "f338b19b-c5f1-47b9-9f6c-d1333043429c",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "驾驶员加速踏板开度",
+                        "value": "0.0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "60b0667e-2c6a-11ef-8cfb-c8cb9e4ad5d4",
+                "transition_id": [
+                    "d615e385-a00f-4504-b7ef-bc6e4520f1c9"
+                ],
+                "points_combination": {
+                    "加速踏板": "50"
+                },
+                "action_send": [
+                    {
+                        "name": "加速踏板",
+                        "value": "50",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [],
+                "is_origin_node": true,
+                "condition": "",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "60b0667e-2c6a-11ef-8cfb-c8cb9e4ad5d4",
+                "id": "f338b19b-c5f1-47b9-9f6c-d1333043429c",
+                "next_receiver_id": "f338b19b-c5f1-47b9-9f6c-d1333043429c",
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "驾驶员加速踏板开度",
+                        "value": "50.0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        },
+        {
+            "sender_part": {
+                "graph_id": "60b0667e-2c6a-11ef-8cfb-c8cb9e4ad5d4",
+                "transition_id": [
+                    "d615e385-a00f-4504-b7ef-bc6e4520f1c9"
+                ],
+                "points_combination": {
+                    "加速踏板": "100"
+                },
+                "action_send": [
+                    {
+                        "name": "加速踏板",
+                        "value": "100",
+                        "type": "assignment"
+                    }
+                ],
+                "conditional_bool_combination": [],
+                "is_origin_node": true,
+                "condition": "",
+                "parent_graph_type": "request"
+            },
+            "receiver_part": {
+                "graph_id": "60b0667e-2c6a-11ef-8cfb-c8cb9e4ad5d4",
+                "id": "f338b19b-c5f1-47b9-9f6c-d1333043429c",
+                "next_receiver_id": null,
+                "entry_action_check": [],
+                "during_action_check": [
+                    {
+                        "name": "驾驶员加速踏板开度",
+                        "value": "100.0",
+                        "type": "assignment",
+                        "tolerance": "0",
+                        "time_point": 0
+                    }
+                ],
+                "exit_action_check": [],
+                "normal_test_action_check": [],
+                "dynamic_test_action_check": [],
+                "is_origin_node": true,
+                "parent_graph_type": "request",
+                "forward_propagation": false,
+                "observe_signals": [],
+                "type": null
+            },
+            "timeout": "5",
+            "timeout_type": "wait"
+        }
+    ]
+}

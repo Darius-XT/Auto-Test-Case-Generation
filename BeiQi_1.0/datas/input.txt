@@ -1,0 +1,2057 @@
+graph_id: d5bcc160-f830-11ee-93f4-db3fea7624c7
+graph_name: 126to121_环路
+node_id: d7047770-cdfa-4236-ab90-6eb5acbf66c7
+node_type: write
+node_information: START
+node_over
+node_id: d79a5b00-f830-11ee-93f4-db3fea7624c7
+node_type: write
+node_information: 整车State状态 = 110 and 整车模式 = 4
+node_over
+node_id: d79c08b0-f830-11ee-93f4-db3fea7624c7
+node_type: write
+node_information: 整车State状态 = 121 and 整车模式 = 4
+node_over
+node_id: d79e79b0-f830-11ee-93f4-db3fea7624c7
+node_type: write
+node_information: 整车State状态 = 126 and 整车模式 = 4
+node_over
+node_id: d7a0c3a0-f830-11ee-93f4-db3fea7624c7
+node_type: write
+node_information: 整车State状态 = 129 and 整车模式 = 1
+node_over
+node_id: 7acf6541-fd4f-11ee-bf11-c731b702cd0d
+node_type: write
+node_information: 整车State状态 = 115 and 整车模式 = 4
+node_over
+edge_id: d7a83db0-f830-11ee-93f4-db3fea7624c7
+source_node_id: d7047770-cdfa-4236-ab90-6eb5acbf66c7
+target_node_id: d79a5b00-f830-11ee-93f4-db3fea7624c7
+edge_information: 慢充 == 1
+edge_over
+edge_id: d7a83db2-f830-11ee-93f4-db3fea7624c7
+source_node_id: d79e79b0-f830-11ee-93f4-db3fea7624c7
+target_node_id: d7a0c3a0-f830-11ee-93f4-db3fea7624c7
+edge_information: 慢充 == 0
+edge_over
+edge_id: d7a816a1-f830-11ee-93f4-db3fea7624c7
+source_node_id: d79c08b0-f830-11ee-93f4-db3fea7624c7
+target_node_id: d79e79b0-f830-11ee-93f4-db3fea7624c7
+edge_information: 后MCU直流母线电压 < 60 and 前MCU直流母线电压 < 60 or after(3, sec)
+edge_over
+edge_id: fafbfb94-a8fa-4ab6-8dce-5a402fa7abd6
+source_node_id: d79e79b0-f830-11ee-93f4-db3fea7624c7
+target_node_id: d79c08b0-f830-11ee-93f4-db3fea7624c7
+edge_information: 动力电池正端继电器粘连 == 1 and duration(前MCU直流母线电压 > 60 and 后MCU直流母线电压 > 60, 3, sec)
+edge_over
+edge_id: 7acf6540-fd4f-11ee-bf11-c731b702cd0d
+source_node_id: d79a5b00-f830-11ee-93f4-db3fea7624c7
+target_node_id: 7acf6541-fd4f-11ee-bf11-c731b702cd0d
+edge_information: 高压下电请求充放电专用 == 2
+edge_over
+edge_id: 7ad30ec0-fd4f-11ee-bf11-c731b702cd0d
+source_node_id: 7acf6541-fd4f-11ee-bf11-c731b702cd0d
+target_node_id: d79c08b0-f830-11ee-93f4-db3fea7624c7
+edge_information: 前MCU直流母线电压 == 65
+edge_over
+graph_over
+graph_id: eb89e710-f88b-11ee-8f78-5de70c77b56e
+graph_name: 126to130or127_分支
+node_id: 282454ec-b288-4092-9718-aeeced3a1c0a
+node_type: write
+node_information: START
+node_over
+node_id: 1a1cf7c0-f88c-11ee-8f78-5de70c77b56e
+node_type: write
+node_information: 整车State状态 = 110 and 整车模式 = 4
+node_over
+node_id: 1a1ef390-f88c-11ee-8f78-5de70c77b56e
+node_type: write
+node_information: 整车State状态 = 115 and 整车模式 = 4
+node_over
+node_id: 1a238770-f88c-11ee-8f78-5de70c77b56e
+node_type: write
+node_information: 整车State状态 = 126 and 整车模式 = 4 and 供电设备状态 = 3 and 远程充放电需求 = 0
+node_over
+node_id: 46d2df14-8f1c-4687-8afc-9db448039736
+node_type: write
+node_information: 
+node_over
+node_id: 4ad2bbba-e494-4f43-b17c-65de75549000
+node_type: write
+node_information: 
+node_over
+node_id: 9e33b4a0-fd4a-11ee-bf11-c731b702cd0d
+node_type: write
+node_information: 整车State状态 = 129 and 整车模式 = 1
+node_over
+edge_id: 1a25d163-f88c-11ee-8f78-5de70c77b56e
+source_node_id: 1a1cf7c0-f88c-11ee-8f78-5de70c77b56e
+target_node_id: 1a1ef390-f88c-11ee-8f78-5de70c77b56e
+edge_information: 高压下电请求充放电专用 == 2
+edge_over
+edge_id: 1a25d164-f88c-11ee-8f78-5de70c77b56e
+source_node_id: 1a1ef390-f88c-11ee-8f78-5de70c77b56e
+target_node_id: 1a238770-f88c-11ee-8f78-5de70c77b56e
+edge_information: 高压下电请求充放电专用 == 0 and CP占空比 == 85 and CP幅值 == 3000 and CP频率 == 1500
+edge_over
+edge_id: 1a25d165-f88c-11ee-8f78-5de70c77b56e
+source_node_id: 282454ec-b288-4092-9718-aeeced3a1c0a
+target_node_id: 1a1cf7c0-f88c-11ee-8f78-5de70c77b56e
+edge_information: 慢充 == 1
+edge_over
+edge_id: 958d8666-644b-4993-88ce-856bebc9c261
+source_node_id: 1a238770-f88c-11ee-8f78-5de70c77b56e
+target_node_id: 46d2df14-8f1c-4687-8afc-9db448039736
+edge_information: BMS自检计数器 == 1 and 整车故障立即下高压开关 == 0 and (车辆充放电模式 == 1 and 供电设备状态 == 3 or 中控无线充电请求 == 1) and (电池预加热保温需求 == 1 or 电池预加热保温需求 == 2) and 远程充放电需求 != 1
+edge_over
+edge_id: 5ceafbb3-a3ba-4acf-a6ec-5846c8f44707
+source_node_id: 1a238770-f88c-11ee-8f78-5de70c77b56e
+target_node_id: 4ad2bbba-e494-4f43-b17c-65de75549000
+edge_information: (BMS自检计数器 == 1 or after(2.2, sec)) and (整车故障立即下高压开关 == 1 or (车辆充放电模式 != 1 and 中控无线充电请求 != 1) or 电池预加热保温需求 == 3 or (车辆充放电模式 == 1 and 供电设备状态 != 3) or 远程充放电需求 == 1 )
+edge_over
+edge_id: ab7e1b26-8b7f-4402-a83b-3fc4d84d57ca
+source_node_id: 46d2df14-8f1c-4687-8afc-9db448039736
+target_node_id: 9e33b4a0-fd4a-11ee-bf11-c731b702cd0d
+edge_information: 慢充 == 0
+edge_over
+edge_id: be6db26d-261e-4be0-86a1-7bca702d7757
+source_node_id: 4ad2bbba-e494-4f43-b17c-65de75549000
+target_node_id: 9e33b4a0-fd4a-11ee-bf11-c731b702cd0d
+edge_information: 慢充 == 0
+edge_over
+graph_over
+graph_id: 894f63d2-f7ca-11ee-9e3e-59c479e9b0e2
+graph_name: 128to129_TR故障低压保持需求_输出to_输入
+node_id: 894f3cc6-f7ca-11ee-9e3e-59c479e9b0e2
+node_type: write
+node_information: START
+node_over
+node_id: 5cc57a30-fd54-11ee-bf11-c731b702cd0d
+node_type: write
+node_information: TR故障低压保持需求 = 0
+node_over
+node_id: cbba67f0-fd56-11ee-ba49-f15cb266346a
+node_type: write
+node_information: TR故障低压保持需求 = 1
+node_over
+edge_id: 914b6c0a-43ed-4431-9443-6e5fbb59ba44
+source_node_id: 894f3cc6-f7ca-11ee-9e3e-59c479e9b0e2
+target_node_id: cbba67f0-fd56-11ee-ba49-f15cb266346a
+edge_information: TR故障 == 0
+edge_over
+edge_id: 5cc8ae80-fd54-11ee-bf11-c731b702cd0d
+source_node_id: 894f3cc6-f7ca-11ee-9e3e-59c479e9b0e2
+target_node_id: 5cc57a30-fd54-11ee-bf11-c731b702cd0d
+edge_information: TR故障 == 1
+edge_over
+graph_over
+graph_id: a263a5e0-f86c-11ee-8f78-5de70c77b56e
+graph_name: 128to129_输出做输入
+node_id: c547bbcf-a471-432b-80df-738aa18a7bbd
+node_type: write
+node_information: START
+node_over
+node_id: 10388143-3176-4ddd-acc7-d6a09cc4ab44
+node_type: write
+node_information: 
+node_over
+node_id: 0663e661-fd52-11ee-bf11-c731b702cd0d
+node_type: write
+node_information: 整车State状态 = 128
+node_over
+node_id: 066015d1-fd52-11ee-bf11-c731b702cd0d
+node_type: write
+node_information: 整车State状态 = 127
+node_over
+node_id: 065df2f1-fd52-11ee-bf11-c731b702cd0d
+node_type: write
+node_information: 整车State状态 = 110
+node_over
+edge_id: 065df2f0-fd52-11ee-bf11-c731b702cd0d
+source_node_id: c547bbcf-a471-432b-80df-738aa18a7bbd
+target_node_id: 065df2f1-fd52-11ee-bf11-c731b702cd0d
+edge_information: 慢充 == 1
+edge_over
+edge_id: 0663e660-fd52-11ee-bf11-c731b702cd0d
+source_node_id: 066015d1-fd52-11ee-bf11-c731b702cd0d
+target_node_id: 0663e661-fd52-11ee-bf11-c731b702cd0d
+edge_information: 前MCU低压下电请求标志位 == 1
+edge_over
+edge_id: 066015d0-fd52-11ee-bf11-c731b702cd0d
+source_node_id: 065df2f1-fd52-11ee-bf11-c731b702cd0d
+target_node_id: 066015d1-fd52-11ee-bf11-c731b702cd0d
+edge_information: 慢充 == 0 and 前MCU直流母线电压 == 65
+edge_over
+edge_id: 4c82dbd2-ee94-4258-b300-36dbdfcae6f5
+source_node_id: 0663e661-fd52-11ee-bf11-c731b702cd0d
+target_node_id: 10388143-3176-4ddd-acc7-d6a09cc4ab44
+edge_information: (TR故障低压保持需求 == 0 or 整车模式 != 1) and 蓄电池智能充电模式上电需求值 == 2
+edge_over
+graph_over
+graph_id: 60777840-892d-11ee-930a-43a45c43941e
+graph_name: 208_1
+node_id: 59651cc3-d7a2-4480-b86d-b28f6717e1f8
+node_type: write
+node_information: START
+node_over
+node_id: 92824489-de63-4ccf-a7d1-7b3f51171929
+node_type: write
+node_information: 用户小计平均电耗 = 累计电耗/累计行车距离
+node_over
+node_id: 5a84596d-f537-41ec-8515-db497c585348
+node_type: write
+node_information: 用户小计平均电耗 = 0
+node_over
+node_id: 3c3ce4be-b43a-49ca-944c-f3a92417eaed
+node_type: read
+branch_yes: 4fd33116-b65d-4420-bc0b-4c76debf2142
+branch_no: c4a6002c-9df3-4eb3-b1d8-3bd7bfec0c84
+node_information: 整车State状态 in [12, 49] and 续驶里程模块初始完成标志位 == 1 and 累计行车距离 > 1000
+node_over
+edge_id: c4a6002c-9df3-4eb3-b1d8-3bd7bfec0c84
+source_node_id: 3c3ce4be-b43a-49ca-944c-f3a92417eaed
+target_node_id: 5a84596d-f537-41ec-8515-db497c585348
+edge_information: 
+edge_over
+edge_id: 4fd33116-b65d-4420-bc0b-4c76debf2142
+source_node_id: 3c3ce4be-b43a-49ca-944c-f3a92417eaed
+target_node_id: 92824489-de63-4ccf-a7d1-7b3f51171929
+edge_information: 
+edge_over
+edge_id: d480ce08-8d77-42e1-84d1-6aa755a1941a
+source_node_id: 59651cc3-d7a2-4480-b86d-b28f6717e1f8
+target_node_id: 3c3ce4be-b43a-49ca-944c-f3a92417eaed
+edge_information: 
+edge_over
+graph_over
+graph_id: 045dcb90-8932-11ee-930a-43a45c43941e
+graph_name: 208_10
+node_id: e3146b92-64c2-440f-9ad0-255b9c51ae67
+node_type: write
+node_information: START
+node_over
+node_id: 97b55f2c-3d56-463a-8043-cee46987a62d
+node_type: write
+node_information: 瞬时放电里程 = 0
+node_over
+node_id: f3d3e3d4-825a-483d-9700-f86efe3c1d60
+node_over
+node_id: aa2cc0b2-b485-46c2-bcdc-2309897652c5
+node_type: read
+branch_yes: c5465865-cc8e-45ef-ad33-7e83c4532624
+branch_no: 0cef0ad2-c87f-437e-9822-7b822ed2ebc7
+node_information: 整车State状态 in [28,29,30] and 动力电池充放电电流 >= 0
+node_over
+node_id: ac7071fc-6763-4a6a-aff5-aef1ca06eaa4
+node_type: write
+node_information: 基准电耗值 = 1
+node_over
+node_id: b1ee4b6b-09db-49b3-a892-80bf0ea76b50
+node_type: write
+node_information: 瞬时放电里程 = A*T100/基准电耗值
+node_over
+node_id: 2e266af0-8f1c-11ee-9e35-758f77768b40
+node_type: write
+node_information: 瞬时放电里程 = 0
+node_over
+node_id: 2e2b4cf0-8f1c-11ee-9e35-758f77768b40
+node_type: read
+branch_yes: 2e36bea1-8f1c-11ee-9e35-758f77768b40
+branch_no: 2e36bea2-8f1c-11ee-9e35-758f77768b40
+node_information: 整车State状态 in [28,29,30] and 动力电池充放电电流 >= 0
+node_over
+node_id: 2e2f4490-8f1c-11ee-9e35-758f77768b40
+node_type: write
+node_information: 瞬时放电里程 = A*T100/基准电耗值
+node_over
+node_id: 2e331520-8f1c-11ee-9e35-758f77768b40
+node_type: write
+node_information: 基准电耗值 = 2
+node_over
+edge_id: a1c0d3e0-1f87-41b7-b129-026280990ca4
+source_node_id: e3146b92-64c2-440f-9ad0-255b9c51ae67
+target_node_id: ac7071fc-6763-4a6a-aff5-aef1ca06eaa4
+edge_information: 
+edge_over
+edge_id: c5465865-cc8e-45ef-ad33-7e83c4532624
+source_node_id: aa2cc0b2-b485-46c2-bcdc-2309897652c5
+target_node_id: b1ee4b6b-09db-49b3-a892-80bf0ea76b50
+edge_information: 
+edge_over
+edge_id: 0cef0ad2-c87f-437e-9822-7b822ed2ebc7
+source_node_id: aa2cc0b2-b485-46c2-bcdc-2309897652c5
+target_node_id: 97b55f2c-3d56-463a-8043-cee46987a62d
+edge_information: 
+edge_over
+edge_id: 997c445e-c259-40be-9fd2-a77e5912865a
+source_node_id: ac7071fc-6763-4a6a-aff5-aef1ca06eaa4
+target_node_id: aa2cc0b2-b485-46c2-bcdc-2309897652c5
+edge_information: 
+edge_over
+edge_id: c1f5b64a-6ee2-4369-94f3-af2fcd18ea19
+source_node_id: b1ee4b6b-09db-49b3-a892-80bf0ea76b50
+target_node_id: 97b55f2c-3d56-463a-8043-cee46987a62d
+edge_information: 
+edge_over
+edge_id: 2e36bea0-8f1c-11ee-9e35-758f77768b40
+source_node_id: 97b55f2c-3d56-463a-8043-cee46987a62d
+target_node_id: 2e331520-8f1c-11ee-9e35-758f77768b40
+edge_information: 
+edge_over
+edge_id: 2e36bea1-8f1c-11ee-9e35-758f77768b40
+source_node_id: 2e2b4cf0-8f1c-11ee-9e35-758f77768b40
+target_node_id: 2e2f4490-8f1c-11ee-9e35-758f77768b40
+edge_information: 
+edge_over
+edge_id: 2e36bea2-8f1c-11ee-9e35-758f77768b40
+source_node_id: 2e2b4cf0-8f1c-11ee-9e35-758f77768b40
+target_node_id: 2e266af0-8f1c-11ee-9e35-758f77768b40
+edge_information: 
+edge_over
+edge_id: 2e36bea3-8f1c-11ee-9e35-758f77768b40
+source_node_id: 2e331520-8f1c-11ee-9e35-758f77768b40
+target_node_id: 2e2b4cf0-8f1c-11ee-9e35-758f77768b40
+edge_information: 
+edge_over
+edge_id: 2e36bea4-8f1c-11ee-9e35-758f77768b40
+source_node_id: 2e2f4490-8f1c-11ee-9e35-758f77768b40
+target_node_id: 2e266af0-8f1c-11ee-9e35-758f77768b40
+edge_information: 
+edge_over
+graph_over
+graph_id: ca86f110-8c44-11ee-b566-7b447028c8e9
+graph_name: 208_17
+node_id: 75f3016a-aca7-4335-9249-103236d932b2
+node_type: write
+node_information: START
+node_over
+node_id: a2b53240-8c45-11ee-b566-7b447028c8e9
+node_type: read
+branch_yes: a3bb4b7d-6602-4342-a043-32ce8e34f266
+branch_no: 7353547f-bbb4-462a-bc87-3eec12645895
+node_information: 续驶里程模块初始完成标志位 == 1
+node_over
+node_id: 272db900-c606-41ef-9067-80218a49fdf5
+node_over
+node_id: c5e633dc-3cb2-4c34-a25c-ee0019a426db
+node_over
+node_id: 6ecc86c7-941d-4a1d-9de0-1522c7002c30
+node_type: write
+node_information: EEPROM存储单体电芯最低温度 = 单体电芯最低温度
+node_over
+node_id: a2b81870-8c45-11ee-b566-7b447028c8e9
+node_type: write
+node_information: 续驶里程1 = 100 and EEPROM存储剩余续驶里程 = 续驶里程1
+node_over
+node_id: a2b6b8e0-8c45-11ee-b566-7b447028c8e9
+node_type: write
+node_information: EEPROM续驶里程 = 10 and EEPROM存储剩余续驶里程 = EEPROM续驶里程
+node_over
+edge_id: 8746e0a4-702b-4b24-8f77-fd481d56298c
+source_node_id: 75f3016a-aca7-4335-9249-103236d932b2
+target_node_id: a2b53240-8c45-11ee-b566-7b447028c8e9
+edge_information: 
+edge_over
+edge_id: a3bb4b7d-6602-4342-a043-32ce8e34f266
+source_node_id: a2b53240-8c45-11ee-b566-7b447028c8e9
+target_node_id: 272db900-c606-41ef-9067-80218a49fdf5
+edge_information: 
+edge_over
+edge_id: 7353547f-bbb4-462a-bc87-3eec12645895
+source_node_id: a2b53240-8c45-11ee-b566-7b447028c8e9
+target_node_id: c5e633dc-3cb2-4c34-a25c-ee0019a426db
+edge_information: 
+edge_over
+edge_id: a2c055d2-8c45-11ee-b566-7b447028c8e9
+source_node_id: c5e633dc-3cb2-4c34-a25c-ee0019a426db
+target_node_id: a2b81870-8c45-11ee-b566-7b447028c8e9
+edge_information: 控制器首帧报文标志位 == 1 or 续驶里程模块初始完成标志位 == 1
+edge_over
+edge_id: 4f419fcc-6d86-481c-96e3-6856cf5ad6a0
+source_node_id: a2b81870-8c45-11ee-b566-7b447028c8e9
+target_node_id: 6ecc86c7-941d-4a1d-9de0-1522c7002c30
+edge_information: 
+edge_over
+edge_id: 3ab69028-b06b-4792-a37b-8f54419d129d
+source_node_id: a2b6b8e0-8c45-11ee-b566-7b447028c8e9
+target_node_id: 6ecc86c7-941d-4a1d-9de0-1522c7002c30
+edge_information: 
+edge_over
+edge_id: a2c055d1-8c45-11ee-b566-7b447028c8e9
+source_node_id: 272db900-c606-41ef-9067-80218a49fdf5
+target_node_id: a2b6b8e0-8c45-11ee-b566-7b447028c8e9
+edge_information: 控制器首帧报文标志位 == 0 or 续驶里程模块初始完成标志位 == 0
+edge_over
+graph_over
+graph_id: 6dbee45c-8eac-11ee-b844-933c8ce1f5af
+graph_name: 208_18_copy
+node_id: 6dbee454-8eac-11ee-b844-933c8ce1f5af
+node_type: write
+node_information: START
+node_over
+node_id: 6dbee456-8eac-11ee-b844-933c8ce1f5af
+node_type: read
+branch_yes: 6dbee450-8eac-11ee-b844-933c8ce1f5af
+branch_no: a000123a-e3e0-4068-a74f-62021e378ff9
+node_information: 续驶里程模块初始完成标志位 == 1
+node_over
+node_id: 6dbee457-8eac-11ee-b844-933c8ce1f5af
+node_type: write
+node_information: 
+node_over
+node_id: 6dbee458-8eac-11ee-b844-933c8ce1f5af
+node_type: write
+node_information: EEPROM续驶里程 = EEPROM存储剩余续驶里程 and EEPROM续驶里程标定值 = 1
+node_over
+node_id: 6dbee459-8eac-11ee-b844-933c8ce1f5af
+node_type: write
+node_information: EEPROM续驶里程 = 0 and EEPROM续驶里程标定值 = 0
+node_over
+node_id: 666b6903-1b95-4072-89a4-7eab042fce9e
+node_type: write
+node_information: 
+node_over
+node_id: 4b7ebfcb-a150-47e6-92f1-4a5298a81d92
+node_over
+node_id: 4cb14ce1-1e2b-46f6-b7aa-4744cf441400
+node_over
+node_id: 55c7a39a-b73c-4ee8-9c97-cda7a1c0d34f
+node_type: write
+node_information: 
+node_over
+edge_id: 6dbee450-8eac-11ee-b844-933c8ce1f5af
+source_node_id: 6dbee456-8eac-11ee-b844-933c8ce1f5af
+target_node_id: 6dbee457-8eac-11ee-b844-933c8ce1f5af
+edge_information: 
+edge_over
+edge_id: 6dbee451-8eac-11ee-b844-933c8ce1f5af
+source_node_id: 666b6903-1b95-4072-89a4-7eab042fce9e
+target_node_id: 6dbee459-8eac-11ee-b844-933c8ce1f5af
+edge_information: EEPROM累积数据可用标志位 == 0 or EEPROM存储剩余续驶里程 >= 6553.5
+edge_over
+edge_id: 6dbee452-8eac-11ee-b844-933c8ce1f5af
+source_node_id: 666b6903-1b95-4072-89a4-7eab042fce9e
+target_node_id: 6dbee458-8eac-11ee-b844-933c8ce1f5af
+edge_information: 控制器首帧报文标志位 == 1 and EEPROM累积数据可用标志位 == 1 and EEPROM存储剩余续驶里程 < 6553.5
+edge_over
+edge_id: a000123a-e3e0-4068-a74f-62021e378ff9
+source_node_id: 6dbee456-8eac-11ee-b844-933c8ce1f5af
+target_node_id: 666b6903-1b95-4072-89a4-7eab042fce9e
+edge_information: 
+edge_over
+edge_id: 87b018be-8d60-45d4-984a-d4e4664332c4
+source_node_id: 6dbee454-8eac-11ee-b844-933c8ce1f5af
+target_node_id: 6dbee456-8eac-11ee-b844-933c8ce1f5af
+edge_information: 
+edge_over
+edge_id: 2b19e360-0f57-4150-ac30-8fecddc377e9
+source_node_id: 6dbee458-8eac-11ee-b844-933c8ce1f5af
+target_node_id: 4b7ebfcb-a150-47e6-92f1-4a5298a81d92
+edge_information: 
+edge_over
+edge_id: 07f0639a-77b1-45ab-8db7-4fc1ee6f2027
+source_node_id: 6dbee459-8eac-11ee-b844-933c8ce1f5af
+target_node_id: 4b7ebfcb-a150-47e6-92f1-4a5298a81d92
+edge_information: 
+edge_over
+edge_id: 79cd42dd-5082-4064-92f7-aaafe8faa5f7
+source_node_id: 4b7ebfcb-a150-47e6-92f1-4a5298a81d92
+target_node_id: 4cb14ce1-1e2b-46f6-b7aa-4744cf441400
+edge_information: 
+edge_over
+edge_id: e8e910ad-0e6c-42f9-b67b-4acb6d9c7d7e
+source_node_id: 4cb14ce1-1e2b-46f6-b7aa-4744cf441400
+target_node_id: 55c7a39a-b73c-4ee8-9c97-cda7a1c0d34f
+edge_information: 
+edge_over
+graph_over
+graph_id: 338fe250-89a9-11ee-9e3c-936e7bf57e7c
+graph_name: 208_20
+node_id: 623dc311-aa42-40b5-be79-63404c1106a4
+node_type: write
+node_information: START
+node_over
+node_id: 21fdfb4f-5cea-43ec-8dd1-d3690a97b7d1
+node_type: write
+node_information: 累计放电距离 = 0
+node_over
+node_id: b7f5de0c-7d2e-4d92-ab03-58126bf95888
+node_type: write
+node_information: 瞬时行车里程梯度 = 能量回收里程 and 能量回收里程 = 0
+node_over
+node_id: 9f751bd3-09ff-4c75-8b83-ee8a932b8595
+node_type: write
+node_information: 瞬时行车里程梯度 = 累计放电距离 * 行车误差修正系数/2
+node_over
+node_id: 680514ef-06af-4645-b9b6-058c85ed8d8f
+node_type: write
+node_information: 累计放电距离 = 累计放电距离call() and 瞬时行车里程梯度 = 0
+node_over
+node_id: 335d4fe2-3abd-4c95-b17a-bbda2bb8f742
+node_over
+node_id: fd97ba61-ed04-4586-a157-918e76b229fa
+node_type: write
+node_information: 瞬时行车里程梯度 = 瞬时放电里程 * 行车误差修正系数
+node_over
+node_id: 29fd68e5-6d2d-4540-89a0-f0afeba0c46b
+node_type: read
+branch_yes: 368011c1-59c6-4ce8-a59c-c9b7f4e2ab3c
+branch_no: 9d735a39-50c8-4d23-b4a6-1d36cf7d5663
+node_information: 瞬时放电里程 > 瞬时行车里程
+node_over
+node_id: 030eb5a0-8f2d-11ee-9e35-758f77768b40
+node_type: write
+node_information: 瞬时行车里程梯度 = 瞬时行车里程 * 行车误差修正系数
+node_over
+node_id: ac6dd304-c4e6-43be-8b8c-4ba614170baa
+node_type: write
+node_information: 瞬时行车里程梯度 = 0 
+node_over
+node_id: 48f507a0-9008-11ee-9fdf-498ccda085cd
+node_over
+node_id: c9508c66-53d1-4548-98e3-5055d893dfcc
+node_type: write
+node_information: 累计放电距离 = 累计放电距离call()
+node_over
+node_id: bdee7cb3-7998-4529-9ee6-e779d8870fcd
+node_type: write
+node_information: 瞬时行车里程 = 10
+node_over
+edge_id: f3b0ce07-2e80-48f6-b5d0-565815c7a2f5
+source_node_id: 623dc311-aa42-40b5-be79-63404c1106a4
+target_node_id: ac6dd304-c4e6-43be-8b8c-4ba614170baa
+edge_information: 整车State状态 >= 9 and 整车State状态 < 28
+edge_over
+edge_id: d5535f14-5152-4c1d-9d6d-c7bdc275f6d7
+source_node_id: 623dc311-aa42-40b5-be79-63404c1106a4
+target_node_id: bdee7cb3-7998-4529-9ee6-e779d8870fcd
+edge_information: 整车State状态 in [28,29,30]
+edge_over
+edge_id: 2db8bfe2-d76d-4061-bacd-c09cc9370916
+source_node_id: bdee7cb3-7998-4529-9ee6-e779d8870fcd
+target_node_id: 21fdfb4f-5cea-43ec-8dd1-d3690a97b7d1
+edge_information: 整车车速 > 车速阈值kph and 动力电池充放电电流 <= -电流阈值A
+edge_over
+edge_id: efb8c6f2-2364-479d-841c-b475478e4488
+source_node_id: 21fdfb4f-5cea-43ec-8dd1-d3690a97b7d1
+target_node_id: b7f5de0c-7d2e-4d92-ab03-58126bf95888
+edge_information: 能量回收里程 > 1
+edge_over
+edge_id: bb256fd4-53ed-4e55-aa8a-36786fa927fc
+source_node_id: bdee7cb3-7998-4529-9ee6-e779d8870fcd
+target_node_id: c9508c66-53d1-4548-98e3-5055d893dfcc
+edge_information: 整车车速 < 车速阈值kph and 动力电池充放电电流 > 电流阈值A
+edge_over
+edge_id: 7aa9ee29-99e8-4f34-a506-d070a3a40ac8
+source_node_id: c9508c66-53d1-4548-98e3-5055d893dfcc
+target_node_id: 9f751bd3-09ff-4c75-8b83-ee8a932b8595
+edge_information: 累计放电距离 > 0.1
+edge_over
+edge_id: 3bf0c608-90ca-48f3-bd3c-7660edfeb695
+source_node_id: 623dc311-aa42-40b5-be79-63404c1106a4
+target_node_id: ac6dd304-c4e6-43be-8b8c-4ba614170baa
+edge_information: 整车State状态 >30 and 整车State状态 <= 49
+edge_over
+edge_id: e8f63913-1c8a-4f36-81c3-3492a91c48ce
+source_node_id: bdee7cb3-7998-4529-9ee6-e779d8870fcd
+target_node_id: 680514ef-06af-4645-b9b6-058c85ed8d8f
+edge_information: 累计放电距离 < 能量回收里程
+edge_over
+edge_id: 98b6e2cc-366c-4cbb-a579-a428d630fe27
+source_node_id: bdee7cb3-7998-4529-9ee6-e779d8870fcd
+target_node_id: 335d4fe2-3abd-4c95-b17a-bbda2bb8f742
+edge_information: 整车车速 >车速阈值kph and 动力电池充放电电流 > 电流阈值A
+edge_over
+edge_id: 72ce957e-f7f1-4511-a90a-f3073a637479
+source_node_id: 335d4fe2-3abd-4c95-b17a-bbda2bb8f742
+target_node_id: 29fd68e5-6d2d-4540-89a0-f0afeba0c46b
+edge_information: 
+edge_over
+edge_id: 368011c1-59c6-4ce8-a59c-c9b7f4e2ab3c
+source_node_id: 29fd68e5-6d2d-4540-89a0-f0afeba0c46b
+target_node_id: fd97ba61-ed04-4586-a157-918e76b229fa
+edge_information: 
+edge_over
+edge_id: 9d735a39-50c8-4d23-b4a6-1d36cf7d5663
+source_node_id: 29fd68e5-6d2d-4540-89a0-f0afeba0c46b
+target_node_id: 030eb5a0-8f2d-11ee-9e35-758f77768b40
+edge_information: 
+edge_over
+edge_id: 0a076241-460f-4b41-8cc6-4d63f6726902
+source_node_id: bdee7cb3-7998-4529-9ee6-e779d8870fcd
+target_node_id: ac6dd304-c4e6-43be-8b8c-4ba614170baa
+edge_information: 动力电池充放电电流 > -电流阈值A and 动力电池充放电电流 < 电流阈值A
+edge_over
+graph_over
+graph_id: 45a00e50-8f5a-11ee-8d8f-2993b54a2812
+graph_name: 208_20_累计放电距离
+node_id: d1deb671-380d-4fa3-b57d-b4b4f9d1236a
+node_type: write
+node_information: START
+node_over
+node_id: cbd0f4ca-3a54-4851-9044-047e7ab60bd9
+node_type: write
+node_information: 累计放电距离 = 累计放电距离call(period = 1, step = 0.1,a = 累计放电距离)
+node_over
+node_id: 51675860-8f5a-11ee-8d8f-2993b54a2812
+node_over
+node_id: 61f61780-9008-11ee-9fdf-498ccda085cd
+node_over
+edge_id: ab0f5e84-3837-43a1-a14a-b444883f6efc
+source_node_id: d1deb671-380d-4fa3-b57d-b4b4f9d1236a
+target_node_id: cbd0f4ca-3a54-4851-9044-047e7ab60bd9
+edge_information: 
+edge_over
+graph_over
+graph_id: aa4043b0-8f2e-11ee-9e35-758f77768b40
+graph_name: 208_22_request
+node_id: 0de5deeb-108b-4faa-8160-9b61d1a493a8
+node_type: write
+node_information: START
+node_over
+node_id: 3c87fbc3-5eaf-4efe-973d-27c3cc56b5e3
+node_type: write
+node_information: D_S挡里程参数 = 1
+node_over
+node_id: f6b33ad3-b9f4-4f6d-a08a-bd26852ce63f
+node_type: write
+node_information: D_S挡里程参数 = S档标称里程/D档标称里程
+node_over
+node_id: ccfff6fa-a4a8-483d-bfed-7d1c8c109ea7
+node_type: write
+node_information: 整车模式 = enum.整车模式('行车模式')
+node_over
+node_id: 33445b5f-891e-46cb-8cec-d3f2d9caadcd
+node_type: write
+node_information: 
+node_over
+edge_id: 897ab9a8-c743-45b0-acbd-5845f72210a8
+source_node_id: 0de5deeb-108b-4faa-8160-9b61d1a493a8
+target_node_id: 3c87fbc3-5eaf-4efe-973d-27c3cc56b5e3
+edge_information: 挡位 == enum.挡位('D') or 挡位 == enum.挡位('N') or 挡位 == enum.挡位('R') or 挡位 == enum.挡位('P')
+edge_over
+edge_id: d42c3432-58a2-4f77-8442-db209ef294c8
+source_node_id: 0de5deeb-108b-4faa-8160-9b61d1a493a8
+target_node_id: f6b33ad3-b9f4-4f6d-a08a-bd26852ce63f
+edge_information: 挡位 == enum.挡位('S')
+edge_over
+edge_id: 17e3f211-0ec0-49e5-abd1-2fd4f8cffddd
+source_node_id: 0de5deeb-108b-4faa-8160-9b61d1a493a8
+target_node_id: ccfff6fa-a4a8-483d-bfed-7d1c8c109ea7
+edge_information: 整车State状态 == 30
+edge_over
+edge_id: fcd2407e-45f6-4cf4-862f-e4f79a95feb8
+source_node_id: ccfff6fa-a4a8-483d-bfed-7d1c8c109ea7
+target_node_id: f6b33ad3-b9f4-4f6d-a08a-bd26852ce63f
+edge_information: 挡位 == enum.挡位('D') or 挡位 == enum.挡位('E') or 挡位 == enum.挡位('S')
+edge_over
+edge_id: bcfbfba4-79af-4a07-b872-698a3b9baff6
+source_node_id: ccfff6fa-a4a8-483d-bfed-7d1c8c109ea7
+target_node_id: 33445b5f-891e-46cb-8cec-d3f2d9caadcd
+edge_information: 挡位 == enum.挡位('N') or 挡位 == enum.挡位('R') or 挡位 == enum.挡位('P')
+edge_over
+graph_over
+graph_id: d2b96250-8c49-11ee-b566-7b447028c8e9
+graph_name: 208_30
+node_id: a4d7a780-6d0d-4947-98bd-40a4a914d31f
+node_type: write
+node_information: START
+node_over
+node_id: 23d2d3b3-608a-4958-a1ba-209ef2233e41
+node_type: write
+node_information: EEPROM续驶里程 = 续驶里程call()
+node_over
+node_id: 1a973fbd-7513-451a-a90c-bf15703b0a2b
+node_type: write
+node_information: EEPROM续驶里程 = 100
+node_over
+node_id: e0de229d-1da8-4d86-9221-111319774824
+node_over
+node_id: a034fc25-fc31-4b2c-bf6c-617644f14212
+node_type: write
+node_information: EEPROM续驶里程 = 续驶里程call()
+node_over
+node_id: c4fc003a-4652-42cf-83bc-aec723205eab
+node_type: read
+branch_yes: 574cd5d4-1ce4-4fef-ac67-1952605d1b66
+branch_no: 1189d512-317b-44d0-a892-4906d4b6903d
+node_information: 单体电芯最低温度 > -15 and EEPROM存储单体电芯最低温度 > 10 and 动力电池SOC > EEPROM存储单体电芯最低温度 + 温度阈值 and 动力电池SOC > EEPROM存储单体电芯最低温度 - 温度阈值 and 单体电芯最低温度 < 单体电芯最低温度上电判断阈值
+node_over
+edge_id: 1189d512-317b-44d0-a892-4906d4b6903d
+source_node_id: c4fc003a-4652-42cf-83bc-aec723205eab
+target_node_id: a034fc25-fc31-4b2c-bf6c-617644f14212
+edge_information: 
+edge_over
+edge_id: 574cd5d4-1ce4-4fef-ac67-1952605d1b66
+source_node_id: c4fc003a-4652-42cf-83bc-aec723205eab
+target_node_id: 23d2d3b3-608a-4958-a1ba-209ef2233e41
+edge_information: 
+edge_over
+edge_id: e8a12791-0064-42a3-af26-b9b0865f7889
+source_node_id: a4d7a780-6d0d-4947-98bd-40a4a914d31f
+target_node_id: 1a973fbd-7513-451a-a90c-bf15703b0a2b
+edge_information: 
+edge_over
+edge_id: 49c8917e-1441-4419-8bfb-826d6135f984
+source_node_id: 1a973fbd-7513-451a-a90c-bf15703b0a2b
+target_node_id: c4fc003a-4652-42cf-83bc-aec723205eab
+edge_information: 
+edge_over
+graph_over
+graph_id: 58c6b6b2-8a87-11ee-b2c3-3b7243c28b58
+graph_name: 208_31
+node_id: 58c6b6a4-8a87-11ee-b2c3-3b7243c28b58
+node_type: write
+node_information: START
+node_over
+node_id: 58c6b6a9-8a87-11ee-b2c3-3b7243c28b58
+node_type: write
+node_information: 动力电池SOC = ID1
+node_over
+node_id: 58c6b6ad-8a87-11ee-b2c3-3b7243c28b58
+node_type: write
+node_information: 动力电池SOC = ID2
+node_over
+node_id: db7f38de-b01c-444d-ba01-42c589133607
+node_type: read
+branch_yes: 8de7dff1-9c09-4153-a644-da0c3f8b965f
+branch_no: 92a444ad-fc08-4c70-9818-f6898e1c9b9f
+node_information: ID1 < 0.1
+node_over
+edge_id: 28b3b7f4-7164-4c5a-98a9-febeec120eec
+source_node_id: 58c6b6a4-8a87-11ee-b2c3-3b7243c28b58
+target_node_id: db7f38de-b01c-444d-ba01-42c589133607
+edge_information: 
+edge_over
+edge_id: 8de7dff1-9c09-4153-a644-da0c3f8b965f
+source_node_id: db7f38de-b01c-444d-ba01-42c589133607
+target_node_id: 58c6b6a9-8a87-11ee-b2c3-3b7243c28b58
+edge_information: 
+edge_over
+edge_id: 92a444ad-fc08-4c70-9818-f6898e1c9b9f
+source_node_id: db7f38de-b01c-444d-ba01-42c589133607
+target_node_id: 58c6b6ad-8a87-11ee-b2c3-3b7243c28b58
+edge_information: 
+edge_over
+graph_over
+graph_id: 116dde70-f871-11ee-8f78-5de70c77b56e
+graph_name: 整车模式变换
+node_id: 9e1fc809-d167-4281-b2cf-2dd9bce06eb1
+node_type: write
+node_information: START
+node_over
+node_id: 1be6da0a-0b01-4754-93fc-1f5c20f121f5
+node_type: write
+node_information: 整车模式 = 2
+node_over
+node_id: 8982320a-edaa-440f-89c1-4fdab54b68f0
+node_type: write
+node_information: 整车模式 = 1
+node_over
+edge_id: 5fdb5508-73e0-4e63-ad51-4dace4364642
+source_node_id: 9e1fc809-d167-4281-b2cf-2dd9bce06eb1
+target_node_id: 1be6da0a-0b01-4754-93fc-1f5c20f121f5
+edge_information: 钥匙开关 == 2
+edge_over
+edge_id: 69110388-8221-4519-b426-cef15a0e846e
+source_node_id: 9e1fc809-d167-4281-b2cf-2dd9bce06eb1
+target_node_id: 8982320a-edaa-440f-89c1-4fdab54b68f0
+edge_information: 钥匙开关 == 0
+edge_over
+graph_over
+graph_id: 5915518c-2c46-11ef-97ca-c8cb9e4ad5d4
+graph_name: 258-10-1
+node_id: 7d8c9862-3fb3-43d5-ad9a-e8234c139bf8
+node_type: write
+node_information: START
+node_over
+node_id: 5a77f4ec-ef08-4043-b69a-bdd04b0b1ff6
+node_type: write
+node_information: 
+node_over
+edge_id: a15a941e-0f82-4c6b-b9fa-1f80e8c22904
+source_node_id: 7d8c9862-3fb3-43d5-ad9a-e8234c139bf8
+target_node_id: 5a77f4ec-ef08-4043-b69a-bdd04b0b1ff6
+edge_information: 前电机ESP干涉状态 == 1 and 后电机ESP干涉状态 == 1
+edge_over
+graph_over
+graph_id: 5956794f-2c46-11ef-bb3c-c8cb9e4ad5d4
+graph_name: 258-11-1
+node_id: 4b901075-b70e-4536-8d5f-24fa4ed3bbba
+node_type: write
+node_information: START
+node_over
+node_id: ba801928-7675-41b4-b47b-6a4dcd29c318
+node_type: write
+node_information: 
+node_over
+edge_id: 29eb1a75-89bb-4e46-b08c-2482486d13ec
+source_node_id: 4b901075-b70e-4536-8d5f-24fa4ed3bbba
+target_node_id: ba801928-7675-41b4-b47b-6a4dcd29c318
+edge_information: 
+edge_over
+graph_over
+graph_id: 5997cb39-2c46-11ef-8287-c8cb9e4ad5d4
+graph_name: 258-13-1
+node_id: f2940c9e-8b28-4a91-967d-448122a9c2d0
+node_type: write
+node_information: START
+node_over
+node_id: 9674c8fb-a07d-4c9f-9155-b0934ebb5727
+node_type: read
+branch_yes: f6278275-f47f-4df8-bf02-2bb17922429a
+branch_no: 8f2ffec5-ac35-4cd3-8107-9f4b52e6a869
+node_information: 前电机轴端扭矩 >= 前电机轴端扭矩下限 and 前电机轴端扭矩 <= 前电机轴端扭矩上限
+node_over
+node_id: cef14936-95ec-4593-a0fe-2c2b280b2712
+node_type: read
+branch_yes: 46e6b1ec-7d8e-4530-8965-025f88bab9e6
+branch_no: 37dd83da-6cdc-4a89-a14f-7e66e010137b
+node_information: 前电机轴端扭矩 < 前电机轴端扭矩下限
+node_over
+node_id: 85ae8b1c-60ef-4041-8574-4b4154a49cea
+node_type: write
+node_information: 前驱动电机目标转矩命令 = 前电机轴端扭矩
+node_over
+node_id: 9bede17e-2dc5-4fd8-a8fb-284516e7d22e
+node_type: write
+node_information: 前驱动电机目标转矩命令 = 前电机轴端扭矩下限
+node_over
+node_id: c6641f5a-3a1a-49b2-80eb-15cc6b9fff78
+node_type: write
+node_information: 前驱动电机目标转矩命令 = 前电机轴端扭矩上限
+node_over
+edge_id: d9e9be28-a319-4d05-baa1-279104c023a3
+source_node_id: f2940c9e-8b28-4a91-967d-448122a9c2d0
+target_node_id: 9674c8fb-a07d-4c9f-9155-b0934ebb5727
+edge_information: 
+edge_over
+edge_id: f6278275-f47f-4df8-bf02-2bb17922429a
+source_node_id: 9674c8fb-a07d-4c9f-9155-b0934ebb5727
+target_node_id: 85ae8b1c-60ef-4041-8574-4b4154a49cea
+edge_information: 
+edge_over
+edge_id: 8f2ffec5-ac35-4cd3-8107-9f4b52e6a869
+source_node_id: 9674c8fb-a07d-4c9f-9155-b0934ebb5727
+target_node_id: cef14936-95ec-4593-a0fe-2c2b280b2712
+edge_information: 
+edge_over
+edge_id: 46e6b1ec-7d8e-4530-8965-025f88bab9e6
+source_node_id: cef14936-95ec-4593-a0fe-2c2b280b2712
+target_node_id: 9bede17e-2dc5-4fd8-a8fb-284516e7d22e
+edge_information: 
+edge_over
+edge_id: 37dd83da-6cdc-4a89-a14f-7e66e010137b
+source_node_id: cef14936-95ec-4593-a0fe-2c2b280b2712
+target_node_id: c6641f5a-3a1a-49b2-80eb-15cc6b9fff78
+edge_information: 
+edge_over
+graph_over
+graph_id: 59ddbe61-2c46-11ef-b580-c8cb9e4ad5d4
+graph_name: 258-13-2
+node_id: d2b7c925-23fe-11ef-8c79-b94327fc6ebd
+node_type: write
+node_information: START
+node_over
+node_id: d2b7f030-23fe-11ef-8c79-b94327fc6ebd
+node_type: read
+branch_yes: d2b7c921-23fe-11ef-8c79-b94327fc6ebd
+branch_no: d2b7c922-23fe-11ef-8c79-b94327fc6ebd
+node_information: 后电机轴端扭矩 >= 后电机轴端扭矩下限 and 后电机轴端扭矩 <= 后电机轴端扭矩上限
+node_over
+node_id: d2b7c926-23fe-11ef-8c79-b94327fc6ebd
+node_type: write
+node_information: 后驱动电机目标转矩命令 = 后电机轴端扭矩
+node_over
+node_id: d2b7f031-23fe-11ef-8c79-b94327fc6ebd
+node_type: read
+branch_yes: d2b7c923-23fe-11ef-8c79-b94327fc6ebd
+branch_no: d2b7c924-23fe-11ef-8c79-b94327fc6ebd
+node_information: 后电机轴端扭矩 < 后电机轴端扭矩下限
+node_over
+node_id: d2b7f032-23fe-11ef-8c79-b94327fc6ebd
+node_type: write
+node_information: 后驱动电机目标转矩命令 = 后电机轴端扭矩下限
+node_over
+node_id: d2b7f033-23fe-11ef-8c79-b94327fc6ebd
+node_type: write
+node_information: 后驱动电机目标转矩命令 = 后电机轴端扭矩上限
+node_over
+edge_id: d2b7c920-23fe-11ef-8c79-b94327fc6ebd
+source_node_id: d2b7c925-23fe-11ef-8c79-b94327fc6ebd
+target_node_id: d2b7f030-23fe-11ef-8c79-b94327fc6ebd
+edge_information: 
+edge_over
+edge_id: d2b7c921-23fe-11ef-8c79-b94327fc6ebd
+source_node_id: d2b7f030-23fe-11ef-8c79-b94327fc6ebd
+target_node_id: d2b7c926-23fe-11ef-8c79-b94327fc6ebd
+edge_information: 
+edge_over
+edge_id: d2b7c922-23fe-11ef-8c79-b94327fc6ebd
+source_node_id: d2b7f030-23fe-11ef-8c79-b94327fc6ebd
+target_node_id: d2b7f031-23fe-11ef-8c79-b94327fc6ebd
+edge_information: 
+edge_over
+edge_id: d2b7c923-23fe-11ef-8c79-b94327fc6ebd
+source_node_id: d2b7f031-23fe-11ef-8c79-b94327fc6ebd
+target_node_id: d2b7f032-23fe-11ef-8c79-b94327fc6ebd
+edge_information: 
+edge_over
+edge_id: d2b7c924-23fe-11ef-8c79-b94327fc6ebd
+source_node_id: d2b7f031-23fe-11ef-8c79-b94327fc6ebd
+target_node_id: d2b7f033-23fe-11ef-8c79-b94327fc6ebd
+edge_information: 
+edge_over
+graph_over
+graph_id: 60b0667e-2c6a-11ef-8cfb-c8cb9e4ad5d4
+graph_name: 263_0_1_1_APSPerc
+node_id: 0ae075a1-aa63-449b-8db0-8163f3305a15
+node_type: write
+node_information: START
+node_over
+node_id: f338b19b-c5f1-47b9-9f6c-d1333043429c
+node_type: write
+node_information: 驾驶员加速踏板开度 = APS_MAP(加速踏板)
+node_over
+edge_id: d615e385-a00f-4504-b7ef-bc6e4520f1c9
+source_node_id: 0ae075a1-aa63-449b-8db0-8163f3305a15
+target_node_id: f338b19b-c5f1-47b9-9f6c-d1333043429c
+edge_information: 
+edge_over
+graph_over
+graph_id: 60fd80d4-2c6a-11ef-b25d-c8cb9e4ad5d4
+graph_name: 263_14_1_1_EBC_RecoSlope_Null
+node_id: 243e0fc5-4e0a-4f58-af50-fcec95f2cb67
+node_type: write
+node_information: START
+node_over
+node_id: 53b0425f-192c-4927-aa21-c1550725b79b
+node_type: write
+node_information: 
+node_over
+node_id: 242c29af-e7bb-460a-bfd9-cb55e9e0698f
+node_type: write
+node_information: 
+node_over
+edge_id: 43eea4a5-d0d5-4540-b089-0d438577e278
+source_node_id: 243e0fc5-4e0a-4f58-af50-fcec95f2cb67
+target_node_id: 242c29af-e7bb-460a-bfd9-cb55e9e0698f
+edge_information: 策略挡位信号 == 4 and 驱动电机转速 <= 7*前轴传动比/0.377
+edge_over
+edge_id: 205e1853-457c-40f3-a1a5-1c69865b7c53
+source_node_id: 53b0425f-192c-4927-aa21-c1550725b79b
+target_node_id: 242c29af-e7bb-460a-bfd9-cb55e9e0698f
+edge_information: 前驱动电机目标转矩命令 > 0
+edge_over
+edge_id: 7772f7ba-c503-444f-9eae-1276d702a1c2
+source_node_id: 242c29af-e7bb-460a-bfd9-cb55e9e0698f
+target_node_id: 53b0425f-192c-4927-aa21-c1550725b79b
+edge_information: 制动踏板 == 0 and 前驱动电机目标转矩命令 < 0
+edge_over
+graph_over
+graph_id: 61438b41-2c6a-11ef-99e6-c8cb9e4ad5d4
+graph_name: 263_16_1_1_EBC_EleBrkTqMiddle
+node_id: dd87f6dd-f2a1-4927-ba67-3fb1e17fa0f3
+node_type: write
+node_information: START
+node_over
+node_id: b5d36fa8-0f63-4ad4-8549-b80b8b9b64be
+node_type: write
+node_information: 
+node_over
+edge_id: 2e548d1e-8070-49bd-8ffb-8c7a334e2b90
+source_node_id: dd87f6dd-f2a1-4927-ba67-3fb1e17fa0f3
+target_node_id: b5d36fa8-0f63-4ad4-8549-b80b8b9b64be
+edge_information: 策略挡位信号 == 4 and EPB状态 != 2 and 针对ESP电制动补偿系统是否可用标志位 == 1 and 怠速状态 == 0
+edge_over
+graph_over
+graph_id: 617b15f3-2c6a-11ef-adba-c8cb9e4ad5d4
+graph_name: 263_3_1_1_EBC_AclPedApled_flg
+node_id: 7363b536-44ca-4d3e-8c82-7b6c9c1ad8fb
+node_type: write
+node_information: START
+node_over
+node_id: 9434e990-226d-11ef-9074-0d4c54e47be0
+node_type: write
+node_information: 加速踏板踩下标志位 = 0
+node_over
+node_id: 9432edc0-226d-11ef-9074-0d4c54e47be0
+node_type: write
+node_information: 加速踏板踩下标志位 = 1
+node_over
+edge_id: 9436be50-226d-11ef-9074-0d4c54e47be0
+source_node_id: 9432edc0-226d-11ef-9074-0d4c54e47be0
+target_node_id: 9434e990-226d-11ef-9074-0d4c54e47be0
+edge_information: 驾驶员加速踏板开度 < 0.3
+edge_over
+edge_id: 9436be52-226d-11ef-9074-0d4c54e47be0
+source_node_id: 7363b536-44ca-4d3e-8c82-7b6c9c1ad8fb
+target_node_id: 9434e990-226d-11ef-9074-0d4c54e47be0
+edge_information: 驾驶员加速踏板开度 == 0
+edge_over
+edge_id: 9436be54-226d-11ef-9074-0d4c54e47be0
+source_node_id: 9434e990-226d-11ef-9074-0d4c54e47be0
+target_node_id: 9432edc0-226d-11ef-9074-0d4c54e47be0
+edge_information: 驾驶员加速踏板开度 > 0.7
+edge_over
+graph_over
+graph_id: 61c7d666-2c6a-11ef-8b18-c8cb9e4ad5d4
+graph_name: 263_4_1_1_EBC_VehStop_flg
+node_id: 8c007d16-dde9-4dea-9475-84eeacc48668
+node_type: write
+node_information: START
+node_over
+node_id: 633e5b80-226f-11ef-9074-0d4c54e47be0
+node_type: write
+node_information: 
+node_over
+node_id: 63400930-226f-11ef-9074-0d4c54e47be0
+node_type: read
+branch_yes: 63420500-226f-11ef-9074-0d4c54e47be0
+branch_no: 63420501-226f-11ef-9074-0d4c54e47be0
+node_information: duration((驱动电机转速 >= -3 and 驱动电机转速 <= 3), 120.4, sec) and EPB状态 == 1 and 加速踏板踩下标志位 == 0 and 策略挡位信号 == 4 and 怠速状态 == 0
+node_over
+node_id: 633b2730-226f-11ef-9074-0d4c54e47be0
+node_type: write
+node_information: 
+node_over
+node_id: 633cadd0-226f-11ef-9074-0d4c54e47be0
+node_type: write
+node_information: 
+node_over
+edge_id: 63420500-226f-11ef-9074-0d4c54e47be0
+source_node_id: 63400930-226f-11ef-9074-0d4c54e47be0
+target_node_id: 633b2730-226f-11ef-9074-0d4c54e47be0
+edge_information: 
+edge_over
+edge_id: 63420501-226f-11ef-9074-0d4c54e47be0
+source_node_id: 63400930-226f-11ef-9074-0d4c54e47be0
+target_node_id: 633cadd0-226f-11ef-9074-0d4c54e47be0
+edge_information: 
+edge_over
+edge_id: 63420502-226f-11ef-9074-0d4c54e47be0
+source_node_id: 633e5b80-226f-11ef-9074-0d4c54e47be0
+target_node_id: 63400930-226f-11ef-9074-0d4c54e47be0
+edge_information: 
+edge_over
+edge_id: 63420503-226f-11ef-9074-0d4c54e47be0
+source_node_id: 8c007d16-dde9-4dea-9475-84eeacc48668
+target_node_id: 633e5b80-226f-11ef-9074-0d4c54e47be0
+edge_information: 驾驶模式信号 == 11
+edge_over
+graph_over
+graph_id: 6217f231-2c6a-11ef-b7ae-c8cb9e4ad5d4
+graph_name: 263_5_1_1_EBC_SlopeTorqueMemy
+node_id: 0c070be1-d742-497b-a98b-0856f44b2259
+node_type: write
+node_information: START
+node_over
+node_id: db21837e-aceb-48cf-8cff-392e0899a591
+node_type: write
+node_information: 
+node_over
+node_id: eca75d90-4ff1-49d7-9ab4-9eee0a60ebdb
+node_type: write
+node_information: 
+node_over
+edge_id: 8782f4e1-7309-4da4-941b-f0c09da4934f
+source_node_id: eca75d90-4ff1-49d7-9ab4-9eee0a60ebdb
+target_node_id: db21837e-aceb-48cf-8cff-392e0899a591
+edge_information: 驱动电机转速 == 4 and 液压驻车退出标志位 == 1
+edge_over
+edge_id: ab05bb50-2965-11ef-afc5-157d334f01af
+source_node_id: db21837e-aceb-48cf-8cff-392e0899a591
+target_node_id: eca75d90-4ff1-49d7-9ab4-9eee0a60ebdb
+edge_information: 液压驻车退出标志位 == 0 and duration(驱动电机转速 >= -3 and 驱动电机转速 <= 3, 0.4, sec)
+edge_over
+edge_id: 5cefe322-f13d-44b1-9c4e-0d7dc570a963
+source_node_id: 0c070be1-d742-497b-a98b-0856f44b2259
+target_node_id: eca75d90-4ff1-49d7-9ab4-9eee0a60ebdb
+edge_information: 液压驻车退出标志位 == 0 and duration(驱动电机转速 == 0, 0.4, sec)
+edge_over
+graph_over
+graph_id: 626c53b8-2c6a-11ef-9a88-c8cb9e4ad5d4
+graph_name: 263_6_1_1_EBC_DrvReq_Nm
+node_id: f552c329-6b24-4db7-a8b5-e730e88bb721
+node_type: write
+node_information: START
+node_over
+node_id: 26620331-bbd9-41ce-bfd3-ca190743e3ff
+node_type: write
+node_information: 
+node_over
+edge_id: df9e341c-162a-433e-a379-48e4dfd7f09f
+source_node_id: f552c329-6b24-4db7-a8b5-e730e88bb721
+target_node_id: 26620331-bbd9-41ce-bfd3-ca190743e3ff
+edge_information: 
+edge_over
+graph_over
+graph_id: 62b9b37a-2c6a-11ef-adb8-c8cb9e4ad5d4
+graph_name: 263_6_1_2_EBC_VehRelease
+node_id: dc5b4d01-587f-4270-aa84-cde7493feebc
+node_type: write
+node_information: START
+node_over
+node_id: b59050aa-1783-444c-b6da-1afac57273bc
+node_type: write
+node_information: 液压驻车退出标志位 = 0
+node_over
+node_id: dc059ee4-7d64-4064-ab56-53d1d2151257
+node_type: write
+node_information: 液压驻车退出标志位 = 1
+node_over
+edge_id: 914a914e-67db-4e87-88e4-2407de345897
+source_node_id: dc5b4d01-587f-4270-aa84-cde7493feebc
+target_node_id: b59050aa-1783-444c-b6da-1afac57273bc
+edge_information: 
+edge_over
+edge_id: 5f9ce26e-0b6a-41fa-8290-5fef41c8ca96
+source_node_id: b59050aa-1783-444c-b6da-1afac57273bc
+target_node_id: dc059ee4-7d64-4064-ab56-53d1d2151257
+edge_information: 驻车扭矩 >= 0 and 加速踏板踩下标志位 == 1 and 前驱动电机目标转矩命令+后驱动电机目标转矩命令 >= 驻车扭矩+15 and 油门扭矩需求 >= 15*前轴传动比*前轴传动效率
+edge_over
+graph_over
+graph_id: 6304c332-2c6a-11ef-ad46-c8cb9e4ad5d4
+graph_name: 263_7_1_1_EBC_PState_flg
+node_id: 318e830c-72e0-410d-adfd-76b7948e87cf
+node_type: write
+node_information: START
+node_over
+node_id: 356829d1-30da-4abd-b072-df90c0509a30
+node_type: write
+node_information: 
+node_over
+node_id: 2350627c-c6a6-4b6e-9b8d-3bf1cce136a9
+node_type: write
+node_information: 
+node_over
+node_id: 267076e6-8cf4-421a-bfbf-e7aa9bea2120
+node_type: write
+node_information: 
+node_over
+node_id: a6bc53e7-1ea9-454a-9688-b55b26b79dfd
+node_type: write
+node_information: 液压驻车状态 = 0
+node_over
+node_id: ecf5830c-e7ad-494d-8684-8dd8f0483416
+node_type: read
+branch_yes: a028fab9-8d6d-4e01-8226-fa114fe6af58
+branch_no: 8ada8712-9c4b-4038-9d6c-8d0f8ed2e5c9
+node_information: VCU需求扭矩补偿目标值 >= (fabs(驻车扭矩)+驻车扭矩补偿值MAP(驻车纵向加速度))*前轴传动比*前轴传动效率
+node_over
+edge_id: a20a3910-eb26-40f9-b89f-0dc389068683
+source_node_id: 356829d1-30da-4abd-b072-df90c0509a30
+target_node_id: ecf5830c-e7ad-494d-8684-8dd8f0483416
+edge_information: 
+edge_over
+edge_id: a028fab9-8d6d-4e01-8226-fa114fe6af58
+source_node_id: ecf5830c-e7ad-494d-8684-8dd8f0483416
+target_node_id: 267076e6-8cf4-421a-bfbf-e7aa9bea2120
+edge_information: 
+edge_over
+edge_id: 8ada8712-9c4b-4038-9d6c-8d0f8ed2e5c9
+source_node_id: ecf5830c-e7ad-494d-8684-8dd8f0483416
+target_node_id: 2350627c-c6a6-4b6e-9b8d-3bf1cce136a9
+edge_information: 
+edge_over
+edge_id: a65da228-1038-4cf2-a837-e9f576e769a9
+source_node_id: 356829d1-30da-4abd-b072-df90c0509a30
+target_node_id: a6bc53e7-1ea9-454a-9688-b55b26b79dfd
+edge_information: 策略挡位信号 == 2 or 策略挡位信号 == 3 or 驱动电机转速 > 100 or P挡联动标志位 == 1 or (加速踏板踩下标志位 == 1 and (驱动电机转速 > 25 or VCU需求扭矩补偿目标值 == 0))
+edge_over
+edge_id: ebfb0aac-47a3-4ff0-bf52-78e3cc5ab6b7
+source_node_id: a6bc53e7-1ea9-454a-9688-b55b26b79dfd
+target_node_id: 356829d1-30da-4abd-b072-df90c0509a30
+edge_information: P挡联动标志位 == 0 and 液压驻车退出标志位 == 0 and 车辆静止标志位 == 1
+edge_over
+edge_id: 5a031143-8418-4db8-afec-a793698e9be9
+source_node_id: 318e830c-72e0-410d-adfd-76b7948e87cf
+target_node_id: a6bc53e7-1ea9-454a-9688-b55b26b79dfd
+edge_information: 车辆静止标志位 == 0 and 策略挡位信号 == 4 and EPB状态 != 2 and 针对ESP电制动补偿系统是否可用标志位 == 1 and 怠速状态 == 0
+edge_over
+graph_over
+graph_id: 634af3f2-2c6a-11ef-b83e-c8cb9e4ad5d4
+graph_name: 263_9_3_1_EBC_GearPState_flg
+node_id: d3920eb2-637c-43cc-b3b9-edc8d8db63f5
+node_type: write
+node_information: START
+node_over
+node_id: 63ea42d1-7c62-4242-a2f0-e30654db6e77
+node_type: write
+node_information: P挡联动标志位 = 1
+node_over
+node_id: 26f1916b-19fc-41ea-bb5c-923f2a83b17c
+node_type: write
+node_information: P挡联动标志位 = 0
+node_over
+edge_id: 3de75cbc-0fbd-4158-8164-d22782b76819
+source_node_id: 26f1916b-19fc-41ea-bb5c-923f2a83b17c
+target_node_id: 63ea42d1-7c62-4242-a2f0-e30654db6e77
+edge_information: 策略挡位信号 == 1
+edge_over
+edge_id: a4d28552-5e2e-419b-a6f2-941369f5a63b
+source_node_id: d3920eb2-637c-43cc-b3b9-edc8d8db63f5
+target_node_id: 26f1916b-19fc-41ea-bb5c-923f2a83b17c
+edge_information: 
+edge_over
+graph_over
+graph_id: 014f25a3-2c7c-11ef-a948-c8cb9e4ad5d4
+graph_name: 0-1-策略挡位
+node_id: d0fb0785-88e6-4e3b-bb43-30557eeb373f
+node_type: write
+node_information: START
+node_over
+node_id: 38d2adb3-1b90-439a-86c2-c91a904826ef
+node_type: write
+node_information: 
+node_over
+node_id: b22964d0-218c-11ef-a39e-6db6cd26b91c
+node_type: write
+node_information: 
+node_over
+edge_id: 51b1668d-984d-4b65-877c-02bc3b13a315
+source_node_id: d0fb0785-88e6-4e3b-bb43-30557eeb373f
+target_node_id: 38d2adb3-1b90-439a-86c2-c91a904826ef
+edge_information: 挡位信号 == 4
+edge_over
+edge_id: 884f9820-e444-4a4f-9655-81bf8d1c25e0
+source_node_id: d0fb0785-88e6-4e3b-bb43-30557eeb373f
+target_node_id: b22964d0-218c-11ef-a39e-6db6cd26b91c
+edge_information: 挡位信号 == 3
+edge_over
+graph_over
+graph_id: 01a03f06-2c7c-11ef-9f00-c8cb9e4ad5d4
+graph_name: 0-2-驾驶模式
+node_id: b34589c6-d99d-4f5e-b4e1-a10e6abe0bcd
+node_type: write
+node_information: START
+node_over
+node_id: e8cbb240-add4-48b6-b500-cae4f0810b58
+node_type: write
+node_information: 驾驶模式信号 = 7
+node_over
+edge_id: 06a9c84e-4089-4c32-89d0-be8de0cd3a3b
+source_node_id: b34589c6-d99d-4f5e-b4e1-a10e6abe0bcd
+target_node_id: e8cbb240-add4-48b6-b500-cae4f0810b58
+edge_information: 驾驶模式请求 == 7
+edge_over
+graph_over
+graph_id: 01e06fdc-2c7c-11ef-bdd1-c8cb9e4ad5d4
+graph_name: 0-3-车速
+node_id: 000a7611-ed19-44ff-9c1f-5cda31fd48b2
+node_type: write
+node_information: START
+node_over
+node_id: 04182ddd-7ea4-459a-8599-4907e7640a5a
+node_over
+node_id: 56ce7649-f4d0-418b-b81a-64cfb8dad40c
+node_type: read
+branch_yes: 11d94169-b32e-4452-adec-567ffe10e441
+branch_no: 9694e98c-9e7d-4847-86d6-da28b7e68a35
+node_information: 驱动电机转速 > 0
+node_over
+node_id: 00b708b9-d8f8-4e4e-aeb0-93a0814af8cd
+node_type: write
+node_information: 车速信号 = ESP车速
+node_over
+node_id: 0ac48a60-218e-11ef-84f6-9394c851dea5
+node_type: write
+node_information: 车速信号 = -ESP车速
+node_over
+edge_id: 68039511-6367-4429-b10a-95f3aaf428c3
+source_node_id: 000a7611-ed19-44ff-9c1f-5cda31fd48b2
+target_node_id: 04182ddd-7ea4-459a-8599-4907e7640a5a
+edge_information: 车速信号有效性 == 1
+edge_over
+edge_id: af9b6a5d-4e6a-4e8b-a6cd-810acf3b519b
+source_node_id: 04182ddd-7ea4-459a-8599-4907e7640a5a
+target_node_id: 56ce7649-f4d0-418b-b81a-64cfb8dad40c
+edge_information: 
+edge_over
+edge_id: 11d94169-b32e-4452-adec-567ffe10e441
+source_node_id: 56ce7649-f4d0-418b-b81a-64cfb8dad40c
+target_node_id: 00b708b9-d8f8-4e4e-aeb0-93a0814af8cd
+edge_information: 
+edge_over
+edge_id: 9694e98c-9e7d-4847-86d6-da28b7e68a35
+source_node_id: 56ce7649-f4d0-418b-b81a-64cfb8dad40c
+target_node_id: 0ac48a60-218e-11ef-84f6-9394c851dea5
+edge_information: 
+edge_over
+graph_over
+graph_id: 02209afa-2c7c-11ef-a76f-c8cb9e4ad5d4
+graph_name: 1-1-扭矩map
+node_id: 8d6b8e67-00a8-4d73-91c8-021ec80ed903
+node_type: write
+node_information: START
+node_over
+node_id: e09adec6-1dc1-415b-86fa-d3caf1469a96
+node_type: write
+node_information: 
+node_over
+edge_id: ee243e66-de0e-48e4-b360-6334d6519b9d
+source_node_id: 8d6b8e67-00a8-4d73-91c8-021ec80ed903
+target_node_id: e09adec6-1dc1-415b-86fa-d3caf1469a96
+edge_information: 驾驶模式信号 == 7
+edge_over
+graph_over
+graph_id: 0271a72e-2c7c-11ef-a33c-c8cb9e4ad5d4
+graph_name: 11-1-总扭矩需求
+node_id: 128d550f-1d14-4a0c-97ba-8709b2d74bd2
+node_type: write
+node_information: START
+node_over
+node_id: d7ae4100-d5e6-4ef3-9e2f-38b6fd036c2a
+node_over
+node_id: e4a08f0b-44bb-4a0a-b05b-49e71929af05
+node_type: read
+branch_yes: 99a77466-615b-40e9-8d2e-f351f07e2780
+branch_no: 76fbc339-b4c6-4061-8d59-2980b3979c51
+node_information: 蠕行扭矩激活标志位 == 1
+node_over
+node_id: 18e3d958-bec6-4410-bb9e-f2a5ba1561ad
+node_type: write
+node_information: 
+node_over
+node_id: 48bf92e0-218b-11ef-a39e-6db6cd26b91c
+node_type: write
+node_information: 
+node_over
+node_id: 9b1eea40-218b-11ef-a39e-6db6cd26b91c
+node_type: read
+branch_yes: 5ff5f141-fd70-44c0-8149-cfe967c82c0f
+branch_no: 09af0270-416a-4309-9203-045d52a3e4e5
+node_information: 蠕行扭矩激活标志位 == 1
+node_over
+node_id: 93bea3d0-218b-11ef-a39e-6db6cd26b91c
+node_type: write
+node_information: 
+node_over
+node_id: b95b3db0-218b-11ef-a39e-6db6cd26b91c
+node_type: write
+node_information: 
+node_over
+node_id: 66cb0db6-93cc-495f-af00-634badb00a09
+node_type: read
+branch_yes: f536249e-a2bb-4a0b-b938-9dd5ea419c35
+branch_no: f9d4e391-71ab-4cdb-9c55-468f59464ef2
+node_information: VCU电制动补偿功能使能标志位 == 1 and 驱动电机转速 < 800 and 加速踏板 > 1
+node_over
+edge_id: fddd6103-bc72-4699-8d0d-3f72207d4930
+source_node_id: d7ae4100-d5e6-4ef3-9e2f-38b6fd036c2a
+target_node_id: e4a08f0b-44bb-4a0a-b05b-49e71929af05
+edge_information: 
+edge_over
+edge_id: 99a77466-615b-40e9-8d2e-f351f07e2780
+source_node_id: e4a08f0b-44bb-4a0a-b05b-49e71929af05
+target_node_id: 18e3d958-bec6-4410-bb9e-f2a5ba1561ad
+edge_information: 
+edge_over
+edge_id: 76fbc339-b4c6-4061-8d59-2980b3979c51
+source_node_id: e4a08f0b-44bb-4a0a-b05b-49e71929af05
+target_node_id: 48bf92e0-218b-11ef-a39e-6db6cd26b91c
+edge_information: 
+edge_over
+edge_id: f536249e-a2bb-4a0b-b938-9dd5ea419c35
+source_node_id: 66cb0db6-93cc-495f-af00-634badb00a09
+target_node_id: d7ae4100-d5e6-4ef3-9e2f-38b6fd036c2a
+edge_information: 
+edge_over
+edge_id: f9d4e391-71ab-4cdb-9c55-468f59464ef2
+source_node_id: 66cb0db6-93cc-495f-af00-634badb00a09
+target_node_id: 9b1eea40-218b-11ef-a39e-6db6cd26b91c
+edge_information: 
+edge_over
+edge_id: 5ff5f141-fd70-44c0-8149-cfe967c82c0f
+source_node_id: 9b1eea40-218b-11ef-a39e-6db6cd26b91c
+target_node_id: 93bea3d0-218b-11ef-a39e-6db6cd26b91c
+edge_information: 
+edge_over
+edge_id: 09af0270-416a-4309-9203-045d52a3e4e5
+source_node_id: 9b1eea40-218b-11ef-a39e-6db6cd26b91c
+target_node_id: b95b3db0-218b-11ef-a39e-6db6cd26b91c
+edge_information: 
+edge_over
+edge_id: a5b370e1-4a52-4195-958b-03dfd4b02b64
+source_node_id: 128d550f-1d14-4a0c-97ba-8709b2d74bd2
+target_node_id: 66cb0db6-93cc-495f-af00-634badb00a09
+edge_information: 
+edge_over
+graph_over
+graph_id: 02c250e7-2c7c-11ef-b74a-c8cb9e4ad5d4
+graph_name: 12-1-总扭矩限制
+node_id: 30bc2489-2c6d-4536-af55-f0800d1d94c7
+node_type: write
+node_information: START
+node_over
+node_id: 0d5cef6c-e115-4361-8f7a-05b23d29a42b
+node_type: write
+node_information: 
+node_over
+edge_id: afbd1125-5955-42fa-bc9f-94c47626da44
+source_node_id: 30bc2489-2c6d-4536-af55-f0800d1d94c7
+target_node_id: 0d5cef6c-e115-4361-8f7a-05b23d29a42b
+edge_information: 
+edge_over
+graph_over
+graph_id: 03004b32-2c7c-11ef-8c70-c8cb9e4ad5d4
+graph_name: 5-1-蠕行状态激活
+node_id: f28f9646-ebe1-49c1-bfd7-ea4693315740
+node_type: write
+node_information: START
+node_over
+node_id: 7159efc0-a0fe-488b-bcd5-285bf0fae549
+node_type: write
+node_information: 蠕行扭矩激活标志位 = 0
+node_over
+node_id: 4307d9b2-3642-41a5-b511-4882d6fb1630
+node_type: write
+node_information: 蠕行扭矩激活标志位 = 1
+node_over
+edge_id: 005bac97-3926-4b33-8aeb-ba79cb22e364
+source_node_id: f28f9646-ebe1-49c1-bfd7-ea4693315740
+target_node_id: 7159efc0-a0fe-488b-bcd5-285bf0fae549
+edge_information: 
+edge_over
+edge_id: 7d1b728b-2002-44c0-9642-8497487c9f2b
+source_node_id: 7159efc0-a0fe-488b-bcd5-285bf0fae549
+target_node_id: 4307d9b2-3642-41a5-b511-4882d6fb1630
+edge_information: 怠速状态 == 1 and 扭矩链使能状态 == 1 and (策略挡位信号 == 4 or 策略挡位信号 == 3)
+edge_over
+edge_id: 64569bb1-3b76-4e32-a8d1-082c2decacd6
+source_node_id: 4307d9b2-3642-41a5-b511-4882d6fb1630
+target_node_id: 7159efc0-a0fe-488b-bcd5-285bf0fae549
+edge_information: (怠速状态 != 1 or 扭矩链使能状态 != 1 or (策略挡位信号 != 4 and 策略挡位信号 != 3)) or 车速信号有效性 == 0
+edge_over
+graph_over
+graph_id: 032fd6a0-2c7c-11ef-ac6b-c8cb9e4ad5d4
+graph_name: 6-1-原始蠕行扭矩-无油门
+node_id: f480b3e1-3bda-417d-af6f-1b688382482e
+node_type: write
+node_information: START
+node_over
+node_id: b112fa3d-1a71-452d-b88d-a3260ebe1b58
+node_type: write
+node_information: 原始蠕行扭矩 = 蠕行查表扭矩()+蠕行智能补偿
+node_over
+node_id: a57dc023-be8d-4aae-89ae-b2ba48584bc7
+node_over
+edge_id: 970a0d0c-df9a-4447-aee5-9569b542c3ba
+source_node_id: f480b3e1-3bda-417d-af6f-1b688382482e
+target_node_id: b112fa3d-1a71-452d-b88d-a3260ebe1b58
+edge_information: 车速信号 < 16 and 加速踏板 < 1.5 and 蠕行扭矩激活标志位 == 1 and 策略挡位信号 == 4
+edge_over
+graph_over
+graph_id: 036dc331-2c7c-11ef-bfbb-c8cb9e4ad5d4
+graph_name: 6-1-原始蠕行扭矩-有油门
+node_id: 4d64c995-7f54-487c-a000-ae56054cc5ff
+node_type: write
+node_information: START
+node_over
+node_id: 438035e0-5ffb-4786-8ee1-81e9b734dd84
+node_type: read
+branch_yes: dd78f04a-ae3b-4266-ab33-0c0a6f1931c3
+branch_no: 5465334e-7218-4ada-939c-fd47d415be19
+node_information: 驱动电机转速 > 440
+node_over
+node_id: 03924c60-2c50-11ef-8d1e-b5e2479282b8
+node_type: write
+node_information: 
+node_over
+node_id: db588ee0-2c4e-11ef-bc76-4b0f4d9ce853
+node_type: write
+node_information: 
+node_over
+node_id: afc8ddb0-2c4f-11ef-bc76-4b0f4d9ce853
+node_type: read
+branch_yes: a7911cbe-77d2-400c-8805-2e4db330c766
+branch_no: 546f3647-4150-47f1-9171-7738d4d3d0af
+node_information: 驱动电机转速 > 430 or 原始蠕行扭矩 < 0
+node_over
+node_id: f905239a-55bc-4b45-a031-1f60bfbfea49
+node_type: read
+branch_yes: 5884ee33-671d-436e-aa24-a0082c4fcf40
+branch_no: 1c653b28-ab84-488a-b23b-75aec4d79eb2
+node_information: 驱动电机转速 < 驱动电机转速
+node_over
+node_id: c1006ff0-2c4d-11ef-bc76-4b0f4d9ce853
+node_type: write
+node_information: 
+node_over
+node_id: e1f352fc-cf4c-4168-8706-fb273bcc20cf
+node_type: write
+node_information: 
+node_over
+node_id: 477ce260-2c4f-11ef-bc76-4b0f4d9ce853
+node_type: write
+node_information: 
+node_over
+edge_id: 5360c2f4-d0ad-45b3-aa2b-a6c70dddb031
+source_node_id: 4d64c995-7f54-487c-a000-ae56054cc5ff
+target_node_id: c1006ff0-2c4d-11ef-bc76-4b0f4d9ce853
+edge_information: 加速踏板 > 1.5 and 蠕行扭矩激活标志位 == 1
+edge_over
+edge_id: 546f3647-4150-47f1-9171-7738d4d3d0af
+source_node_id: afc8ddb0-2c4f-11ef-bc76-4b0f4d9ce853
+target_node_id: f905239a-55bc-4b45-a031-1f60bfbfea49
+edge_information: 
+edge_over
+edge_id: 5884ee33-671d-436e-aa24-a0082c4fcf40
+source_node_id: f905239a-55bc-4b45-a031-1f60bfbfea49
+target_node_id: e1f352fc-cf4c-4168-8706-fb273bcc20cf
+edge_information: 
+edge_over
+edge_id: 1c653b28-ab84-488a-b23b-75aec4d79eb2
+source_node_id: f905239a-55bc-4b45-a031-1f60bfbfea49
+target_node_id: 438035e0-5ffb-4786-8ee1-81e9b734dd84
+edge_information: 
+edge_over
+edge_id: dd78f04a-ae3b-4266-ab33-0c0a6f1931c3
+source_node_id: 438035e0-5ffb-4786-8ee1-81e9b734dd84
+target_node_id: db588ee0-2c4e-11ef-bc76-4b0f4d9ce853
+edge_information: 
+edge_over
+edge_id: 5465334e-7218-4ada-939c-fd47d415be19
+source_node_id: 438035e0-5ffb-4786-8ee1-81e9b734dd84
+target_node_id: 477ce260-2c4f-11ef-bc76-4b0f4d9ce853
+edge_information: 
+edge_over
+edge_id: 499ec84e-eb17-4ee7-be4d-7c024e5e582f
+source_node_id: c1006ff0-2c4d-11ef-bc76-4b0f4d9ce853
+target_node_id: afc8ddb0-2c4f-11ef-bc76-4b0f4d9ce853
+edge_information: 
+edge_over
+edge_id: a7911cbe-77d2-400c-8805-2e4db330c766
+source_node_id: afc8ddb0-2c4f-11ef-bc76-4b0f4d9ce853
+target_node_id: 03924c60-2c50-11ef-8d1e-b5e2479282b8
+edge_information: 
+edge_over
+graph_over
+graph_id: 03a1f731-2c7c-11ef-8c05-c8cb9e4ad5d4
+graph_name: 6-2-蠕行扭矩补偿
+node_id: 6f4cdd7a-b7e1-403a-a2ec-8b567a50274a
+node_type: write
+node_information: START
+node_over
+node_id: 8bedd5db-beef-4491-83e7-454036e92ebd
+node_type: write
+node_information: 蠕行扭矩补偿 = -min((油门扭矩需求-车速信号系数()*油门扭矩需求),0)
+node_over
+node_id: fecbc551-ac5d-49db-bc52-c4db1005f343
+node_over
+edge_id: ad5ec7b3-c2c5-4cb0-a78a-0c4290e45a69
+source_node_id: 6f4cdd7a-b7e1-403a-a2ec-8b567a50274a
+target_node_id: 8bedd5db-beef-4491-83e7-454036e92ebd
+edge_information: 策略挡位信号 == 4
+edge_over
+graph_over
+graph_id: 03dad2de-2c7c-11ef-94f0-c8cb9e4ad5d4
+graph_name: 7-1-蠕行扭矩系数
+node_id: 355679ae-d764-424d-a807-e93acee61baa
+node_type: write
+node_information: START
+node_over
+node_id: 65a8cae8-c1b5-4370-89b2-dbf8fac1bad8
+node_type: write
+node_information: 
+node_over
+node_id: ea857c30-2158-11ef-a4eb-9dd06221edea
+node_type: write
+node_information: 
+node_over
+edge_id: f0bcce26-06c2-46fa-abb9-3345dfe30095
+source_node_id: 355679ae-d764-424d-a807-e93acee61baa
+target_node_id: 65a8cae8-c1b5-4370-89b2-dbf8fac1bad8
+edge_information: 蠕行扭矩激活标志位 == 0
+edge_over
+edge_id: f0a58a09-755d-4896-b827-900c4c752d6d
+source_node_id: 355679ae-d764-424d-a807-e93acee61baa
+target_node_id: ea857c30-2158-11ef-a4eb-9dd06221edea
+edge_information: 蠕行扭矩激活标志位 == 1
+edge_over
+graph_over
+graph_id: 04296156-2c7c-11ef-af6b-c8cb9e4ad5d4
+graph_name: 8-1-蠕行扭矩
+node_id: eca6d800-2953-4da1-aa15-83c1f9f1de9c
+node_type: write
+node_information: START
+node_over
+node_id: f5ac8693-387b-40f8-aa66-d0be779f5119
+node_type: write
+node_information: 
+node_over
+node_id: e6d22b4a-ef53-47ec-ab67-6ac47e725d46
+node_type: read
+branch_yes: a515fb70-ecf1-4d1e-8ec9-886e61cb6fef
+branch_no: d52c8c97-f787-4801-a143-26cbabf8fc2e
+node_information: 策略挡位信号 == 4
+node_over
+node_id: 37f26ed6-bf11-4739-97df-cf637ca81a08
+node_type: write
+node_information: 
+node_over
+node_id: 1bca4421-0c0c-40e0-95ca-abefb917bdb6
+node_type: read
+branch_yes: dd089b80-aee0-4b79-964a-2eb3964a9fac
+branch_no: d53ba9ca-e71e-4139-a3f0-163c72642f84
+node_information: 策略挡位信号 == 3
+node_over
+node_id: ed501a84-fa37-41d2-90b7-9f34459f59ac
+node_type: write
+node_information: 
+node_over
+node_id: cb589555-f674-4e51-9308-1eacfd5f582a
+node_type: write
+node_information: 
+node_over
+edge_id: 167eaab0-7c90-4d4d-89cd-b5fa942b2be5
+source_node_id: eca6d800-2953-4da1-aa15-83c1f9f1de9c
+target_node_id: f5ac8693-387b-40f8-aa66-d0be779f5119
+edge_information: 
+edge_over
+edge_id: 2761f8e2-ae76-4ac3-aa82-0f0d97b94029
+source_node_id: f5ac8693-387b-40f8-aa66-d0be779f5119
+target_node_id: e6d22b4a-ef53-47ec-ab67-6ac47e725d46
+edge_information: 
+edge_over
+edge_id: a515fb70-ecf1-4d1e-8ec9-886e61cb6fef
+source_node_id: e6d22b4a-ef53-47ec-ab67-6ac47e725d46
+target_node_id: 37f26ed6-bf11-4739-97df-cf637ca81a08
+edge_information: 
+edge_over
+edge_id: d52c8c97-f787-4801-a143-26cbabf8fc2e
+source_node_id: e6d22b4a-ef53-47ec-ab67-6ac47e725d46
+target_node_id: 1bca4421-0c0c-40e0-95ca-abefb917bdb6
+edge_information: 
+edge_over
+edge_id: dd089b80-aee0-4b79-964a-2eb3964a9fac
+source_node_id: 1bca4421-0c0c-40e0-95ca-abefb917bdb6
+target_node_id: ed501a84-fa37-41d2-90b7-9f34459f59ac
+edge_information: 
+edge_over
+edge_id: d53ba9ca-e71e-4139-a3f0-163c72642f84
+source_node_id: 1bca4421-0c0c-40e0-95ca-abefb917bdb6
+target_node_id: cb589555-f674-4e51-9308-1eacfd5f582a
+edge_information: 
+edge_over
+graph_over
+graph_id: 6b283429-2c46-11ef-b323-c8cb9e4ad5d4
+graph_name: 25-1
+node_id: 17cc542b-4881-4ad4-9f5e-69c47e81d667
+node_type: write
+node_information: START
+node_over
+node_id: 57d5a483-750d-4947-b82e-9df60cf846d3
+node_type: write
+node_information: 回收扭矩修正功能激活状态 = 1 and 回收扭矩修正目标分配比 = 0
+node_over
+node_id: b62dde70-217e-11ef-a581-db23211c0fbf
+node_type: write
+node_information: 回收扭矩修正功能激活状态 = 1 and 回收扭矩修正目标分配比 = 0
+node_over
+node_id: ed9cd776-a0d7-4fce-b358-ecfb1a448333
+node_type: read
+branch_yes: c80732c9-73f8-4803-8058-db7240878db3
+branch_no: d52c29ae-4f6a-4c00-adc8-0aeaa7658db5
+node_information: 总扭矩需求 < 1 and (总扭矩需求 <= 1 or CRBS功能状态位 == 1) and 扭矩分配模式位使能开关 == 1
+node_over
+edge_id: df5c3cda-57d6-4222-9bb9-bd9d90899e8b
+source_node_id: 17cc542b-4881-4ad4-9f5e-69c47e81d667
+target_node_id: ed9cd776-a0d7-4fce-b358-ecfb1a448333
+edge_information: 
+edge_over
+edge_id: c80732c9-73f8-4803-8058-db7240878db3
+source_node_id: ed9cd776-a0d7-4fce-b358-ecfb1a448333
+target_node_id: 57d5a483-750d-4947-b82e-9df60cf846d3
+edge_information: 
+edge_over
+edge_id: d52c29ae-4f6a-4c00-adc8-0aeaa7658db5
+source_node_id: ed9cd776-a0d7-4fce-b358-ecfb1a448333
+target_node_id: b62dde70-217e-11ef-a581-db23211c0fbf
+edge_information: 
+edge_over
+graph_over
+graph_id: 6b708006-2c46-11ef-b5bc-c8cb9e4ad5d4
+graph_name: 29-1
+node_id: 30c4a132-7b3c-462f-9ca1-4b1cc9e542e4
+node_type: write
+node_information: START
+node_over
+node_id: 600673d0-2184-11ef-a581-db23211c0fbf
+node_type: write
+node_information: 前电机最大轮端扭矩分配比限制 = (前电机轮端峰值扭矩-前电机轮端可持续扭矩)*0+前电机轮端可持续扭矩
+node_over
+node_id: 16164b9a-7bd4-4538-abdd-494cc9d88dec
+node_type: write
+node_information: 前电机最大轮端扭矩分配比限制 = (前电机轮端峰值扭矩-前电机轮端可持续扭矩)*1+前电机轮端可持续扭矩
+node_over
+node_id: 7a6d3b39-290e-4245-8df0-bcca85e4b852
+node_type: read
+branch_yes: 4d1a242c-fddb-4271-977a-94355611b089
+branch_no: 9c234bc5-f519-413b-a6bd-b9bd57a02c1c
+node_information: 扭矩分配模式位使能开关 != 1 and 前电机峰值功率禁止状态 != 1
+node_over
+edge_id: 161a4b01-8712-40ad-b5b1-d6fdfee0f39c
+source_node_id: 30c4a132-7b3c-462f-9ca1-4b1cc9e542e4
+target_node_id: 7a6d3b39-290e-4245-8df0-bcca85e4b852
+edge_information: 
+edge_over
+edge_id: 4d1a242c-fddb-4271-977a-94355611b089
+source_node_id: 7a6d3b39-290e-4245-8df0-bcca85e4b852
+target_node_id: 16164b9a-7bd4-4538-abdd-494cc9d88dec
+edge_information: 
+edge_over
+edge_id: 9c234bc5-f519-413b-a6bd-b9bd57a02c1c
+source_node_id: 7a6d3b39-290e-4245-8df0-bcca85e4b852
+target_node_id: 600673d0-2184-11ef-a581-db23211c0fbf
+edge_information: 
+edge_over
+graph_over
+graph_id: 6bbf8e0b-2c46-11ef-8996-c8cb9e4ad5d4
+graph_name: 33-1
+node_id: a9be5862-3558-4f2b-9b3d-1af0a2ce2ec4
+node_type: write
+node_information: START
+node_over
+node_id: d4ba2660-221d-11ef-a581-db23211c0fbf
+node_type: read
+branch_yes: 1e943737-e3cf-4443-a7df-8bbd374dd2e3
+branch_no: db0cdf29-4ca8-4f4a-9145-5679c7a3bf8a
+node_information: 总扭矩需求 > 0
+node_over
+node_id: d4b6a3f0-221d-11ef-a581-db23211c0fbf
+node_type: write
+node_information: 原始前轴需求扭矩 = 总扭矩需求-总扭矩需求*仲裁后分配比/100 and 原始后轴需求扭矩 = 总扭矩需求*仲裁后分配比
+node_over
+node_id: 9e4bc384-5399-41de-89aa-0b09f90cb92e
+node_over
+node_id: b25f2d80-221e-11ef-a581-db23211c0fbf
+node_type: write
+node_information: 原始前轴需求扭矩 = 0 and 原始后轴需求扭矩 = 0
+node_over
+edge_id: efe0dd55-5ef2-448e-82d7-cff7dc778ca0
+source_node_id: a9be5862-3558-4f2b-9b3d-1af0a2ce2ec4
+target_node_id: d4ba2660-221d-11ef-a581-db23211c0fbf
+edge_information: 
+edge_over
+edge_id: db0cdf29-4ca8-4f4a-9145-5679c7a3bf8a
+source_node_id: d4ba2660-221d-11ef-a581-db23211c0fbf
+target_node_id: 9e4bc384-5399-41de-89aa-0b09f90cb92e
+edge_information: 
+edge_over
+edge_id: 1e943737-e3cf-4443-a7df-8bbd374dd2e3
+source_node_id: d4ba2660-221d-11ef-a581-db23211c0fbf
+target_node_id: d4b6a3f0-221d-11ef-a581-db23211c0fbf
+edge_information: 
+edge_over
+edge_id: 00f1d328-817e-413d-b975-940a230f6a1f
+source_node_id: 9e4bc384-5399-41de-89aa-0b09f90cb92e
+target_node_id: b25f2d80-221e-11ef-a581-db23211c0fbf
+edge_information: 策略挡位信号 == 4
+edge_over
+graph_over
+graph_id: 6c0ec0b6-2c46-11ef-8a4f-c8cb9e4ad5d4
+graph_name: 34-1-1
+node_id: 87eea16b-14f0-4d9b-a754-e0b72141f849
+node_type: write
+node_information: START
+node_over
+node_id: 6cf7a130-222f-11ef-a581-db23211c0fbf
+node_type: write
+node_information: 前轴扭矩GAP = 前电机最大轮端扭矩分配比限制-原始前轴需求扭矩 and 前轴扭矩CAP = 0
+node_over
+node_id: 6cf38280-222f-11ef-a581-db23211c0fbf
+node_type: write
+node_information: 前轴扭矩GAP = 0 and 前轴扭矩CAP = 前电机最大轮端扭矩分配比限制-原始前轴需求扭矩
+node_over
+node_id: 6cf11180-222f-11ef-a581-db23211c0fbf
+node_type: read
+branch_yes: 6cfa3942-222f-11ef-a581-db23211c0fbf
+branch_no: 6cfa3941-222f-11ef-a581-db23211c0fbf
+node_information: 前电机最大轮端扭矩分配比限制 > 原始前轴需求扭矩
+node_over
+edge_id: 6cfa3940-222f-11ef-a581-db23211c0fbf
+source_node_id: 87eea16b-14f0-4d9b-a754-e0b72141f849
+target_node_id: 6cf11180-222f-11ef-a581-db23211c0fbf
+edge_information: 
+edge_over
+edge_id: 6cfa3941-222f-11ef-a581-db23211c0fbf
+source_node_id: 6cf11180-222f-11ef-a581-db23211c0fbf
+target_node_id: 6cf7a130-222f-11ef-a581-db23211c0fbf
+edge_information: 
+edge_over
+edge_id: 6cfa3942-222f-11ef-a581-db23211c0fbf
+source_node_id: 6cf11180-222f-11ef-a581-db23211c0fbf
+target_node_id: 6cf38280-222f-11ef-a581-db23211c0fbf
+edge_information: 
+edge_over
+graph_over
+graph_id: 6c5fc638-2c46-11ef-ad70-c8cb9e4ad5d4
+graph_name: 34-1-2
+node_id: 00cfbab9-d8e5-4e72-982e-9069689628c8
+node_type: write
+node_information: START
+node_over
+node_id: e1bc8de0-2230-11ef-a581-db23211c0fbf
+node_type: write
+node_information: 后轴扭矩GAP = 0 and 后轴扭矩CAP = 后电机最大轮端扭矩分配比限制-原始后轴需求扭矩
+node_over
+node_id: e1ba9210-2230-11ef-a581-db23211c0fbf
+node_type: write
+node_information: 后轴扭矩GAP = 后电机最大轮端扭矩分配比限制-原始后轴需求扭矩 and 后轴扭矩CAP = 0
+node_over
+node_id: e1b86f30-2230-11ef-a581-db23211c0fbf
+node_type: read
+branch_yes: e1be62a2-2230-11ef-a581-db23211c0fbf
+branch_no: e1be62a1-2230-11ef-a581-db23211c0fbf
+node_information: 后电机最大轮端扭矩分配比限制 > 原始后轴需求扭矩
+node_over
+edge_id: e1be62a0-2230-11ef-a581-db23211c0fbf
+source_node_id: 00cfbab9-d8e5-4e72-982e-9069689628c8
+target_node_id: e1b86f30-2230-11ef-a581-db23211c0fbf
+edge_information: 
+edge_over
+edge_id: e1be62a1-2230-11ef-a581-db23211c0fbf
+source_node_id: e1b86f30-2230-11ef-a581-db23211c0fbf
+target_node_id: e1ba9210-2230-11ef-a581-db23211c0fbf
+edge_information: 
+edge_over
+edge_id: e1be62a2-2230-11ef-a581-db23211c0fbf
+source_node_id: e1b86f30-2230-11ef-a581-db23211c0fbf
+target_node_id: e1bc8de0-2230-11ef-a581-db23211c0fbf
+edge_information: 
+edge_over
+graph_over
+graph_id: 6ca4df8e-2c46-11ef-8842-c8cb9e4ad5d4
+graph_name: 34-1-3
+node_id: 01eedb80-6fe2-4444-b282-cde5b4f4b500
+node_type: write
+node_information: START
+node_over
+node_id: 6814a4e0-2231-11ef-a581-db23211c0fbf
+node_type: write
+node_information: 前后轴峰值扭矩受限标志位 = 1
+node_over
+node_id: c06f8290-2231-11ef-a581-db23211c0fbf
+node_type: write
+node_information: 前后轴峰值扭矩受限标志位 = 0
+node_over
+node_id: 68108630-2231-11ef-a581-db23211c0fbf
+node_type: read
+branch_yes: 6816a0b2-2231-11ef-a581-db23211c0fbf
+branch_no: 6816a0b1-2231-11ef-a581-db23211c0fbf
+node_information: (前电机最大轮端扭矩分配比限制 < 原始前轴需求扭矩) and (后电机最大轮端扭矩分配比限制 < 原始后轴需求扭矩)
+node_over
+edge_id: 6816a0b0-2231-11ef-a581-db23211c0fbf
+source_node_id: 01eedb80-6fe2-4444-b282-cde5b4f4b500
+target_node_id: 68108630-2231-11ef-a581-db23211c0fbf
+edge_information: 
+edge_over
+edge_id: 6816a0b1-2231-11ef-a581-db23211c0fbf
+source_node_id: 68108630-2231-11ef-a581-db23211c0fbf
+target_node_id: c06f8290-2231-11ef-a581-db23211c0fbf
+edge_information: 
+edge_over
+edge_id: 6816a0b2-2231-11ef-a581-db23211c0fbf
+source_node_id: 68108630-2231-11ef-a581-db23211c0fbf
+target_node_id: 6814a4e0-2231-11ef-a581-db23211c0fbf
+edge_information: 
+edge_over
+graph_over
+graph_id: 6ce41f23-2c46-11ef-9760-c8cb9e4ad5d4
+graph_name: 35-1-1
+node_id: 22d33b92-61e1-46b5-9419-63bdb76ac5e4
+node_type: write
+node_information: START
+node_over
+node_id: b74cb8b0-223e-11ef-a581-db23211c0fbf
+node_type: write
+node_information: 前后轴峰值扭矩受限标志位 = 0 and 限制后前轴需求扭矩 = 原始前轴需求扭矩+前轴扭矩GAP and 限制后后轴需求扭矩 = 原始后轴需求扭矩+min(fabs(前轴扭矩GAP),后轴扭矩CAP)
+node_over
+node_id: d49a2a30-223c-11ef-a581-db23211c0fbf
+node_type: write
+node_information: 前后轴峰值扭矩受限标志位 = 1 and 限制后前轴需求扭矩 = min(原始前轴需求扭矩,前电机最大轮端扭矩分配比限制) and 限制后后轴需求扭矩 = min(原始后轴需求扭矩,后电机最大轮端扭矩分配比限制)
+node_over
+node_id: 0d05f400-2240-11ef-a581-db23211c0fbf
+node_type: write
+node_information: 前后轴峰值扭矩受限标志位 = 0 and 限制后前轴需求扭矩 = 原始前轴需求扭矩+min(fabs(后轴扭矩GAP),前轴扭矩CAP) and 限制后后轴需求扭矩 = 原始后轴需求扭矩+后轴扭矩GAP
+node_over
+node_id: adf332f0-2241-11ef-a581-db23211c0fbf
+node_type: write
+node_information: 前后轴峰值扭矩受限标志位 = 0 and 限制后前轴需求扭矩 = 原始前轴需求扭矩 and 限制后后轴需求扭矩 = 原始后轴需求扭矩
+node_over
+node_id: d4982e60-223c-11ef-a581-db23211c0fbf
+node_type: read
+branch_yes: d49e21d2-223c-11ef-a581-db23211c0fbf
+branch_no: d49e21d1-223c-11ef-a581-db23211c0fbf
+node_information: (前电机最大轮端扭矩分配比限制 < 原始前轴需求扭矩) and (后电机最大轮端扭矩分配比限制 < 原始后轴需求扭矩)
+node_over
+node_id: 9b463100-223e-11ef-a581-db23211c0fbf
+node_type: read
+branch_yes: 6e790604-00e8-4916-acde-9cbde301c154
+branch_no: 8e669461-d486-4f4b-b14b-a590bb511d10
+node_information: (前电机最大轮端扭矩分配比限制 < 原始前轴需求扭矩) and (后电机最大轮端扭矩分配比限制 > 原始后轴需求扭矩)
+node_over
+node_id: 17e2b700-2240-11ef-a581-db23211c0fbf
+node_type: read
+branch_yes: 4878537c-301f-413c-bc96-9e785cbcc0c2
+branch_no: 2492cad2-a37f-4a0d-9544-b6111f9ad889
+node_information: (前电机最大轮端扭矩分配比限制 > 原始前轴需求扭矩) and (后电机最大轮端扭矩分配比限制 < 原始后轴需求扭矩)
+node_over
+edge_id: d49e21d0-223c-11ef-a581-db23211c0fbf
+source_node_id: 22d33b92-61e1-46b5-9419-63bdb76ac5e4
+target_node_id: d4982e60-223c-11ef-a581-db23211c0fbf
+edge_information: 
+edge_over
+edge_id: d49e21d1-223c-11ef-a581-db23211c0fbf
+source_node_id: d4982e60-223c-11ef-a581-db23211c0fbf
+target_node_id: 9b463100-223e-11ef-a581-db23211c0fbf
+edge_information: 
+edge_over
+edge_id: d49e21d2-223c-11ef-a581-db23211c0fbf
+source_node_id: d4982e60-223c-11ef-a581-db23211c0fbf
+target_node_id: d49a2a30-223c-11ef-a581-db23211c0fbf
+edge_information: 
+edge_over
+edge_id: 6e790604-00e8-4916-acde-9cbde301c154
+source_node_id: 9b463100-223e-11ef-a581-db23211c0fbf
+target_node_id: b74cb8b0-223e-11ef-a581-db23211c0fbf
+edge_information: 
+edge_over
+edge_id: 8e669461-d486-4f4b-b14b-a590bb511d10
+source_node_id: 9b463100-223e-11ef-a581-db23211c0fbf
+target_node_id: 17e2b700-2240-11ef-a581-db23211c0fbf
+edge_information: 
+edge_over
+edge_id: 4878537c-301f-413c-bc96-9e785cbcc0c2
+source_node_id: 17e2b700-2240-11ef-a581-db23211c0fbf
+target_node_id: 0d05f400-2240-11ef-a581-db23211c0fbf
+edge_information: 
+edge_over
+edge_id: 2492cad2-a37f-4a0d-9544-b6111f9ad889
+source_node_id: 17e2b700-2240-11ef-a581-db23211c0fbf
+target_node_id: adf332f0-2241-11ef-a581-db23211c0fbf
+edge_information: 
+edge_over
+graph_over
+graph_id: 6d2c8a4a-2c46-11ef-a670-c8cb9e4ad5d4
+graph_name: 36-1
+node_id: 2684fc7a-f410-4910-b063-3c03e8cfa2e8
+node_type: write
+node_information: START
+node_over
+node_id: 261f0dd0-2242-11ef-a581-db23211c0fbf
+node_type: write
+node_information: 调整后分配比 = 限制后后轴需求扭矩/(限制后后轴需求扭矩+限制后前轴需求扭矩)*100
+node_over
+node_id: 2620e290-2242-11ef-a581-db23211c0fbf
+node_type: write
+node_information: 调整后分配比 = 仲裁后分配比
+node_over
+node_id: 261ceaf0-2242-11ef-a581-db23211c0fbf
+node_type: read
+branch_yes: 26230572-2242-11ef-a581-db23211c0fbf
+branch_no: 26230571-2242-11ef-a581-db23211c0fbf
+node_information: 扭矩分配模式位使能开关 == 1 and 策略挡位信号 == 4 and ((前电机最大轮端扭矩分配比限制 < 原始前轴需求扭矩) or (后电机最大轮端扭矩分配比限制 < 原始后轴需求扭矩))
+node_over
+edge_id: 26230570-2242-11ef-a581-db23211c0fbf
+source_node_id: 2684fc7a-f410-4910-b063-3c03e8cfa2e8
+target_node_id: 261ceaf0-2242-11ef-a581-db23211c0fbf
+edge_information: 
+edge_over
+edge_id: 26230571-2242-11ef-a581-db23211c0fbf
+source_node_id: 261ceaf0-2242-11ef-a581-db23211c0fbf
+target_node_id: 2620e290-2242-11ef-a581-db23211c0fbf
+edge_information: 
+edge_over
+edge_id: 26230572-2242-11ef-a581-db23211c0fbf
+source_node_id: 261ceaf0-2242-11ef-a581-db23211c0fbf
+target_node_id: 261f0dd0-2242-11ef-a581-db23211c0fbf
+edge_information: 
+edge_over
+graph_over
+graph_id: 6d7288de-2c46-11ef-ab6b-c8cb9e4ad5d4
+graph_name: 41-1
+node_id: 98bd6db7-93bd-49ba-9032-f5871a06fc93
+node_type: write
+node_information: START
+node_over
+node_id: cc37ce50-2242-11ef-a581-db23211c0fbf
+node_type: read
+branch_yes: cc3e36f2-2242-11ef-a581-db23211c0fbf
+branch_no: cc3e36f1-2242-11ef-a581-db23211c0fbf
+node_information: 总扭矩需求 > 0
+node_over
+node_id: cc39f130-2242-11ef-a581-db23211c0fbf
+node_type: write
+node_information: 前轴最大轮端扭矩限制 = 前电机最大轮端扭矩分配比限制 and 前轴最小轮端扭矩限制 = 0 and 后轴最大轮端扭矩限制 = 后电机最大轮端扭矩分配比限制 and 后轴最小轮端扭矩限制 = 0
+node_over
+node_id: 3b316c70-2244-11ef-a581-db23211c0fbf
+node_type: write
+node_information: 前轴最大轮端扭矩限制 = 0 and 前轴最小轮端扭矩限制 = 0-前电机最大轮端扭矩分配比限制 and 后轴最大轮端扭矩限制 = 0 and 后轴最小轮端扭矩限制 = 0-后电机最大轮端扭矩分配比限制
+node_over
+edge_id: cc3e36f0-2242-11ef-a581-db23211c0fbf
+source_node_id: 98bd6db7-93bd-49ba-9032-f5871a06fc93
+target_node_id: cc37ce50-2242-11ef-a581-db23211c0fbf
+edge_information: 
+edge_over
+edge_id: cc3e36f1-2242-11ef-a581-db23211c0fbf
+source_node_id: cc37ce50-2242-11ef-a581-db23211c0fbf
+target_node_id: 3b316c70-2244-11ef-a581-db23211c0fbf
+edge_information: 
+edge_over
+edge_id: cc3e36f2-2242-11ef-a581-db23211c0fbf
+source_node_id: cc37ce50-2242-11ef-a581-db23211c0fbf
+target_node_id: cc39f130-2242-11ef-a581-db23211c0fbf
+edge_information: 
+edge_over
+graph_over
+graph_id: 6da9f22a-2c46-11ef-86e2-c8cb9e4ad5d4
+graph_name: 42-1-分配后前后轴需求扭矩计算
+node_id: ee3aadb8-179c-40d1-b0bb-aa12d595bfc4
+node_type: write
+node_information: START
+node_over
+node_id: c49319f0-2244-11ef-a581-db23211c0fbf
+node_type: write
+node_information: 分配后前轴需求扭矩 = 总扭矩需求 - 总扭矩需求*调整后分配比/100 and 分配后后轴需求扭矩 = 总扭矩需求*调整后分配比/100
+node_over
+edge_id: c4953cd0-2244-11ef-a581-db23211c0fbf
+source_node_id: ee3aadb8-179c-40d1-b0bb-aa12d595bfc4
+target_node_id: c49319f0-2244-11ef-a581-db23211c0fbf
+edge_information: 
+edge_over
+graph_over
+graph_id: 6dea9445-2c46-11ef-81c3-c8cb9e4ad5d4
+graph_name: 43-1-最终分配比
+node_id: fb667b01-0e6c-46c9-8da4-68f73a15e33f
+node_type: write
+node_information: START
+node_over
+node_id: 276d0a40-2245-11ef-a581-db23211c0fbf
+node_type: write
+node_information: 最终分配比 = 分配后后轴需求扭矩/(分配后前轴需求扭矩+分配后后轴需求扭矩)*100
+node_over
+edge_id: 276eb7f0-2245-11ef-a581-db23211c0fbf
+source_node_id: fb667b01-0e6c-46c9-8da4-68f73a15e33f
+target_node_id: 276d0a40-2245-11ef-a581-db23211c0fbf
+edge_information: 
+edge_over
+graph_over
+graph_id: 6e31e9e3-2c46-11ef-95dc-c8cb9e4ad5d4
+graph_name: 7-1-原始分配比计算
+node_id: 525638c9-cda8-436f-902a-51fe41245bb7
+node_type: write
+node_information: START
+node_over
+node_id: 98e807b2-2a3f-4edd-a1b2-39250fd08327
+node_type: write
+node_information: 
+node_over
+edge_id: 04817930-4014-4794-b3f5-449730ec9c9e
+source_node_id: 525638c9-cda8-436f-902a-51fe41245bb7
+target_node_id: 98e807b2-2a3f-4edd-a1b2-39250fd08327
+edge_information: 策略挡位信号 == 4 and 驾驶模式信号 == 7
+edge_over
+graph_over
